@@ -265,3 +265,12 @@ function blog_url()
 {
 	return get_bloginfo('url');
 }
+
+// Add specific CSS class for search widgets
+add_filter('body_class','idx_not_home');
+function idx_not_home($classes) {
+	// add 'class-name' to the $classes array
+	$classes[] = 'not-home';
+	// return the $classes array
+	return $classes;
+}

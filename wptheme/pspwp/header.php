@@ -115,11 +115,7 @@
 }
 #megaMenu ul.megaMenu > li.menu-item.ss-nav-menu-item-0 { margin-left: 230px }
 #megaMenu .ss-colgroup .ss-col, #megaMenu .wpmega-nonlink li.widget, #megaMenu ul.megaMenu li.menu-item.ss-nav-menu-mega.mega-colgroup > ul > li { padding: 0 }
-	.ui-autocomplete {
-    left: 238px !important;
-    top: 119px !important;;
-    z-index: 100 !important;;
-}
+
 </style>
 <script type="text/javascript">
 jQuery(function() {
