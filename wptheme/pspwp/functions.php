@@ -273,7 +273,7 @@ function blog_url()
 add_filter('body_class','idx_not_home');
 function idx_not_home($classes) {
 	// add 'class-name' to the $classes array
-	if ( !is_home() )
+	if ( !is_front_page() )
 		$classes[] = 'not-home';
 	// return the $classes array
 	return $classes;
