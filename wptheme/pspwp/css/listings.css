@@ -1,0 +1,136 @@
+/* listings.css */
+
+
+
+#listings { }
+
+
+
+#listings h1 {
+
+	color: #001f49;
+
+	font: 400 18px/1 "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+	text-transform: uppercase;
+
+}
+
+
+
+.greybar_hr {
+
+	border-top: 1px solid #d2d1d1;
+
+	width: 100%;
+
+}
+
+
+
+.listing_pod {
+
+	margin-bottom:108px;
+
+}
+
+
+
+.listing_pod img {
+
+	float: left;
+
+}
+
+
+
+.listing_pod_content {
+
+	float: left;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	margin-left: 7px;
+
+	width: 410px;
+
+}
+
+
+
+.listing_pod p {
+
+	display: block;
+
+	font-size: 12px;
+
+	margin: auto auto 10px 10px;
+
+	padding-bottom: 5px;
+
+}
+
+
+
+.listing_btn {
+
+	margin-left: 7px;
+
+}
+
+
+
+.listing_info_label {
+
+	color: #001f49;
+
+	font-weight: 800;
+
+	margin: auto auto 0 10px;
+
+	text-transform: uppercase;
+
+}
+
+
+
+.agent_links {
+
+	display: block;
+
+	padding-bottom: 5px;
+
+	margin: 7px auto 10px 10px;
+
+}
+
+
+
+#tabs h1 {
+
+	color: #001f49;
+
+	font: 400 18px/1 "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+	text-transform: uppercase;
+
+}
+
+
+
+#tabs p {
+
+	color: #444;
+
+	/*font: 12px/1 Arial, Helvetica, sans-serif;*/
+
+}
+
+
+
+.tab_search_mls_btn {
+
+	float: right;
+
+}
+

@@ -1,0 +1,410 @@
+/* account.css */
+
+
+
+.account_title_bar {
+
+	background: url(../images/psp_account_blu_bar_back.png) repeat-x;
+
+	height: 34px;
+
+	margin: 0;
+
+	padding: 0;
+
+	width: 100%;
+
+}
+
+
+
+.account_title_bar h2 {
+
+	color: #fff;
+
+	float: left;
+
+	font: 14px/1 Arial, Helvetica, sans-serif;
+
+	margin: 10px 0 0;
+
+	text-transform:uppercase;
+
+}
+
+
+
+.account_title_count {
+
+	background: url(../images/psp_account_number_back.png) no-repeat;
+
+	float:left;
+
+	margin-left: 10px;
+
+	width: 31px;
+
+}
+
+
+
+.account_title_count p {
+
+	color: #fff !important;
+
+	font-weight: bold !important;
+
+	margin-left: 9px;
+
+}
+
+
+
+.account_subtitle_bar {
+
+	background-color: #e1e2e3;
+
+	clear:both;
+
+	color: #001f49;
+
+	font: 14px/1 Arial, Helvetica, sans-serif;
+
+	height: 34px;
+
+	width: 100%;
+
+}
+
+
+
+.account_subtitle_bar_left {
+
+	display: inline-block;
+
+	padding: 10px;
+
+}
+
+
+
+.account_subtitle_bar_right a {
+
+	color: #001f49;
+
+	display: inline-block;
+
+	font: 14px/1 Arial, Helvetica, sans-serif;
+
+	float: right;
+
+	padding: 10px;
+
+	text-decoration: none;
+
+	text-transform: uppercase;
+
+}
+
+
+
+.row_white {
+
+	background-color: #fff;
+
+	clear: both;
+
+	height: 70px;
+
+	width: 100%;
+
+}
+
+
+
+.saved_thumb {
+
+	display: inline-block;
+
+	float: left;
+
+}
+
+
+
+.row_grey {
+
+	background-color:#e1e2e3;
+
+	clear: both;
+
+	height: 70px;
+
+	width: 100%;
+
+}
+
+
+
+.pager {
+
+	margin: 5px auto;
+
+	vertical-align: center;
+
+	width: 105px;
+
+}
+
+
+
+.pager p {
+
+	display: inline-block;
+
+	font-size: 12px;
+
+	margin: 6px auto auto 5px;
+
+}
+
+
+
+.saved_listings_content {
+
+	color: #555;
+
+	display: inline-block;
+
+	float: left;
+
+	margin-top: 12px;
+
+}
+
+
+
+.saved_listings_addrs {
+
+	font-weight:bold;
+
+}
+
+
+
+.saved_listings_right {
+
+	color: #555;
+
+	display: inline-block;
+
+	float: right;
+
+	font-weight: bold;
+
+	margin: 10px 10px auto auto;
+
+}
+
+
+
+.saved_listings_right_links {
+
+	clear: right;
+
+	display: block;
+
+	float: right;
+
+	margin: 20px 10px auto auto;
+
+}
+
+
+
+.saved_listings_right_links a {
+
+	color: #666;
+
+	font-size: 10px;
+
+	font-weight: bold;
+
+	text-transform: uppercase;
+
+}
+
+
+
+.saved_listings_right_links a.blue {
+
+	color: #001f49;
+
+	margin-right: 10px;
+
+}
+
+
+
+.saved_searches_content {
+
+	color: #555;
+
+	display: inline-block;
+
+	float: left;
+
+	font-size: 12px;
+
+	line-height: 20px;
+
+	margin: 5px 10px;
+
+}
+
+
+
+.saved_searches_content_1 {
+
+	color: #001f49;
+
+	font-weight: bold;
+
+}
+
+
+
+.saved_searches_content_2 {
+
+	font-weight: bold;
+
+}
+
+
+
+.saved_messages_content {
+
+	color: #555;
+
+	display: inline-block;
+
+	float: left;
+
+	font-size: 12px;
+
+	margin: 5px 10px;
+
+	width: 440px;
+
+}
+
+
+
+.saved_messages_content_1 {
+
+	color: #001f49;
+
+	font-weight: bold;
+
+}
+
+
+
+.saved_messages_content_grey {
+
+	color: #444;
+
+}
+
+
+
+.saved_messages_content_2 {
+
+	color: #666;
+
+	font-size: 11px;
+
+	margin: 0;
+
+	padding: 0;
+
+}
+
+
+
+.saved_messages_content_3 {
+
+	font-size: 11px;
+
+	font-weight: bold;
+
+}
+
+
+
+.saved_messages_right {
+
+	color: #555;
+
+	display: inline-block;
+
+	float: right;
+
+	font-weight: bold;
+
+	margin: 3px 10px auto auto;
+
+}
+
+
+
+.saved_messages_right_reply {
+
+	clear:right;
+
+	display: block;
+
+	float: right;
+
+	margin: 5px 10px auto auto;
+
+}
+
+
+
+.saved_messages_right_links {
+
+	clear: right;
+
+	display: block;
+
+	float: right;
+
+	margin: 5px 10px auto auto;
+
+}
+
+
+
+.saved_messages_right_links a {
+
+	color:#666;
+
+	font-size: 10px;
+
+	font-weight: bold;
+
+	text-transform: uppercase;
+
+}
+
+
+
+.saved_messages_right_links a.blue {
+
+	color: #001f49;
+
+	margin-right: 10px;
+
+}
+

@@ -1,0 +1,153 @@
+/* CSS Document */
+
+.slide1 {
+	width: 960px;
+	height: 343px;
+	background:url(../images/home-slider-01.jpg) no-repeat top center;
+}
+
+.slide2 {
+	width: 960px;
+	height: 343px;
+	background:url(../images/home-slider-02.jpg) no-repeat top center;
+}
+
+.slide2 a {
+	display: inline-block;
+	font-family: "FuturaStdBook";
+	font-size: 17px;
+	color:#333333;
+	margin-left:315px;
+	margin-top:189px;
+	padding:0;
+	text-transform:uppercase;
+}
+
+.slide2 a:last-child {
+	margin: auto;
+}
+
+.slide3 {
+	width: 960px;
+	height: 343px;
+	background:url(../images/home-slider-03.jpg) no-repeat top center;
+}
+
+.slide3 a {
+	display: inline-block;
+	font-family: "FuturaStdBook";
+	font-size: 17px;
+	color:#333333;
+	margin-left:315px;
+	margin-top:189px;
+	padding:0;
+	text-transform:uppercase;
+}
+
+.slide3 a:last-child {
+	margin: auto;
+}
+
+.slide4 {
+	width: 960px;
+	height: 343px;
+	background:url(../images/home-slider-04.jpg) no-repeat top center;
+}
+
+.slide4 a {
+	display: inline-block;
+	font-family: "FuturaStdBook";
+	font-size: 17px;
+	color:#ff6600;
+	margin-left:315px;
+	margin-top:189px;
+	padding:0;
+	text-transform:uppercase;
+}
+
+.slide4 a:last-child {
+	margin: auto;
+}
+
+
+
+/*=Slide =============================*/
+#splash-container {
+    overflow:hidden;
+	margin-bottom:14px;
+}
+
+/* Hero slideshow */
+
+#jqb_object {
+	position: relative;
+	width: 960px;
+	overflow: hidden;
+}
+
+#jqb_object div.slider-container-inner {
+    width: 100%;
+	height: 343px;
+    overflow: hidden;
+}
+
+#jqb_object div.slider-container-inner+p {
+    /* Hides a dummy <p> that Magento's WYSIWYG editor inserts */
+    display: none;
+}
+
+/*
+#jqb_object div.slider-container div.slider-container-inner div {
+	width: 100%;
+	height: 100%;
+}
+*/
+#jqb_object div.slider-container div.slider-container-inner img {
+	border: 0;
+}
+
+/* Progress bar */
+
+#jqb_object div.slideshow-progress-bar-wrap {
+    position: relative;
+}
+
+#jqb_object div.slideshow-progress-bar-wrap div.slideshow-progress-bar {
+    position: relative;
+    border-top: 6px solid #cccccc;
+}
+
+/* Progress bar numbers and highlight bar */
+#jqb_object div.slideshow-progress-bar-wrap div.slideshow-progress-bar div.pagerLink {
+    float: left;
+    position: relative;
+    width: 960px;
+    height: 45px;
+    margin: -35px 0 0;
+}
+
+#jqb_object div.slideshow-progress-bar-wrap div.highlight-bar {
+    position: absolute;
+    z-index: 10;
+    background: #feef74;
+    height: 6px;
+    left: 0;
+    width: 20%;
+}
+
+#jqb_object div.slideshow-progress-bar-wrap div.highlight-bar div.edge {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #fff;
+}
+
+#jqb_object div.slideshow-progress-bar-wrap div.highlight-bar div.edge.left {
+    left: -2px;
+}
+
+#jqb_object div.slideshow-progress-bar-wrap div.highlight-bar div.edge.right {
+    right: -2px;
+}
+

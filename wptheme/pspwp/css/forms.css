@@ -1,0 +1,358 @@
+/* forms.css */
+
+
+
+#form_container {
+
+	background: rgba(255, 255, 255, 0.8);
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	font-weight:bold;
+
+	height: 100%;
+
+	margin: 20px auto;
+
+	padding: 20px;
+
+	width: 94%;
+
+}
+
+
+
+#form_container h1 {
+
+	color: #401C1C;
+
+	float:left;
+
+	font-size: 25px;
+
+	font-weight: 600;
+
+	letter-spacing: 2px;
+
+	margin: 5px auto 10px;
+
+	
+
+	-moz-text-shadow: 0.05em 0.05em #008CC9;
+
+	-webkit-text-shadow: 0.05em 0.05em #008CC9;
+
+	text-shadow: 0.05em 0.05em #008CC9;
+
+	
+
+	text-transform: uppercase;
+
+	text-decoration: none;
+
+}
+
+
+
+#form_container h2 {
+
+	color: #333;
+
+	clear: both;
+
+	float:left;
+
+	font-size: 20px;
+
+	font-weight: 600;
+
+	letter-spacing: 2px;
+
+	margin: 25px auto 5px;
+
+	text-decoration: none;
+
+	
+
+	-moz-text-shadow: 0.05em 0.05em #fff;
+
+	-webkit-text-shadow: 0.05em 0.05em #fff;
+
+	text-shadow: 0.05em 0.05em #fff;
+
+
+
+	text-transform: uppercase;
+
+}
+
+
+
+.promo_txt {
+
+	color: #000;
+
+	float: left;
+
+	font-size: 14px;
+
+	font-weight: normal;
+
+	margin: 15px auto 20px 20px;
+
+	text-decoration: none;
+
+}
+
+
+
+.promo_txt a {
+
+	color: #007CC6;
+
+	text-decoration: none;
+
+}
+
+
+
+.promo_txt2 {
+
+	clear:both;
+
+	color: #000;
+
+	font-size: 14px;
+
+	font-weight: normal;
+
+	margin: 15px auto 10px;
+
+	text-decoration: none;
+
+}
+
+
+
+.promo_txt_large {
+
+	font-size: 16px;
+
+}
+
+
+
+.form_row {
+
+	clear: both;
+
+    padding-top: 10px;
+
+}
+
+
+
+.form_row_space,
+
+.form_row_halfspace {
+
+	clear: both;
+
+	padding-bottom: 10px;
+
+    padding-top: 20px;
+
+}
+
+
+
+.form_field {
+
+	clear: both;
+
+	display: block;
+
+	float: left;
+
+    margin: 5px;
+
+}
+
+
+
+.inline-form .form_field {
+
+	clear: none;
+
+}
+
+
+
+.form_field label {
+
+    color: #001f49;
+
+    display: block;
+
+	font-size: 11px;
+
+    padding-bottom: 5px;
+
+}
+
+
+
+.form_field input,
+
+.form_field select,
+
+.form_field textarea,
+
+.form_field file {
+
+	background-color: #fff;
+
+	border: 1px solid #d8d8d8;
+
+	color: #001f49;
+
+	padding: 5px;
+
+}
+
+
+
+.form_field input:focus,
+
+.form_field select:focus,
+
+.form_field textarea:focus,
+
+.form_field file:focus {
+
+    background-color: #eee;
+
+    border: 1px solid #fff;
+
+}
+
+
+
+.form_field_check {
+
+	font-size: 14px;
+
+    color: #401C1C;
+
+	padding: 10px 5px 10px 0;
+
+}
+
+
+
+.form_field_check a {
+
+    color: #008CC9;
+
+	font-size: 14px;
+
+	padding: 5px;
+
+}
+
+
+
+.bttn {
+
+	background-color: #008CC9 !important;
+
+	border: 1px solid #fff !important;
+
+	color: #fff;
+
+	cursor: pointer;
+
+	font-size: 16px !important;
+
+	padding: 7px !important;
+
+}
+
+
+
+.subuplil {
+
+	vertical-align: top;
+
+}
+
+
+
+/* INPUT SIZES */
+
+
+
+.input_tiny {
+
+    width: 25px;
+
+}
+
+
+
+.input_short {
+
+    width: 75px;
+
+}
+
+
+
+.input_osi {
+
+    width: 100px;
+
+}
+
+
+
+.input_normal {
+
+	height: 10px !important;
+
+    width: 150px;
+
+}
+
+
+
+.input_medium {
+
+    width: 200px;
+
+}
+
+
+
+.input_large {
+
+    width: 275px;
+
+}
+
+
+
+.input_long {
+
+    width: 350px;
+
+}
+
+
+
+.optional_field {
+
+    background-color: #fff;
+
+}
+

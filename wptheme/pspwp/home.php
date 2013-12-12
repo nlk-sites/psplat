@@ -1,0 +1,51 @@
+<?php
+/**
+ * The template for displaying blog posts.
+ *
+ *
+ *
+ * @package PSPWP
+ */
+
+get_header(); ?>
+
+<div id="main" role="main">
+  <?php get_sidebar("searchbar"); ?>
+	<div id="main_inner">
+        <div class="left_main_accnt">
+       	  <div id="listings">
+       	  	<div id="sectionTitle">
+       			<p>Recent Posts</p><img src="<?php bloginfo('template_url'); ?>/images/blog_conch.png" width="52" height="40">
+			</div>
+            <?php while ( have_posts() ) : the_post(); ?>
+				<div class="eachPost">
+					<h1><?php the_title(); ?></h1>
+		            <p class="date_auth"><?php the_time('M. jS Y'); ?> - Agent - <a href="#"><?php the_author(); ?></a></p>
+		            <div class="sharebuttons">
+		            	<ul>
+							<li><?php dd_twitter_generate('Compact','twitter_username',get_permalink(get_the_ID()), get_the_title(), get_the_ID()); ?></li>
+			                <li><?php dd_fblike_generate('Like Button Count',get_permalink(get_the_ID()), get_the_title(), get_the_ID()) ?></li>
+			                <li><?php dd_google1_generate('Compact (20px)',get_permalink(get_the_ID()), get_the_title(), get_the_ID()); ?></li>
+			                <li><?php dd_linkedin_generate('Compact',get_permalink(get_the_ID()), get_the_title(), get_the_ID()); ?></li>
+			            </ul>
+		            </div>
+					<div class="clearfix"></div>
+					<?php the_post_thumbnail('profile-thumb'); ?>
+		            <?php the_excerpt(); ?>
+		
+					<p><a href="<?php the_permalink(); ?>">Read Full Article</a></p>
+		            <p><a href="#">Comments</a> ( <?php comments_number( '0', '1', '%' ); ?> )  | <a href="<?php the_permalink(); ?>">Permalink</a></p>
+			
+				</div>
+				<hr class="greybar_hr">
+			<?php endwhile; // end of the loop. ?>
+			<?php wp_pagenavi(); ?>
+			<div class="clearfix"></div>
+          </div>
+        </div>
+  		<?php get_sidebar('right'); ?> 
+	  	<div class="clearfix"></div>
+	  <?php //include_once("tabbed_listings.php"); ?>
+	</div>
+</div>
+<?php get_footer(); ?>

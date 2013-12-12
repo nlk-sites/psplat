@@ -1,0 +1,242 @@
+/* nav.css */
+
+
+
+ul.main-nav li {
+
+	position: relative;
+
+}
+
+
+
+ul.main-nav li a {
+
+	padding: 26px 10px 10px;
+
+}
+
+
+
+.main-nav li.active > a {
+
+	background-position: bottom center;
+
+	color: #fff;
+
+}
+
+
+
+.sub,
+
+.sub .module-outer,
+
+.sub .module-inner,
+
+.sub-mini,
+
+.sub-mini .module-outer,
+
+.sub-mini .module-inner {
+
+	display: inline;
+
+	float: left;
+
+}
+
+
+
+.sub .module-outer,
+.sub-mini .module-outer {
+
+	background-color: #666;
+
+	height: auto;
+
+	xmin-height: 240px;
+
+	width: 100%;
+
+}
+
+
+
+.sub,
+
+.sub-mini {
+
+	color: #fff;
+
+	display: none;
+
+	position: absolute;
+
+	top: 20px;
+
+	z-index: 1001;
+
+}
+
+
+
+.sub {
+
+	width: 960px;
+
+}
+
+
+
+.sub-mini {
+
+	width: 200px;
+
+}
+
+
+
+.sub-footer {
+
+	background: rgba(75, 76, 78, 0.75);
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF4B4C4E,endColorstr=#BF4B4C4E)"; /* IE8 */
+
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF4B4C4E,endColorstr=#BF4B4C4E);   /* IE6 & 7 */
+
+	clear: both;
+
+	height: 10px;
+
+    zoom: 1;
+
+}
+
+
+
+#mn-listings .sub,
+
+#mn-listings:hover .sub,
+
+#mn-listings.active .sub { left: -230px; }
+
+
+
+ul.main-nav li .sub-mini,
+
+ul.main-nav li:hover .sub-mini,
+
+ul.main-nav li.active .sub-mini {
+
+	left: 0%;
+
+}
+
+
+
+.sub ul li.
+
+.sub-mini ul li {
+
+	display: block;
+
+}
+
+
+
+.sub li a,
+
+.sub-mini li a {
+
+	color: #fff;
+
+}
+
+
+
+.sub-section {
+
+	display: inline;
+
+	float: left;
+
+	padding: 14px 10px 0 24px;
+
+	width: 145px;
+
+}
+
+
+
+#listing-context.sub-section {
+
+	font-size: 11px;
+
+	line-height: 16px;
+
+	margin-left: 26px;
+
+	width: 296px;
+
+}
+
+
+
+.sub-section ul li a,
+
+.sub-section li a:hover {
+
+	background: none;
+
+	height: auto;
+
+	margin: 0;
+
+	padding: 0;
+
+}
+
+
+
+.sub-section ul li {
+
+	border-bottom: 2px groove #999;
+
+	display: block;
+
+	margin: 0;
+
+	padding: 6px 0;
+
+	width: 100%;
+
+}
+
+
+
+.sub-section ul li a {
+
+	color: #999;
+
+	line-height: 1;
+
+	text-transform: none;
+
+
+
+	-moz-transition: color ease 0.5s;
+
+	-webkit-transition: color ease 0.5s;
+
+	transition: color ease 0.5s;
+
+}
+
+
+
+.sub .sub-section ul li a:hover {
+
+	color: #fff;
+
+}

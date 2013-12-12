@@ -1,0 +1,21 @@
+#featured_details_image_box_footer {
+	background-color: #e0e1e2;
+	height: 26px;
+	margin: 0;
+	padding: 3px 0 1px;
+	width:100%;
+}
+
+#featured_details_image_box_footer img {
+	cursor: pointer;
+}
+
+#featured_details_image_box_footer .left {
+	float: left;
+}
+
+#featured_details_image_box_footer .right {
+	display: none;
+	
+	float: right;
+}

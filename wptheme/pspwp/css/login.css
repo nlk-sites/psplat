@@ -1,0 +1,241 @@
+/* login.css */
+
+
+
+
+
+/* the login singup menu */
+
+#login-signup {
+
+	position: absolute;
+
+	top: 8px;
+
+	right: 0;
+
+	color: white;
+
+	font-size: 11px;
+
+}
+
+
+
+#login-signup img {
+
+	vertical-align: middle;
+
+}
+
+
+
+#login-signup a {
+
+	color: white;
+
+	text-decoration: underline;
+
+}
+
+
+
+
+
+/* default overlay */
+
+.apple-overlay {
+
+
+
+    /* initially overlay is hidden */
+
+    display:none;
+
+
+
+    /* growing background image */
+
+    background-image:url(../images/white.png);
+
+
+
+    /*
+
+      width after the growing animation finishes
+
+      height is automatically calculated
+
+      */
+
+    width:640px;
+
+
+
+    /* some padding to layout nested elements nicely  */
+
+    padding:35px;
+
+
+
+    /* a little styling */
+
+    font-size:11px;
+
+}
+
+
+
+/* default close button positioned on upper right corner */
+
+.apple-overlay .close {
+
+    background-image:url(../images/close.png);
+
+    position:absolute; right:5px; top:5px;
+
+    cursor:pointer;
+
+    height:35px;
+
+    width:35px;
+
+}
+
+
+
+.apple-overlay h2 {
+
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+	font-style: normal;
+
+	font-size: 18px;
+
+	color: #fff;
+
+	margin: 0 0 22px 0;
+
+	line-height: 22px;
+
+	-moz-text-shadow: 0.1em 0.1em #000;
+
+	-webkit-text-shadow: 0.1em 0.1em #000;
+
+	text-shadow: 0.1em 0.1em #000;
+
+}
+
+
+
+/* the login modal */
+
+
+
+.login-modal {
+
+    background-image:url(../images/modal-login.png);
+
+    width:450px;
+
+    padding:35px;
+
+}
+
+
+
+.login {
+
+	margin-top: 18px;
+
+}
+
+
+
+
+
+/* the signup modal */
+
+
+
+.signup-modal {
+
+    background-image:url(../images/modal-signup.png);
+
+    width:450px;
+
+    padding:35px;
+
+}
+
+
+
+.signup {
+
+	background: url(../images/bttn_back_grey.png) repeat-x;
+
+	border: none;
+
+	color: #001f49 !important;
+
+	cursor: pointer;
+
+	font: bold 11px/1 Arial, Helvetica, sans-serif !important;
+
+	margin-top: 18px;
+
+	padding: 4px 20px !important;
+
+	text-decoration: none;
+
+	text-transform: uppercase;
+
+}
+
+
+
+.signup-modal .input_normal {
+
+	width: 200px;
+
+}
+
+
+
+/* register email modal */
+
+
+
+.email-modal {
+
+    background-image:url(../images/modal-login.png);
+
+    width:450px;
+
+    padding:35px;
+
+}
+
+
+
+.send {
+
+	background: url(../images/bttn_back_grey.png) repeat-x;
+
+	border: none;
+
+	color: #001f49 !important;
+
+	cursor: pointer;
+
+	font: bold 11px/1 Arial, Helvetica, sans-serif !important;
+
+	margin-top: 18px;
+
+	padding: 4px 20px !important;
+
+	text-decoration: none;
+
+	text-transform: uppercase;
+
+}
