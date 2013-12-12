@@ -220,6 +220,9 @@ function pspwp_scripts() {
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'pspwp-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
+
+	wp_enqueue_script( 'pspwp-customs', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '1', true );
+
 }
 add_action( 'wp_enqueue_scripts', 'pspwp_scripts' );
 
@@ -270,7 +273,58 @@ function blog_url()
 add_filter('body_class','idx_not_home');
 function idx_not_home($classes) {
 	// add 'class-name' to the $classes array
-	$classes[] = 'not-home';
+	if ( !is_home() )
+		$classes[] = 'not-home';
 	// return the $classes array
 	return $classes;
+}
+
+// IDX forms stuff
+function idx_show_price_options( $default ) { ?>
+	<option value=""><?=$default ?></option>
+	<option value="200000">200K</option>
+	<option value="225000">225K</option>
+	<option value="250000">250K</option>
+	<option value="275000">275K</option>
+	<option value="300000">300K</option>
+	<option value="325000">325K</option>
+	<option value="350000">350K</option>
+	<option value="375000">375K</option>
+	<option value="400000">400K</option>
+	<option value="425000">425K</option>
+	<option value="450000">450K</option>
+	<option value="475000">475K</option>
+	<option value="500000">500K</option>
+	<option value="550000">550K</option>
+	<option value="600000">600K</option>
+	<option value="650000">650K</option>
+	<option value="700000">700K</option>
+	<option value="750000">750K</option>
+	<option value="800000">800K</option>
+	<option value="850000">850K</option>
+	<option value="900000">900K</option>
+	<option value="950000">950K</option>
+	<option value="1000000">1M</option>
+	<option value="1250000">1.25M</option>
+	<option value="1500000">1.5M</option>
+	<option value="1750000">1.75M</option>
+	<option value="2000000">2M</option>
+	<option value="2250000">2.25M</option>
+	<option value="2500000">2.5M</option>
+	<option value="2750000">2.75M</option>
+	<option value="3000000">3M</option>
+	<option value="3250000">3.25M</option>
+	<option value="3500000">3.5M</option>
+	<option value="3750000">3.75M</option>
+	<option value="4000000">4M</option>
+	<option value="4250000">4.25M</option>
+	<option value="4500000">4.5M</option>
+	<option value="4750000">4.75M</option>
+	<option value="5000000">5M</option>
+	<option value="6000000">6M</option>
+	<option value="7000000">7M</option>
+	<option value="8000000">8M</option>
+	<option value="9000000">9M</option>
+	<option value="10000000">10M</option>
+<?php
 }

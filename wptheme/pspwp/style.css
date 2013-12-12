@@ -462,7 +462,8 @@ body.fixed-left-bar .right_main
 
 /* IDX widget overrides */
 body.home .ui-autocomplete {
-	left: 936px !important;
+	margin-left: 50%;
+	left: 236px !important;
 	top: 201px !important;
 	z-index: 100 !important;
 	border-left: 1px solid #999;
@@ -471,7 +472,8 @@ body.home .ui-autocomplete {
 }
 /*body:not(home) .ui-autocomplete {*/
 body.not-home .ui-autocomplete {
-	left: 238px !important;
+	margin-left: 50%;
+	left: -450px !important;
 	top: 152px !important;
 	z-index: 100 !important;
 	border-left: 1px solid #999;
