@@ -32,7 +32,3 @@ jQuery(function($) {
         }
     });
 });
-
-jQuery(function($) {
-    $('ul.ui-autocomplete.ui-menu').after('form#idx-search-form');
-});
