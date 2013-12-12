@@ -280,7 +280,7 @@ function idx_not_home($classes) {
 }
 
 // IDX forms stuff
-function idx_show_price_options( $default ) { ?>
+function idx_show_price_options( $default = 'price' ) { ?>
 	<option value=""><?=$default ?></option>
 	<option value="200000">200K</option>
 	<option value="225000">225K</option>
