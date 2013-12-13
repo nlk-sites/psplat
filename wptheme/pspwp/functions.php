@@ -328,3 +328,17 @@ function idx_show_price_options( $default = 'price' ) { ?>
 	<option value="10000000">10M</option>
 <?php
 }
+
+
+function curl_schools( $zip, $state ) {
+    if (!function_exists('curl_init')){
+		return false;
+    }
+    define( 'APIKEY', 'mbmi6wmtl8monyzfhcai0wxx' ); // greatschools api key
+    $url = "http://api.greatschools.org/schools/nearby?key=" . APIKEY . "&zip=" . $zip . "&state=" . $state . "";
+    $ch = curl_init( $url );
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $result = curl_exec($ch);
+    curl_close($ch);
+	return $result;
+}

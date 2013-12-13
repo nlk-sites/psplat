@@ -5,6 +5,16 @@
  * @package PSPWP
  */
 
+// For schools lookup
+$communityzip = types_render_field( "community-zip", array( "raw"=>"true" ) );
+$communitystate = types_render_field( "community-state", array( "raw"=>"true" ) );
+$nearby_schools = curl_schools( $communityzip, $communitystate );
+if ( $nearby_schools )
+	$schools_xml = new SimpleXMLElement( $nearby_schools );
+
+
+
+
 get_header(); ?>
 
 <style>
@@ -30,7 +40,9 @@ get_header(); ?>
           </div>
            <?php the_post_thumbnail('agent-detail', array('class' => 'agentdetail')); ?>
            <?php dynamic_sidebar('sidebar_community'); ?>
-		   <?php /* ?>
+		   <?php 
+			   
+					  		/* ?>
 		   <div class="featured_heading">
 		        <div class="featured_contact">
 		            Need More Info?
@@ -79,6 +91,7 @@ get_header(); ?>
 				    <li><a href="#tabs-2">Concierge</a></li>
 				    <li><a href="#clistings">Listings</a></li>
 					<li><a href="#featured">Featured Listings</a></li>
+					<?php if ( $nearby_schools ) { ?><li><a href="#nearschools">Nearby Schools</a></li><?php } ?>
 				    <!-- <img class="tab_search_mls_btn" src="<?php bloginfo( 'template_url' ); ?>/images/search_mls_bttn.png" width="104" height="22"> -->
 				  </ul>
 				  <div id="tabs-1">
@@ -163,6 +176,17 @@ get_header(); ?>
 							<?php
 						}
 					?> 	
+				  </div>
+				  <div id="nearschools">
+				  	<div class="clearfix"></div>
+					  	<div>
+					  		<?php if ( $schools_xml ) { ?>
+					  			<h3>Current 'Nearby School' raw XML data</h3>
+			  					<?php var_dump($schools_xml);
+		  					} else { ?>
+		  						<h3>School data not available. Community Zip Code and State required.</h3>
+		  					<?php } ?>
+				  		</div>
 				  </div>
 				</div>
 				
