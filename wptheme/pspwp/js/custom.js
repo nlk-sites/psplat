@@ -14,7 +14,7 @@ jQuery(function($) {
             $(this).attr('name', 'idx-q-Cities').addClass('ui-autocomplete-input');
         }
         else if ( filterAddress.test(theVal) ) {
-            $(this).attr('name', 'idx-q-AddressMasks').removeClass('ui-autocomplete-input').val( '%' + theVal + '%' );
+            $(this).attr('name', 'idx-q-AddressMasks').removeClass('ui-autocomplete-input');
         }
         else if ( filterMls.test(theVal) ) {
             $(this).attr('name', 'idx-q-MlsNumbers').removeClass('ui-autocomplete-input');
@@ -30,4 +30,9 @@ jQuery(function($) {
             $(this).attr('name', 'idx-q-Cities').addClass('ui-autocomplete-input');
         }
     });
+    $('#idx-search-form').submit( function() {
+        var addyVal = $('input[name="idx-q-AddressMasks"]').val();
+        $('input[name="idx-q-AddressMasks"]').val( '%' + addyVal + '%' );
+        return true;
+    }); 
 });
