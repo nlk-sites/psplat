@@ -12,8 +12,15 @@ get_header(); ?>
 		<?php get_sidebar('left'); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
         <div class="right_main_min">
-            <div class="videocode">
+            <!--div class="videocode">
                 <?php echo(types_render_field("video-code", array())); ?>
+            </div-->
+            <div class="psp-slider">
+                <?php 
+                    $slideid = types_render_field( "slidedeck-id-property", array() );
+                    $slider = "[SlideDeck2 id=" . $slideid . "]";
+                    echo do_shortcode( $slider );
+                ?>
             </div>
             <div class="clearfix"></div>
             <br/>

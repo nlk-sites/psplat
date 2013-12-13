@@ -42,7 +42,14 @@ get_header(); ?>
 		<div class="clearfix"></div><br><br><br><br><br>
         </div>
         <div class="right_main_min">
-				<div class="videocode"><?php echo(types_render_field( "video-code", array())); ?></div>
+				<!--div class="videocode"><?php echo(types_render_field( "video-code", array())); ?></div-->
+				<div class="psp-slider">
+					<?php 
+						$slideid = types_render_field( "slidedeck-id-agent", array() );
+						$slider = "[SlideDeck2 id=" . $slideid . "]";
+						echo do_shortcode( $slider );
+					?>
+				</div>
 				<div class="clearfix"></div>
                 <br />
 				<div id="tabs">
