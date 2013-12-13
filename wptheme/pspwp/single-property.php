@@ -18,7 +18,7 @@ get_header(); ?>
             <div class="psp-slider">
                 <?php 
                     $slideid = types_render_field( "slidedeck-id-property", array() );
-                    $slider = "[SlideDeck2 id=" . $slideid . "]";
+                    $slider = "[SlideDeck2 id=" . $slideid . " iframe=1]";
                     echo do_shortcode( $slider );
                 ?>
             </div>
