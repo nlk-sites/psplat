@@ -14,8 +14,7 @@ jQuery(function($) {
             $(this).attr('name', 'idx-q-Cities').addClass('ui-autocomplete-input');
         }
         else if ( filterAddress.test(theVal) ) {
-            $(this).attr('name', 'idx-q-AddressMasks').removeClass('ui-autocomplete-input');
-            $('input#idx-q-AddressMasks').val( '%' + theVal + '%' );
+            $(this).attr('name', 'idx-q-AddressMasks').removeClass('ui-autocomplete-input').val( '%' + theVal + '%' );
         }
         else if ( filterMls.test(theVal) ) {
             $(this).attr('name', 'idx-q-MlsNumbers').removeClass('ui-autocomplete-input');
