@@ -480,3 +480,6 @@ body.not-home .ui-autocomplete {
 	border-right: 1px solid #999;
 	border-bottom: 1px solid #999;
 }
+
+/* custom menu stuff */
+.menu-item.full-width-sub ul.sub-menu-1 { width: 927px; }
