@@ -482,4 +482,4 @@ body.not-home .ui-autocomplete {
 }
 
 /* custom menu stuff */
-.menu-item.full-width-sub ul.sub-menu-1 { width: 927px; }
+#megaMenu ul.megaMenu li.menu-item.full-width-sub ul.sub-menu-1 { width: 927px; }
