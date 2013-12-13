@@ -59,7 +59,7 @@ get_header(); ?>
 				    <li><a href="#listings">My Listings</a></li>
 					<li><a href="#listings2">My Sold Listings</a></li>
 				    <li><a href="#tabs-4">My Blog</a></li>
-				    <img class="tab_search_mls_btn" src="<?php bloginfo( 'template_url' ); ?>/images/search_mls_bttn.png" width="104" height="22">
+				    <!--img class="tab_search_mls_btn" src="<?php bloginfo( 'template_url' ); ?>/images/search_mls_bttn.png" width="104" height="22"-->
 				  </ul>
 				  <div id="tabs-1">
 				    <?php the_content(); ?>
