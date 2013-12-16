@@ -464,21 +464,17 @@ body.fixed-left-bar .right_main
 body.home .ui-autocomplete {
 	margin-left: 50%;
 	left: 236px !important;
-	top: 173px !important;
+	top: 174px !important;
 	z-index: 10000 !important;
-	border-left: 1px solid #999;
-	border-right: 1px solid #999;
-	border-bottom: 1px solid #999;
+	border: 1px solid #999;
 }
 /*body:not(home) .ui-autocomplete {*/
 body.not-home .ui-autocomplete {
 	margin-left: 50%;
 	left: -450px !important;
-	top: 124px !important;
+	top: 125px !important;
 	z-index: 10000 !important;
-	border-left: 1px solid #999;
-	border-right: 1px solid #999;
-	border-bottom: 1px solid #999;
+	border: 1px solid #999;
 }
 
 /* custom menu stuff */
