@@ -33,7 +33,7 @@ get_header(); ?>
 				<hr class="greybar_hr" />
 				<?php 
 					$quote = get_post_meta( get_the_ID(), 'quote', true);
-					if ( !empty($quote) { ?>
+					if ( !empty($quote) ) { ?>
 						<div id="quote">
 							<?=$quote; ?>
 						</div>
