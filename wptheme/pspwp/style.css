@@ -41,13 +41,18 @@ and Blueprint http://www.blueprintcss.org/
 */
 
 
-
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
 
 
 /* =Reset
 
 -------------------------------------------------------------- */
 
+h1, h2, h3, h4, h5, h6 {
+
+	font-family: "Open Sans", arial, sans-serif;
+	
+}
 
 
 /* Alignment */
