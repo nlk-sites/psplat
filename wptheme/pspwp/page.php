@@ -31,6 +31,14 @@ get_header(); ?>
             <?php while ( have_posts() ) : the_post(); ?>
 				<h1><?php the_title(); ?></h1>
 				<hr class="greybar_hr" />
+				<?php 
+					$quote = get_post_meta( get_the_ID(), 'quote', true);
+					if ( !empty($quote) { ?>
+						<div id="quote">
+							<?=$quote; ?>
+						</div>
+					<?php }
+				?>
 				<?php the_content(); ?>
 			<?php endwhile; // end of the loop. ?>
           </div>
