@@ -308,3 +308,64 @@
 
 
 
+#schooltabs table {
+
+	width: 100%;
+
+	text-align: left;
+
+}
+
+#schooltabs table tr {
+
+	border-bottom: 1px solid #ccc;
+
+}
+
+#schooltabs table th {
+
+	text-transform: uppercase;
+
+	padding: 20px 10px 10px;
+
+	font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
+	font-size: 1.2em;
+
+	font-weight: 300;
+
+}
+
+#schooltabs table td {
+
+	vertical-align: top;
+
+}
+
+#schooltabs table p {
+
+	font-size: 1.16em;
+
+	line-height: 1.4em;
+
+	color: #666;
+
+}
+
+#schooltabs table p::first-line {
+
+	font-size: 1.2em;
+
+}
+
+#schooltabs table .bluestar {
+
+	color: #34578f;
+
+}
+
+#schooltabs table .whitestar {
+
+	color: #ccc;
+	
+}

@@ -327,6 +327,7 @@ jQuery(document).ready(function(){
     
     
     jQuery("#tabs").tabs();
+    jQuery("#schooltabs").tabs();
     
     function fixHeights(){
         //equal heights across floats
