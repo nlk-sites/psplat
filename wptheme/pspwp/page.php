@@ -35,7 +35,7 @@ get_header(); ?>
 					$quote = get_post_meta( get_the_ID(), 'quote', true);
 					if ( !empty($quote) ) { ?>
 						<div id="quote">
-							<?=$quote; ?>
+							<p id="quote-text"><?=$quote; ?></p>
 						</div>
 					<?php }
 				?>
