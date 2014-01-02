@@ -262,7 +262,7 @@ get_header(); ?>
 						  							$grades = $grade_range[0] . " to " . $grade_range[1];
 						  							$rating = $school->parentRating;
 						  							$distance = $school->distance . " mi";
-						  							if ( $grade_range[0] == "K" || $grade_range[0] == "PK" ) {
+						  							if ( $grade_range[0] == "K" || $grade_range[0] == "PK" || $grade_range[0] < 6 ) {
 						  							?>
 						  							<tr>
 						  								<td><p><b><?=$name; ?></b><br />
