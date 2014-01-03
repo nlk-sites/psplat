@@ -7,7 +7,7 @@
 
 // For schools lookup
 $communityzip = types_render_field( "community-zip", array( "raw"=>"true" ) );
-$communitystate = types_render_field( "community-state", array( "raw"=>"true" ) );
+$communitystate = "CA"; // types_render_field( "community-state", array( "raw"=>"true" ) );
 $nearby_schools = curl_schools( $communityzip, $communitystate );
 if ( $nearby_schools )
 	$schools_xml = new SimpleXMLElement( $nearby_schools );

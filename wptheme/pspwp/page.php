@@ -43,7 +43,7 @@ get_header(); ?>
 			<?php endwhile; // end of the loop. ?>
           </div>
         </div>
-  		<?php get_sidebar('right'); ?> 
+  		<?php if ( strpos( $_SERVER['REQUEST_URI'],'/idx/advanced/' ) == false) { get_sidebar('right'); } ?> 
 	  	<div class="clearfix"></div>
 	  <?php //include_once("tabbed_listings.php"); ?>
 	</div>

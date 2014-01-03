@@ -162,7 +162,6 @@
 	<div style="height: 0px">
 	&nbsp;
 	</div>	
-	<!--
     <a href="#" class="btn-more"><i class="icon"></i> <span>Expand</span></a>
 
     <div class="pager">
@@ -170,7 +169,6 @@
         <a class="slide-prev"></a> <span class="current-page"></span> <a class="slide-next"></a>
 
     </div>
-	-->
 
     <div class="clearfix"></div>
 
