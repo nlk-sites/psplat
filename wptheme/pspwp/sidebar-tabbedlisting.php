@@ -87,7 +87,7 @@
 		        <div class="t_title" style="margin-bottom: 10px;">
 		           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		        </div>
-		        <div class="clear">
+		        <div>
 		        	<span class="t_label">price</span>&nbsp;<span class="t_txt">$<?php echo number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-current-price', true))); ?></span>
 		        	<br>
 		        	<span class="t_label">bed/bath</span>&nbsp;<span class="t_txt"><?php echo types_render_field("bed", array()); ?> bedroom | <?php echo types_render_field("bath", array()); ?> bathroom</span>
