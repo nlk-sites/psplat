@@ -5,6 +5,14 @@
  * @package PSPWP
  */
 
+// For schools lookup
+$communityzip = types_render_field( "property-zip", array( "raw"=>"true" ) );
+$communitystate = "CA"; // types_render_field( "community-state", array( "raw"=>"true" ) );
+$nearby_schools = curl_schools( $communityzip, $communitystate );
+if ( $nearby_schools )
+    $schools_xml = new SimpleXMLElement( $nearby_schools );
+
+
 get_header(); ?>
 
 <div id="main" role="main">
@@ -54,6 +62,7 @@ get_header(); ?>
                     <li>
                         <a href="#tabs-2">Community Info</a>
                     </li>
+                    <?php if ( $nearby_schools ) { ?><li><a href="#nearschools">Nearby Schools</a></li><?php } ?>
                 </ul>
 				<div id="tabs-3">
                     <?php echo types_render_field("overview", array()); ?>
@@ -79,6 +88,226 @@ get_header(); ?>
                 <div id="tabs-2">
                     <?php echo(types_render_field("community-info", array())); ?>
                 </div>
+
+                <div id="nearschools">
+                    <div class="clearfix"></div>
+                    <div id="schooltabs">
+                        <ul>
+                            <li><a href="#servinghome">Serving this Home</a></li>
+                            <li><a href="#elementaryschool">Nearby Elementary</a></li>
+                            <li><a href="#middleschool">Nearby Middle</a></li>
+                            <li><a href="#highschool">Nearby High</a></li>
+                        </ul>
+                        <div id="servinghome">
+                            <?php if ( $schools_xml ) { ?>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>School Name</th>
+                                            <th>Type</th>
+                                            <th>Grades</th>
+                                            <th>Parent Rating</th>
+                                            <th>Distance</th>
+                                        </tr>
+                                        <?php
+                                            foreach ( $schools_xml->school as $school ) {
+                                                $address = explode( ", ", $school->address );
+                                                $grade_range = explode( "-", $school->gradeRange);
+                                                $grades = $grade_range[0] . " to " . $grade_range[1];
+                                                ?>
+                                                <tr>
+                                                    <td><p><b><?=$school->name; ?></b><br />
+                                                        <?php
+                                                            echo $address[0] . ',<br />';
+                                                            echo $address[1] . ', ' . $address[2] . '<br />';
+                                                            echo $school->phone;
+                                                        ?>
+                                                    </p></td>
+                                                    <td><p><?php echo ucfirst( $school->type ); ?></p></td>
+                                                    <td><p><?=$grades; ?></p></td>
+                                                    <td>
+                                                        <p>
+                                                        <?php
+                                                            for ( $i = 1; $i <= $school->parentRating; $i++ ) {
+                                                                echo '<span class="bluestar">★</span>';
+                                                            }
+                                                            for ( $i = 5; $i > $school->parentRating; $i-- ) {
+                                                                echo '<span class="whitestar">★</span>';
+                                                            }
+                                                        ?>
+                                                    </p>
+                                                    </td>
+                                                    <td><p><?php echo $school->distance . " mi"; ?></p></td>
+                                                </tr>
+                                            <?php }
+                                        ?>
+                                    </tbody>
+                                </table>
+
+                                <?php
+                                } else { ?>
+                                    <h3>School data currently not available.</h3>
+                            <?php } ?>
+                        </div>
+                        <div id="elementaryschool">
+                            <?php if ( $schools_xml ) { ?>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>School Name</th>
+                                            <th>Type</th>
+                                            <th>Grades</th>
+                                            <th>Parent Rating</th>
+                                            <th>Distance</th>
+                                        </tr>
+                                        <?php
+                                            foreach ( $schools_xml->school as $school ) {
+                                                $address = explode( ", ", $school->address );
+                                                $grade_range = explode( "-", $school->gradeRange);
+                                                $grades = $grade_range[0] . " to " . $grade_range[1];
+                                                if ( $grade_range[0] == "K" || $grade_range[0] == "PK" || $grade_range[0] < 6 ) {
+                                                ?>
+                                                <tr>
+                                                    <td><p><b><?=$school->name; ?></b><br />
+                                                        <?php
+                                                            echo $address[0] . ',<br />';
+                                                            echo $address[1] . ', ' . $address[2] . '<br />';
+                                                            echo $school->phone;
+                                                        ?>
+                                                    </p></td>
+                                                    <td><p><?php echo ucfirst( $school->type ); ?></p></td>
+                                                    <td><p><?=$grades; ?></p></td>
+                                                    <td>
+                                                        <p>
+                                                        <?php
+                                                            for ( $i = 1; $i <= $school->parentRating; $i++ ) {
+                                                                echo '<span class="bluestar">★</span>';
+                                                            }
+                                                            for ( $i = 5; $i > $school->parentRating; $i-- ) {
+                                                                echo '<span class="whitestar">★</span>';
+                                                            }
+                                                        ?>
+                                                    </p>
+                                                    </td>
+                                                    <td><p><?php echo $school->distance . " mi"; ?></p></td>
+                                                </tr>
+                                                <?php }
+                                            }
+                                        ?>
+                                    </tbody>
+                                </table>
+                                <?php
+                                } else { ?>
+                                    <h3>School data currently not available.</h3>
+                            <?php } ?>
+                        </div>
+                        <div id="middleschool">
+                            <?php if ( $schools_xml ) { ?>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>School Name</th>
+                                            <th>Type</th>
+                                            <th>Grades</th>
+                                            <th>Parent Rating</th>
+                                            <th>Distance</th>
+                                        </tr>
+                                        <?php
+                                            foreach ( $schools_xml->school as $school ) {
+                                                $address = explode( ", ", $school->address );
+                                                $grade_range = explode( "-", $school->gradeRange);
+                                                $grades = $grade_range[0] . " to " . $grade_range[1];
+                                                if ( ( $grade_range[0] <= 6 || $grade_range[0] == "K" || $grade_range[0] == "PK" ) && $grade_range[1] >= 8 ) {
+                                                ?>
+                                                <tr>
+                                                    <td><p><b><?=$school->name; ?></b><br />
+                                                        <?php
+                                                            echo $address[0] . ',<br />';
+                                                            echo $address[1] . ', ' . $address[2] . '<br />';
+                                                            echo $school->phone;
+                                                        ?>
+                                                    </p></td>
+                                                    <td><p><?php echo ucfirst( $school->type ); ?></p></td>
+                                                    <td><p><?=$grades; ?></p></td>
+                                                    <td>
+                                                        <p>
+                                                        <?php
+                                                            for ( $i = 1; $i <= $school->parentRating; $i++ ) {
+                                                                echo '<span class="bluestar">★</span>';
+                                                            }
+                                                            for ( $i = 5; $i > $school->parentRating; $i-- ) {
+                                                                echo '<span class="whitestar">★</span>';
+                                                            }
+                                                        ?>
+                                                    </p>
+                                                    </td>
+                                                    <td><p><?php echo $school->distance . " mi"; ?></p></td>
+                                                </tr>
+                                                <?php }
+                                            }
+                                        ?>
+                                    </tbody>
+                                </table>
+                                <?php
+                                } else { ?>
+                                    <h3>School data currently not available.</h3>
+                            <?php } ?>
+                        </div>
+                        <div id="highschool">
+                            <?php if ( $schools_xml ) { ?>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th>School Name</th>
+                                            <th>Type</th>
+                                            <th>Grades</th>
+                                            <th>Parent Rating</th>
+                                            <th>Distance</th>
+                                        </tr>
+                                        <?php
+                                            foreach ( $schools_xml->school as $school ) {
+                                                $address = explode( ", ", $school->address );
+                                                $grade_range = explode( "-", $school->gradeRange);
+                                                $grades = $grade_range[0] . " to " . $grade_range[1];
+                                                if ( $grade_range[1] >= 9 ) {
+                                                ?>
+                                                <tr>
+                                                    <td><p><b><?=$school->name; ?></b><br />
+                                                        <?php
+                                                            echo $address[0] . ',<br />';
+                                                            echo $address[1] . ', ' . $address[2] . '<br />';
+                                                            echo $school->phone;
+                                                        ?>
+                                                    </p></td>
+                                                    <td><p><?php echo ucfirst( $school->type ); ?></p></td>
+                                                    <td><p><?=$grades; ?></p></td>
+                                                    <td>
+                                                        <p>
+                                                        <?php
+                                                            for ( $i = 1; $i <= $school->parentRating; $i++ ) {
+                                                                echo '<span class="bluestar">★</span>';
+                                                            }
+                                                            for ( $i = 5; $i > $school->parentRating; $i-- ) {
+                                                                echo '<span class="whitestar">★</span>';
+                                                            }
+                                                        ?>
+                                                    </p>
+                                                    </td>
+                                                    <td><p><?php echo $school->distance . " mi"; ?></p></td>
+                                                </tr>
+                                                <?php }
+                                            }
+                                        ?>
+                                    </tbody>
+                                </table>
+                                <?php
+                                } else { ?>
+                                    <h3>School data currently not available.</h3>
+                            <?php } ?>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 	<?php endwhile; // end of the loop. ?>	
