@@ -88,7 +88,6 @@ get_header(); ?>
         			      					<span class="compare_column_details_price_subtxt">Original Price: $<?php echo number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-orginal-price', true))); ?></span>
         			                		<span class="compare_column_details_label">bed/bath</span>&nbsp;<span class="compare_column_details_txt"><?php echo types_render_field("bed", array()); ?> bedroom | <?php echo types_render_field("bath", array()); ?> bathroom</span><br>
         			      					<span class="compare_column_details_label">sq/ft</span>&nbsp;<span class="compare_column_details_txt"><?php echo types_render_field("square-feet", array()); ?></span><br>
-        			                		<span class="compare_column_details_label">days on market</span>&nbsp;<span class="compare_column_details_txt"><?php echo types_render_field("days-on-market", array()); ?></span><br>
         			            		</div>
         			                </div>
                         	</div>

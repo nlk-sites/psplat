@@ -85,7 +85,7 @@ get_header(); ?>
 		      				<span class="featured_price_subtxt">Original Price: $<?php echo number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-orginal-price', true))); ?></span>
 		                    <span class="featured_label">bed/bath</span>&nbsp;<span class="featured_txt"><?php echo types_render_field("bed", array()); ?> bedroom | <?php echo types_render_field("bath", array()); ?> bathroom</span><br>
 		      				<span class="featured_label">sq/ft</span>&nbsp;<span class="featured_txt"><?php echo types_render_field("square-feet", array()); ?></span><br>
-		                    <span class="featured_label">days on market</span>&nbsp;<span class="featured_txt"><?php echo types_render_field("days-on-market", array()); ?></span><br>
+		                    
 		    				
 		           		</div>
 		                <div class="featured_links">
