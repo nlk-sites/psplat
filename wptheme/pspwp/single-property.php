@@ -72,7 +72,7 @@ get_header(); ?>
 				<div id="tabs-1">
 
                     <?php
-                        $mlsnum = echo types_render_field("mls-number", array());
+                        $mlsnum = types_render_field("mls-number", array());
                         $idxcode = '[idx-listing mlsnumber="' . $mlsnum . '" showall="true"]';
                         echo do_shortcode( $idxcode );
                     ?>
