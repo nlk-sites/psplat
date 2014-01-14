@@ -488,3 +488,11 @@ body.not-home .ui-autocomplete {
 
 body.single-property .dsidx-primary-photo { display: none; }
 body.single-property .dsidx-photos { display: none; }
+body.single-property #tabs-1 table { margin: auto !important; }
+body.single-property #tabs-1 tr th {
+	padding: 6px 0;
+}
+body.single-property #tabs-1 tr.dsidx-secondary-row th {
+	background-color: #efefef;
+}
+body.single-property #tabs-1 iframe.dsidx-shortcode-map { margin: auto !important; }
