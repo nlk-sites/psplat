@@ -72,9 +72,12 @@ get_header(); ?>
 				<div id="tabs-1">
 
                     <?php
-                        $idxdet = '[idx-listing mlsnumber="140002334"]';
-                        echo do_shortcode( $idxdet );
+                        $mlsnum = echo types_render_field("mls-number", array());
+                        $idxcode = '[idx-listing mlsnumber="' . $mlsnum . '" showall="true"]';
+                        echo do_shortcode( $idxcode );
                     ?>
+
+                    <?php /* Removed: old listing details
                 	<div class="community_overview">
                 		<div id="mls_details_right" style="width: 100%;">
 			                	<div class="mls_details_details">
@@ -91,6 +94,7 @@ get_header(); ?>
 					<hr/>
 					<div class="clear"></div>
                     <?php the_content(); ?>
+                    */ ?>
                 </div>
                 <div id="tabs-2">
                     <?php echo(types_render_field("community-info", array())); ?>
