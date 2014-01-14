@@ -32,6 +32,7 @@ get_header(); ?>
             </div>
             <div class="clearfix"></div>
             <br/>
+            <?php /* Removed: Gallery link & fancybox
             <div style="display:none;">
                 <?php
                 $galleryimages = get_post_meta(get_the_ID(), 'wpcf-gallery-image');
@@ -51,6 +52,7 @@ get_header(); ?>
             <?php if ($firstimg != '#'): ?>
             <a href="<?php echo $firstimg; ?>" class="fancybox" rel="gallery-<?php echo get_the_ID(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_photo_gallery.png" width="115" height="30" class="tab_search_mls_btn"></a>
             <?php endif; ?>
+            */ ?>
             <div id="tabs">
                 <ul>
                     <li>
@@ -68,6 +70,11 @@ get_header(); ?>
                     <?php echo types_render_field("overview", array()); ?>
                 </div>
 				<div id="tabs-1">
+
+                    <?php
+                        $idxdet = '[idx-listing mlsnumber="140002334"]';
+                        echo do_shortcode( $idxdet );
+                    ?>
                 	<div class="community_overview">
                 		<div id="mls_details_right" style="width: 100%;">
 			                	<div class="mls_details_details">

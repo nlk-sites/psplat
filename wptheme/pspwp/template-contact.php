@@ -61,7 +61,7 @@ get_header(); ?>
 			<?php endwhile;  wp_reset_postdata(); ?>
           </div>
         </div>
-		<?php get_sidebar('right'); ?>
+		<?php get_sidebar('contact'); ?>
 	  	<div class="clearfix"></div>
 	  	<?php get_sidebar("tabbedlisting"); ?>
 	  	<div class="clearfix"></div>

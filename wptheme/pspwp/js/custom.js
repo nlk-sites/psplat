@@ -36,3 +36,9 @@ jQuery(function($) {
         return true;
     }); 
 });
+
+// Set right side-bar no smaller than left content
+jQuery(function($) {
+    var h = $('.left_main_accnt').height();
+    $('.right_bar').css('min-height', h);
+});
