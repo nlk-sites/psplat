@@ -164,20 +164,31 @@
 <?php wp_footer(); ?>
 <script type="text/javascript">
 jQuery(function() { 	
-	jQuery('#agentmenuimg').each(function() {
+	jQuery('#agentmenuimg, #comenuimg').each(function() {
 		var agentog = jQuery(this).attr('src');
 		jQuery(this).data('agentog', agentog).bind('reset', function() {
 			jQuery(this).attr('src',jQuery(this).data('agentog'));
 		});
 	});
 	jQuery('#menu-item-162 a img').each(function() {
-		console.log('js for '+ jQuery(this).attr('src'));
+		//console.log('js for '+ jQuery(this).attr('src'));
 		jQuery(this).parent().bind({
 			'mouseover': function() {
 				jQuery('#agentmenuimg').attr('src',jQuery(this).children('img').attr('src'));
 			},
 			'mouseout': function() {
 				jQuery('#agentmenuimg').trigger('reset');
+			}
+		});
+	});
+	jQuery('#menu-item-392 a img').each(function() {
+		//console.log('js for '+ jQuery(this).attr('src'));
+		jQuery(this).parent().bind({
+			'mouseover': function() {
+				jQuery('#comenuimg').attr('src',jQuery(this).children('img').attr('src'));
+			},
+			'mouseout': function() {
+				jQuery('#comenuimg').trigger('reset');
 			}
 		});
 	});
