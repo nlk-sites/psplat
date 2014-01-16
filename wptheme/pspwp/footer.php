@@ -181,7 +181,7 @@ jQuery(function() {
 			}
 		});
 	});
-	jQuery('#menu-item-392 a img').each(function() {
+	jQuery('#menu-item-161 a img').each(function() {
 		//console.log('js for '+ jQuery(this).attr('src'));
 		jQuery(this).parent().bind({
 			'mouseover': function() {
