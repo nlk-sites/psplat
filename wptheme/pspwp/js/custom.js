@@ -56,4 +56,3 @@ jQuery(function($) {
         $('#pop-overlay').remove();
     })
 });
-
