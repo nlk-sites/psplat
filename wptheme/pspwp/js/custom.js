@@ -1,5 +1,8 @@
 //idx search widget multi search box
 jQuery(function($) {
+    if ( $('#idx-q-search-for').length < 1 ) {
+        $('#idx-q-search-form').append('<input type="hidden" name="idx-q-search-for" id="idx-q-search-for" />');
+    }
     $('#idx-q-Cities').bind("blur keyup", function(){
         var theVal = $(this).val(),
             filterZip = new RegExp("^[0-9]{5}([-][0-9]{4})?$"),
@@ -29,6 +32,7 @@ jQuery(function($) {
         else {
             $(this).attr('name', 'idx-q-Cities').addClass('ui-autocomplete-input');
         }
+        $('input[name="idx-search-for"]').attr( 'value', theVal );
     });
     $('#idx-search-form').submit( function() {
         var addyVal = $('input[name="idx-q-AddressMasks"]').val();

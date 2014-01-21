@@ -289,52 +289,52 @@ function idx_not_home($classes) {
 }
 
 // IDX forms stuff
-function idx_show_price_options( $default = 'price' ) { ?>
+function idx_show_price_options( $default = 'price', $this = NULL ) { ?>
 	<option value=""><?=$default ?></option>
-	<option value="200000">200K</option>
-	<option value="225000">225K</option>
-	<option value="250000">250K</option>
-	<option value="275000">275K</option>
-	<option value="300000">300K</option>
-	<option value="325000">325K</option>
-	<option value="350000">350K</option>
-	<option value="375000">375K</option>
-	<option value="400000">400K</option>
-	<option value="425000">425K</option>
-	<option value="450000">450K</option>
-	<option value="475000">475K</option>
-	<option value="500000">500K</option>
-	<option value="550000">550K</option>
-	<option value="600000">600K</option>
-	<option value="650000">650K</option>
-	<option value="700000">700K</option>
-	<option value="750000">750K</option>
-	<option value="800000">800K</option>
-	<option value="850000">850K</option>
-	<option value="900000">900K</option>
-	<option value="950000">950K</option>
-	<option value="1000000">1M</option>
-	<option value="1250000">1.25M</option>
-	<option value="1500000">1.5M</option>
-	<option value="1750000">1.75M</option>
-	<option value="2000000">2M</option>
-	<option value="2250000">2.25M</option>
-	<option value="2500000">2.5M</option>
-	<option value="2750000">2.75M</option>
-	<option value="3000000">3M</option>
-	<option value="3250000">3.25M</option>
-	<option value="3500000">3.5M</option>
-	<option value="3750000">3.75M</option>
-	<option value="4000000">4M</option>
-	<option value="4250000">4.25M</option>
-	<option value="4500000">4.5M</option>
-	<option value="4750000">4.75M</option>
-	<option value="5000000">5M</option>
-	<option value="6000000">6M</option>
-	<option value="7000000">7M</option>
-	<option value="8000000">8M</option>
-	<option value="9000000">9M</option>
-	<option value="10000000">10M</option>
+	<option value="200000" <?php if ( $this == 200000 ) { echo 'selected="selected"'; } ?> >200K</option>
+	<option value="225000" <?php if ( $this == 225000 ) { echo 'selected="selected"'; } ?> >225K</option>
+	<option value="250000" <?php if ( $this == 250000 ) { echo 'selected="selected"'; } ?> >250K</option>
+	<option value="275000" <?php if ( $this == 275000 ) { echo 'selected="selected"'; } ?> >275K</option>
+	<option value="300000" <?php if ( $this == 300000 ) { echo 'selected="selected"'; } ?> >300K</option>
+	<option value="325000" <?php if ( $this == 325000 ) { echo 'selected="selected"'; } ?> >325K</option>
+	<option value="350000" <?php if ( $this == 350000 ) { echo 'selected="selected"'; } ?> >350K</option>
+	<option value="375000" <?php if ( $this == 375000 ) { echo 'selected="selected"'; } ?> >375K</option>
+	<option value="400000" <?php if ( $this == 400000 ) { echo 'selected="selected"'; } ?> >400K</option>
+	<option value="425000" <?php if ( $this == 425000 ) { echo 'selected="selected"'; } ?> >425K</option>
+	<option value="450000" <?php if ( $this == 450000 ) { echo 'selected="selected"'; } ?> >450K</option>
+	<option value="475000" <?php if ( $this == 475000 ) { echo 'selected="selected"'; } ?> >475K</option>
+	<option value="500000" <?php if ( $this == 500000 ) { echo 'selected="selected"'; } ?> >500K</option>
+	<option value="550000" <?php if ( $this == 550000 ) { echo 'selected="selected"'; } ?> >550K</option>
+	<option value="600000" <?php if ( $this == 600000 ) { echo 'selected="selected"'; } ?> >600K</option>
+	<option value="650000" <?php if ( $this == 650000 ) { echo 'selected="selected"'; } ?> >650K</option>
+	<option value="700000" <?php if ( $this == 700000 ) { echo 'selected="selected"'; } ?> >700K</option>
+	<option value="750000" <?php if ( $this == 750000 ) { echo 'selected="selected"'; } ?> >750K</option>
+	<option value="800000" <?php if ( $this == 800000 ) { echo 'selected="selected"'; } ?> >800K</option>
+	<option value="850000" <?php if ( $this == 850000 ) { echo 'selected="selected"'; } ?> >850K</option>
+	<option value="900000" <?php if ( $this == 900000 ) { echo 'selected="selected"'; } ?> >900K</option>
+	<option value="950000" <?php if ( $this == 950000 ) { echo 'selected="selected"'; } ?> >950K</option>
+	<option value="1000000" <?php if ( $this == 1000000 ) { echo 'selected="selected"'; } ?> >1M</option>
+	<option value="1250000" <?php if ( $this == 1250000 ) { echo 'selected="selected"'; } ?> >1.25M</option>
+	<option value="1500000" <?php if ( $this == 1500000 ) { echo 'selected="selected"'; } ?> >1.5M</option>
+	<option value="1750000" <?php if ( $this == 1750000 ) { echo 'selected="selected"'; } ?> >1.75M</option>
+	<option value="2000000" <?php if ( $this == 2000000 ) { echo 'selected="selected"'; } ?> >2M</option>
+	<option value="2250000" <?php if ( $this == 2250000 ) { echo 'selected="selected"'; } ?> >2.25M</option>
+	<option value="2500000" <?php if ( $this == 2500000 ) { echo 'selected="selected"'; } ?> >2.5M</option>
+	<option value="2750000" <?php if ( $this == 2750000 ) { echo 'selected="selected"'; } ?> >2.75M</option>
+	<option value="3000000" <?php if ( $this == 3000000 ) { echo 'selected="selected"'; } ?> >3M</option>
+	<option value="3250000" <?php if ( $this == 3250000 ) { echo 'selected="selected"'; } ?> >3.25M</option>
+	<option value="3500000" <?php if ( $this == 3500000 ) { echo 'selected="selected"'; } ?> >3.5M</option>
+	<option value="3750000" <?php if ( $this == 3750000 ) { echo 'selected="selected"'; } ?> >3.75M</option>
+	<option value="4000000" <?php if ( $this == 4000000 ) { echo 'selected="selected"'; } ?> >4M</option>
+	<option value="4250000" <?php if ( $this == 4250000 ) { echo 'selected="selected"'; } ?> >4.25M</option>
+	<option value="4500000" <?php if ( $this == 4500000 ) { echo 'selected="selected"'; } ?> >4.5M</option>
+	<option value="4750000" <?php if ( $this == 4750000 ) { echo 'selected="selected"'; } ?> >4.75M</option>
+	<option value="5000000" <?php if ( $this == 5000000 ) { echo 'selected="selected"'; } ?> >5M</option>
+	<option value="6000000" <?php if ( $this == 6000000 ) { echo 'selected="selected"'; } ?> >6M</option>
+	<option value="7000000" <?php if ( $this == 7000000 ) { echo 'selected="selected"'; } ?> >7M</option>
+	<option value="8000000" <?php if ( $this == 8000000 ) { echo 'selected="selected"'; } ?> >8M</option>
+	<option value="9000000" <?php if ( $this == 9000000 ) { echo 'selected="selected"'; } ?> >9M</option>
+	<option value="10000000" <?php if ( $this == 10000000 ) { echo 'selected="selected"'; } ?> >10M</option>
 <?php
 }
 

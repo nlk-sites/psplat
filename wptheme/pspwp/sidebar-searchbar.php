@@ -32,11 +32,29 @@
 
 </style>
 
+<?php
+
+if ( isset( $_GET['idx-q-AddressMasks'] ) ) {
+	$search_term = $_GET['idx-q-AddressMasks'];
+	$cleanSearch = ucwords( preg_replace('/%/', '', $search_term) );
+}
+else {
+	$url = $_SERVER['REQUEST_URI'];
+	$parts = parse_url( $url );
+	$path_parts = explode( '/', $parts['path'] );
+	$search_term = $path_parts[ count( $path_parts ) - 2 ];
+	$cleanSearch = ucwords( strtr( urldecode( $search_term ), '-', ' ' ) );
+}
+
+?>
+
 <div class="sbr s-coll clearfix">
 
     <form method="get" action="<?php bloginfo('url'); ?>/idx/" id="idx-search-form">
 
-    	<input name="idx-q-Cities" id="idx-q-Cities" class="sbr-srch" type="text" placeholder="Search: City, Zipcode, Address" />
+    	<input name="idx-q-Cities" id="idx-q-Cities" class="sbr-srch" type="text" placeholder="Search: City, Zipcode, Address" value="<?=$cleanSearch; ?>" />
+
+    	<input type="hidden" name="idx-q-search-for" id="idx-q-search-for" />
 
         <div class="smallOption" id="smallOption">
 
@@ -48,15 +66,15 @@
 
 	        <select class="sbr-type" name="idx-q-PropertyTypes" id="idx-q-PropertyTypes">
 
-	            <option value="">Show All</option>
+	            <option value="" <?php if ( $_GET['idx-q-PropertyTypes'] == '' ) { echo 'selected="selected"'; } ?> >Show All</option>
 
-				<option value="336">Residential / Detached</option>
+				<option value="336" <?php if ( $_GET['idx-q-PropertyTypes'] == 336 ) { echo 'selected="selected"'; } ?> >Residential / Detached</option>
 
-				<option value="339">Residential / All Other Attached</option>
+				<option value="339" <?php if ( $_GET['idx-q-PropertyTypes'] == 339 ) { echo 'selected="selected"'; } ?> >Residential / All Other Attached</option>
 
-				<option value="341">Lot / Land</option>
+				<option value="341" <?php if ( $_GET['idx-q-PropertyTypes'] == 341 ) { echo 'selected="selected"'; } ?> >Lot / Land</option>
 
-				<option value="343">Rental</option>
+				<option value="343" <?php if ( $_GET['idx-q-PropertyTypes'] == 343 ) { echo 'selected="selected"'; } ?> >Rental</option>
 
 	        </select>
 
@@ -68,13 +86,13 @@
 
             <select class="sbr-price" name="idx-q-PriceMin" id="idx-q-PriceMin">
 
-                <?php idx_show_price_options( 'no min'); ?>
+                <?php idx_show_price_options( 'no min', $_GET['idx-q-PriceMin'] ); ?>
 
             </select>
 
             <select class="sbr-price" name="idx-q-PriceMax" id="idx-q-PriceMax">
 
-                <?php idx_show_price_options( 'no max'); ?>
+                <?php idx_show_price_options( 'no max', $_GET['idx-q-PriceMax'] ); ?>
 
             </select>
 
@@ -86,37 +104,37 @@
 
             <select class="sbr-beds" name="idx-q-BedsMin" id="idx-q-BedsMin">
 
-                <option value="">no min</option>
+                <option value="" <?php if ( $_GET['idx-q-BedsMin'] == '' ) { echo 'selected="selected"'; } ?> >no min</option>
 
-                <option value="0">0</option>
+                <option value="0" <?php if ( $_GET['idx-q-BedsMin'] == '0' ) { echo 'selected="selected"'; } ?> >0</option>
 
-                <option value="1">1</option>
+                <option value="1" <?php if ( $_GET['idx-q-BedsMin'] == 1 ) { echo 'selected="selected"'; } ?> >1</option>
 
-                <option value="2">2</option>
+                <option value="2" <?php if ( $_GET['idx-q-BedsMin'] == 2 ) { echo 'selected="selected"'; } ?> >2</option>
 
-                <option value="3">3</option>
+                <option value="3" <?php if ( $_GET['idx-q-BedsMin'] == 3 ) { echo 'selected="selected"'; } ?> >3</option>
 
-                <option value="4">4</option>
+                <option value="4" <?php if ( $_GET['idx-q-BedsMin'] == 4 ) { echo 'selected="selected"'; } ?> >4</option>
 
-                <option value="5">5</option>
+                <option value="5" <?php if ( $_GET['idx-q-BedsMin'] == 5 ) { echo 'selected="selected"'; } ?> >5</option>
 
             </select>
 
             <select class="sbr-beds" name="idx-q-BedsMax" id="idx-q-BedsMax">
 
-                <option value="">no max</option>
+                <option value="" <?php if ( $_GET['idx-q-BedsMax'] == '' ) { echo 'selected="selected"'; } ?> >no max</option>
 
-                <option value="1">1</option>
+                <option value="1" <?php if ( $_GET['idx-q-BedsMax'] == 1 ) { echo 'selected="selected"'; } ?> >1</option>
 
-                <option value="2">2</option>
+                <option value="2" <?php if ( $_GET['idx-q-BedsMax'] == 2 ) { echo 'selected="selected"'; } ?> >2</option>
 
-                <option value="3">3</option>
+                <option value="3" <?php if ( $_GET['idx-q-BedsMax'] == 3 ) { echo 'selected="selected"'; } ?> >3</option>
 
-                <option value="4">4</option>
+                <option value="4" <?php if ( $_GET['idx-q-BedsMax'] == 4 ) { echo 'selected="selected"'; } ?> >4</option>
 
-                <option value="5">5</option>
+                <option value="5" <?php if ( $_GET['idx-q-BedsMax'] == 5 ) { echo 'selected="selected"'; } ?> >5</option>
 
-                <option value="6">6</option>
+                <option value="6" <?php if ( $_GET['idx-q-BedsMax'] == 6 ) { echo 'selected="selected"'; } ?> >6</option>
 
             </select>
 
@@ -132,15 +150,15 @@
 
 					<select class="sbr-type" name="idx-q-PropertyTypes">
 
-			            <option value="">Show All</option>
+						<option value="" <?php if ( $_GET['idx-q-PropertyTypes'] == '' ) { echo 'selected="selected"'; } ?> >Show All</option>
 
-						<option value="336">Residential / Detached</option>
+						<option value="336" <?php if ( $_GET['idx-q-PropertyTypes'] == 336 ) { echo 'selected="selected"'; } ?> >Residential / Detached</option>
 
-						<option value="339">Residential / All Other Attached</option>
+						<option value="339" <?php if ( $_GET['idx-q-PropertyTypes'] == 339 ) { echo 'selected="selected"'; } ?> >Residential / All Other Attached</option>
 
-						<option value="343">Rental</option>
+						<option value="341" <?php if ( $_GET['idx-q-PropertyTypes'] == 341 ) { echo 'selected="selected"'; } ?> >Lot / Land</option>
 
-						<option value="341">Lot / Land</option>
+						<option value="343" <?php if ( $_GET['idx-q-PropertyTypes'] == 343 ) { echo 'selected="selected"'; } ?> >Rental</option>
 
 			        </select>
 
@@ -162,17 +180,19 @@
 
 	                        <select class="select_small" name="idx-q-BedsMin" id="idx-q-BedsMin">
 
-	                            <option value="">no min</option>
+	                            <option value="" <?php if ( $_GET['idx-q-BedsMin'] == '' ) { echo 'selected="selected"'; } ?> >no min</option>
 
-	                            <option value="1">1</option>
+				                <option value="0" <?php if ( $_GET['idx-q-BedsMin'] == 0 ) { echo 'selected="selected"'; } ?> >0</option>
 
-	                            <option value="2">2</option>
+				                <option value="1" <?php if ( $_GET['idx-q-BedsMin'] == 1 ) { echo 'selected="selected"'; } ?> >1</option>
 
-	                            <option value="3">3</option>
+				                <option value="2" <?php if ( $_GET['idx-q-BedsMin'] == 2 ) { echo 'selected="selected"'; } ?> >2</option>
 
-	                            <option value="4">4</option>
+				                <option value="3" <?php if ( $_GET['idx-q-BedsMin'] == 3 ) { echo 'selected="selected"'; } ?> >3</option>
 
-	                            <option value="5">5</option>
+				                <option value="4" <?php if ( $_GET['idx-q-BedsMin'] == 4 ) { echo 'selected="selected"'; } ?> >4</option>
+
+				                <option value="5" <?php if ( $_GET['idx-q-BedsMin'] == 5 ) { echo 'selected="selected"'; } ?> >5</option>
 
 	                        </select>
 
@@ -190,17 +210,19 @@
 
 	                        <select class="select_small" name="idx-q-BedsMax" id="idx-q-BedsMax">
 
-	                            <option value="">no max</option>
+	                            <option value="" <?php if ( $_GET['idx-q-BedsMax'] == '' ) { echo 'selected="selected"'; } ?> >no max</option>
 
-								<option value="1">1</option>
+				                <option value="1" <?php if ( $_GET['idx-q-BedsMax'] == 1 ) { echo 'selected="selected"'; } ?> >1</option>
 
-	                            <option value="2">2</option>
+				                <option value="2" <?php if ( $_GET['idx-q-BedsMax'] == 2 ) { echo 'selected="selected"'; } ?> >2</option>
 
-	                            <option value="3">3</option>
+				                <option value="3" <?php if ( $_GET['idx-q-BedsMax'] == 3 ) { echo 'selected="selected"'; } ?> >3</option>
 
-	                            <option value="4">4</option>
+				                <option value="4" <?php if ( $_GET['idx-q-BedsMax'] == 4 ) { echo 'selected="selected"'; } ?> >4</option>
 
-	                            <option value="5">5</option>
+				                <option value="5" <?php if ( $_GET['idx-q-BedsMax'] == 5 ) { echo 'selected="selected"'; } ?> >5</option>
+
+				                <option value="6" <?php if ( $_GET['idx-q-BedsMax'] == 6 ) { echo 'selected="selected"'; } ?> >6</option>
 
 	                        </select>
 
@@ -224,17 +246,17 @@
 
 	                        <select class="select_small" name="idx-q-BathsMin" id="idx-q-BathsMin">
 
-	                            <option value="">no min</option>
+	                            <option value="" <?php if ( $_GET['idx-q-BathsMin'] == '' ) { echo 'selected="selected"'; } ?> >no min</option>
 
-	                            <option value="1">1</option>
+	                            <option value="1" <?php if ( $_GET['idx-q-BathsMin'] == 1 ) { echo 'selected="selected"'; } ?> >1</option>
 
-	                            <option value="2">2</option>
+	                            <option value="2" <?php if ( $_GET['idx-q-BathsMin'] == 2 ) { echo 'selected="selected"'; } ?> >2</option>
 
-	                            <option value="3">3</option>
+	                            <option value="3" <?php if ( $_GET['idx-q-BathsMin'] == 3 ) { echo 'selected="selected"'; } ?> >3</option>
 
-	                            <option value="4">4</option>
+	                            <option value="4" <?php if ( $_GET['idx-q-BathsMin'] == 4 ) { echo 'selected="selected"'; } ?> >4</option>
 
-	                            <option value="5">5</option>
+	                            <option value="5" <?php if ( $_GET['idx-q-BathsMin'] == 5 ) { echo 'selected="selected"'; } ?> >5</option>
 
 	                        </select>
 
@@ -252,17 +274,17 @@
 
 	                        <select class="select_small" name="idx-q-BathsMax" id="idx-q-BathsMax">
 
-	                            <option value="">no max</option>
+	                            <option value="" <?php if ( $_GET['idx-q-BathsMax'] == '' ) { echo 'selected="selected"'; } ?> >no max</option>
 
-								<option value="1">1</option>
+								<option value="1" <?php if ( $_GET['idx-q-BathsMax'] == 1 ) { echo 'selected="selected"'; } ?> >1</option>
 
-	                            <option value="2">2</option>
+	                            <option value="2" <?php if ( $_GET['idx-q-BathsMax'] == 2 ) { echo 'selected="selected"'; } ?> >2</option>
 
-	                            <option value="3">3</option>
+	                            <option value="3" <?php if ( $_GET['idx-q-BathsMax'] == 3 ) { echo 'selected="selected"'; } ?> >3</option>
 
-	                            <option value="4">4</option>
+	                            <option value="4" <?php if ( $_GET['idx-q-BathsMax'] == 4 ) { echo 'selected="selected"'; } ?> >4</option>
 
-	                            <option value="5">5</option>
+	                            <option value="5" <?php if ( $_GET['idx-q-BathsMax'] == 5 ) { echo 'selected="selected"'; } ?> >5</option>
 
 	                        </select>
 
@@ -286,27 +308,27 @@
 
                         <select class="select_medium" name="idx-q-PriceMin" id="idx-q-PriceMin">
 
-                            <option value="">no min</option>
+                            <option value="" <?php if ( $_GET['idx-q-PriceMin'] == '' ) { echo 'selected="selected"'; } ?> >no min</option>
 
-                            <option value="200000">200K</option>
+                            <option value="200000" <?php if ( $_GET['idx-q-PriceMin'] == 200000 ) { echo 'selected="selected"'; } ?> >200K</option>
 
-                            <option value="300000">300K</option>
+                            <option value="300000" <?php if ( $_GET['idx-q-PriceMin'] == 300000 ) { echo 'selected="selected"'; } ?> >300K</option>
 
-                            <option value="400000">400K</option>
+                            <option value="400000" <?php if ( $_GET['idx-q-PriceMin'] == 400000 ) { echo 'selected="selected"'; } ?> >400K</option>
 
-                            <option value="500000">500K</option>
+                            <option value="500000" <?php if ( $_GET['idx-q-PriceMin'] == 500000 ) { echo 'selected="selected"'; } ?> >500K</option>
 
-                            <option value="700000">700K</option>
+                            <option value="700000" <?php if ( $_GET['idx-q-PriceMin'] == 700000 ) { echo 'selected="selected"'; } ?> >700K</option>
 
-                            <option value="1000000">1M</option>
+                            <option value="1000000" <?php if ( $_GET['idx-q-PriceMin'] == 1000000 ) { echo 'selected="selected"'; } ?> >1M</option>
 
-                            <option value="2000000">2M</option>
+                            <option value="2000000" <?php if ( $_GET['idx-q-PriceMin'] == 2000000 ) { echo 'selected="selected"'; } ?> >2M</option>
 
-                            <option value="3000000">3M</option>
+                            <option value="3000000" <?php if ( $_GET['idx-q-PriceMin'] == 3000000 ) { echo 'selected="selected"'; } ?> >3M</option>
 
-                            <option value="4000000">4M</option>
+                            <option value="4000000" <?php if ( $_GET['idx-q-PriceMin'] == 4000000 ) { echo 'selected="selected"'; } ?> >4M</option>
 
-                            <option value="5000000">5M</option>
+                            <option value="5000000" <?php if ( $_GET['idx-q-PriceMin'] == 5000000 ) { echo 'selected="selected"'; } ?> >5M</option>
 
                         </select>
 
@@ -326,23 +348,23 @@
 
 	                            <option value="">no max</option>
 
-	                            <option value="300000">300K</option>
+	                            <option value="300000" <?php if ( $_GET['idx-q-PriceMax'] == 300000 ) { echo 'selected="selected"'; } ?> >300K</option>
 
-	                            <option value="400000">400K</option>
+	                            <option value="400000" <?php if ( $_GET['idx-q-PriceMax'] == 400000 ) { echo 'selected="selected"'; } ?> >400K</option>
 
-	                            <option value="500000">500K</option>
+	                            <option value="500000" <?php if ( $_GET['idx-q-PriceMax'] == 500000 ) { echo 'selected="selected"'; } ?> >500K</option>
 
-	                            <option value="700000">700K</option>
+	                            <option value="700000" <?php if ( $_GET['idx-q-PriceMax'] == 700000 ) { echo 'selected="selected"'; } ?> >700K</option>
 
-	                            <option value="1000000">1M</option>
+	                            <option value="1000000" <?php if ( $_GET['idx-q-PriceMax'] == 1000000 ) { echo 'selected="selected"'; } ?> >1M</option>
 
-	                            <option value="2000000">2M</option>
+	                            <option value="2000000" <?php if ( $_GET['idx-q-PriceMax'] == 2000000 ) { echo 'selected="selected"'; } ?> >2M</option>
 
-	                            <option value="3000000">3M</option>
+	                            <option value="3000000" <?php if ( $_GET['idx-q-PriceMax'] == 3000000 ) { echo 'selected="selected"'; } ?> >3M</option>
 
-	                            <option value="4000000">4M</option>
+	                            <option value="4000000" <?php if ( $_GET['idx-q-PriceMax'] == 4000000 ) { echo 'selected="selected"'; } ?> >4M</option>
 
-	                            <option value="5000000">5M</option>
+	                            <option value="5000000" <?php if ( $_GET['idx-q-PriceMax'] == 5000000 ) { echo 'selected="selected"'; } ?> >5M</option>
 
 	                        </select>
 
@@ -366,27 +388,27 @@
 
 	                        <select class="select_small" name="idx-q-ImprovedSqFtMin" id="idx-q-ImprovedSqFtMin">
 
-	                            <option value="">no min</option>
+	                            <option value="" <?php if ( $_GET['idx-q-ImprovedSqFtMin'] == '' ) { echo 'selected="selected"'; } ?> >no min</option>
 
-								<option value="100">100</option>
+								<option value="100" <?php if ( $_GET['idx-q-ImprovedSqFtMin'] == 100 ) { echo 'selected="selected"'; } ?> >100</option>
 
-	                            <option value="200">200</option>
+	                            <option value="200" <?php if ( $_GET['idx-q-ImprovedSqFtMin'] == 200 ) { echo 'selected="selected"'; } ?> >200</option>
 
-	                            <option value="300">300</option>
+	                            <option value="300" <?php if ( $_GET['idx-q-ImprovedSqFtMin'] == 300 ) { echo 'selected="selected"'; } ?> >300</option>
 
-	                            <option value="400">400</option>
+	                            <option value="400" <?php if ( $_GET['idx-q-ImprovedSqFtMin'] == 400 ) { echo 'selected="selected"'; } ?> >400</option>
 
-	                            <option value="500">500</option>
+	                            <option value="500" <?php if ( $_GET['idx-q-ImprovedSqFtMin'] == 500 ) { echo 'selected="selected"'; } ?> >500</option>
 
-								<option value="700">700</option>
+								<option value="700" <?php if ( $_GET['idx-q-ImprovedSqFtMin'] == 700 ) { echo 'selected="selected"'; } ?> >700</option>
 
-								<option value="1000">1000</option>
+								<option value="1000" <?php if ( $_GET['idx-q-ImprovedSqFtMin'] == 1000 ) { echo 'selected="selected"'; } ?> >1000</option>
 
-								<option value="1500">1500</option>
+								<option value="1500" <?php if ( $_GET['idx-q-ImprovedSqFtMin'] == 1500 ) { echo 'selected="selected"'; } ?> >1500</option>
 
-								<option value="2000">2000</option>
+								<option value="2000" <?php if ( $_GET['idx-q-ImprovedSqFtMin'] == 2000 ) { echo 'selected="selected"'; } ?> >2000</option>
 
-								<option value="3000">3000</option>
+								<option value="3000" <?php if ( $_GET['idx-q-ImprovedSqFtMin'] == 3000 ) { echo 'selected="selected"'; } ?> >3000</option>
 
 	                        </select>
 
@@ -404,27 +426,27 @@
 
 	                        <select class="select_small" name="idx-q-ImprovedSqFtMax" id="idx-q-ImprovedSqFtMax">
 
-	                            <option value="">no max</option>
+	                            <option value="" <?php if ( $_GET['idx-q-ImprovedSqFtMax'] == '' ) { echo 'selected="selected"'; } ?> >no min</option>
 
-								<option value="100">100</option>
+								<option value="100" <?php if ( $_GET['idx-q-ImprovedSqFtMax'] == 100 ) { echo 'selected="selected"'; } ?> >100</option>
 
-	                            <option value="200">200</option>
+	                            <option value="200" <?php if ( $_GET['idx-q-ImprovedSqFtMax'] == 200 ) { echo 'selected="selected"'; } ?> >200</option>
 
-	                            <option value="300">300</option>
+	                            <option value="300" <?php if ( $_GET['idx-q-ImprovedSqFtMax'] == 300 ) { echo 'selected="selected"'; } ?> >300</option>
 
-	                            <option value="400">400</option>
+	                            <option value="400" <?php if ( $_GET['idx-q-ImprovedSqFtMax'] == 400 ) { echo 'selected="selected"'; } ?> >400</option>
 
-	                            <option value="500">500</option>
+	                            <option value="500" <?php if ( $_GET['idx-q-ImprovedSqFtMax'] == 500 ) { echo 'selected="selected"'; } ?> >500</option>
 
-								<option value="700">700</option>
+								<option value="700" <?php if ( $_GET['idx-q-ImprovedSqFtMax'] == 700 ) { echo 'selected="selected"'; } ?> >700</option>
 
-								<option value="1000">1000</option>
+								<option value="1000" <?php if ( $_GET['idx-q-ImprovedSqFtMax'] == 1000 ) { echo 'selected="selected"'; } ?> >1000</option>
 
-								<option value="1500">1500</option>
+								<option value="1500" <?php if ( $_GET['idx-q-ImprovedSqFtMax'] == 1500 ) { echo 'selected="selected"'; } ?> >1500</option>
 
-								<option value="2000">2000</option>
+								<option value="2000" <?php if ( $_GET['idx-q-ImprovedSqFtMax'] == 2000 ) { echo 'selected="selected"'; } ?> >2000</option>
 
-								<option value="3000">3000</option>
+								<option value="3000" <?php if ( $_GET['idx-q-ImprovedSqFtMax'] == 3000 ) { echo 'selected="selected"'; } ?> >3000</option>
 
 	                        </select>
 
@@ -448,27 +470,27 @@
 
 	                        <select class="select_small" name="idx-q-LotSqFtMin" id="idx-q-LotSqFtMin">
 
-	                            <option value="">no min</option>
+	                            <option value="" <?php if ( $_GET['idx-q-LotSqFtMin'] == '' ) { echo 'selected="selected"'; } ?> >no min</option>
 
-								<option value="100">100</option>
+								<option value="100" <?php if ( $_GET['idx-q-LotSqFtMin'] == 100 ) { echo 'selected="selected"'; } ?> >100</option>
 
-	                            <option value="200">200</option>
+	                            <option value="200" <?php if ( $_GET['idx-q-LotSqFtMin'] == 200 ) { echo 'selected="selected"'; } ?> >200</option>
 
-	                            <option value="300">300</option>
+	                            <option value="300" <?php if ( $_GET['idx-q-LotSqFtMin'] == 300 ) { echo 'selected="selected"'; } ?> >300</option>
 
-	                            <option value="400">400</option>
+	                            <option value="400" <?php if ( $_GET['idx-q-LotSqFtMin'] == 400 ) { echo 'selected="selected"'; } ?> >400</option>
 
-	                            <option value="500">500</option>
+	                            <option value="500" <?php if ( $_GET['idx-q-LotSqFtMin'] == 500 ) { echo 'selected="selected"'; } ?> >500</option>
 
-								<option value="700">700</option>
+								<option value="700" <?php if ( $_GET['idx-q-LotSqFtMin'] == 700 ) { echo 'selected="selected"'; } ?> >700</option>
 
-								<option value="1000">1000</option>
+								<option value="1000" <?php if ( $_GET['idx-q-LotSqFtMin'] == 1000 ) { echo 'selected="selected"'; } ?> >1000</option>
 
-								<option value="1500">1500</option>
+								<option value="1500" <?php if ( $_GET['idx-q-LotSqFtMin'] == 1500 ) { echo 'selected="selected"'; } ?> >1500</option>
 
-								<option value="2000">2000</option>
+								<option value="2000" <?php if ( $_GET['idx-q-LotSqFtMin'] == 2000 ) { echo 'selected="selected"'; } ?> >2000</option>
 
-								<option value="3000">3000</option>
+								<option value="3000" <?php if ( $_GET['idx-q-LotSqFtMin'] == 3000 ) { echo 'selected="selected"'; } ?> >3000</option>
 
 	                        </select>
 
@@ -486,27 +508,27 @@
 
 	                        <select class="select_small" name="idx-q-LotSqFtMax" id="idx-q-LotSqFtMax">
 
-	                            <option value="">no max</option>
+	                            <option value="" <?php if ( $_GET['idx-q-LotSqFtMax'] == '' ) { echo 'selected="selected"'; } ?> >no min</option>
 
-								<option value="100">100</option>
+								<option value="100" <?php if ( $_GET['idx-q-LotSqFtMax'] == 100 ) { echo 'selected="selected"'; } ?> >100</option>
 
-	                            <option value="200">200</option>
+	                            <option value="200" <?php if ( $_GET['idx-q-LotSqFtMax'] == 200 ) { echo 'selected="selected"'; } ?> >200</option>
 
-	                            <option value="300">300</option>
+	                            <option value="300" <?php if ( $_GET['idx-q-LotSqFtMax'] == 300 ) { echo 'selected="selected"'; } ?> >300</option>
 
-	                            <option value="400">400</option>
+	                            <option value="400" <?php if ( $_GET['idx-q-LotSqFtMax'] == 400 ) { echo 'selected="selected"'; } ?> >400</option>
 
-	                            <option value="500">500</option>
+	                            <option value="500" <?php if ( $_GET['idx-q-LotSqFtMax'] == 500 ) { echo 'selected="selected"'; } ?> >500</option>
 
-								<option value="700">700</option>
+								<option value="700" <?php if ( $_GET['idx-q-LotSqFtMax'] == 700 ) { echo 'selected="selected"'; } ?> >700</option>
 
-								<option value="1000">1000</option>
+								<option value="1000" <?php if ( $_GET['idx-q-LotSqFtMax'] == 1000 ) { echo 'selected="selected"'; } ?> >1000</option>
 
-								<option value="1500">1500</option>
+								<option value="1500" <?php if ( $_GET['idx-q-LotSqFtMax'] == 1500 ) { echo 'selected="selected"'; } ?> >1500</option>
 
-								<option value="2000">2000</option>
+								<option value="2000" <?php if ( $_GET['idx-q-LotSqFtMax'] == 2000 ) { echo 'selected="selected"'; } ?> >2000</option>
 
-								<option value="3000">3000</option>
+								<option value="3000" <?php if ( $_GET['idx-q-LotSqFtMax'] == 3000 ) { echo 'selected="selected"'; } ?> >3000</option>
 
 	                        </select>
 
@@ -536,27 +558,27 @@
 
 							<select class="select_medium" name="idx-q-DaysOnMarketMin" id="idx-q-DaysOnMarketMin">
 
-	                            <option value="">No Max</option>
+	                            <option value="" <?php if ( $_GET['idx-q-DaysOnMarketMin'] == '' ) { echo 'selected="selected"'; } ?> >No Max</option>
 
-	                            <option value="1">1</option>
+	                            <option value="1" <?php if ( $_GET['idx-q-DaysOnMarketMin'] == 1 ) { echo 'selected="selected"'; } ?> >1</option>
 
-	                            <option value="2">2</option>
+	                            <option value="2" <?php if ( $_GET['idx-q-DaysOnMarketMin'] == 2 ) { echo 'selected="selected"'; } ?> >2</option>
 
-								<option value="3">3</option>
+								<option value="3" <?php if ( $_GET['idx-q-DaysOnMarketMin'] == 3 ) { echo 'selected="selected"'; } ?> >3</option>
 
-								<option value="4">4</option>
+								<option value="4" <?php if ( $_GET['idx-q-DaysOnMarketMin'] == 4 ) { echo 'selected="selected"'; } ?> >4</option>
 
-								<option value="5">5</option>
+								<option value="5" <?php if ( $_GET['idx-q-DaysOnMarketMin'] == 5 ) { echo 'selected="selected"'; } ?> >5</option>
 
-								<option value="10">10</option>
+								<option value="10" <?php if ( $_GET['idx-q-DaysOnMarketMin'] == 10 ) { echo 'selected="selected"'; } ?> >10</option>
 
-								<option value="15">15</option>
+								<option value="15" <?php if ( $_GET['idx-q-DaysOnMarketMin'] == 15 ) { echo 'selected="selected"'; } ?> >15</option>
 
-								<option value="20">20</option>
+								<option value="20" <?php if ( $_GET['idx-q-DaysOnMarketMin'] == 20 ) { echo 'selected="selected"'; } ?> >20</option>
 
-								<option value="25">25</option>
+								<option value="25" <?php if ( $_GET['idx-q-DaysOnMarketMin'] == 25 ) { echo 'selected="selected"'; } ?> >25</option>
 
-								<option value="30">30</option>
+								<option value="30" <?php if ( $_GET['idx-q-DaysOnMarketMin'] == 30 ) { echo 'selected="selected"'; } ?> >30</option>
 
 	                        </select>
 
@@ -578,11 +600,11 @@
 
 							<select class="select_medium" name="idx-q-status" id="idx-q-status">
 
-	                            <option value="">Any Status</option>
+	                            <option value="" <?php if ( $_GET['idx-q-status'] == '' ) { echo 'selected="selected"'; } ?> >Any Status</option>
 
-	                            <option value="1">Active Listing</option>
+	                            <option value="1" <?php if ( $_GET['idx-q-status'] == 1 ) { echo 'selected="selected"'; } ?> >Active Listing</option>
 
-	                            <option value="2">Sold</option>
+	                            <option value="2" <?php if ( $_GET['idx-q-status'] == 2 ) { echo 'selected="selected"'; } ?> >Sold</option>
 
 	                        </select>
 
