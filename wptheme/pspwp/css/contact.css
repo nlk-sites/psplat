@@ -52,6 +52,140 @@
 }
 
 
+/* contact form pop-up */
+
+#contact .pop-up {
+	display: none;
+	position: fixed;
+	width: 700px;
+	height: 550px;
+	left: 50%;
+	margin-left: -350px;
+	top: 50%;
+	margin-top: -275px;
+	background-color: #fff;
+	z-index: 99999;
+}
+#contact .close-pop-up {
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	height: 48px;
+	width: 48px;
+	background: url(/wp-content/themes/pspwp/images/close-48px.png) no-repeat 0 0;
+	cursor: pointer;
+	z-index: 1;
+}
+
+#contact .pop-up .pad-fix {
+	padding: 0 40px;
+	margin-top: 45px;
+}
+
+#contact .pop-up .grey-bar {
+	background-color: #97999c;
+	position: absolute;
+	width: inherit;
+}
+
+#contact .pop-up .grey-bar * {
+	display: inline-block;
+	padding-left: 40px;
+	color: #fff;
+}
+
+#contact .pop-up #contactform {}
+
+#contactform .third {
+	display: inline-block;
+	width: 200px;
+	margin-right: 18px;
+	margin-top: 20px;
+}
+#contactform .third.last {
+	margin-right: 0px;
+	width: 177px;
+}
+
+#contactform .third input {
+	width: 175px;
+	border: 1px solid #e9eaec;
+	box-sizing: border-box;
+}
+
+#contactform hr {
+	height: 1px;
+	border-top: 1px solid #e9eaec;
+	margin: 24px 0;
+}
+
+#contactform label {
+	color: #001f49;
+}
+#contactform label.big {
+	font-size: 1.3em;
+}
+#contactform label.big,
+#contactform label.clr,
+#contactform .third label {
+	display: block;
+	clear: right;
+	margin-bottom: 6px;
+}
+#contactform label.clr {
+	margin-bottom: 12px;
+}
+#contactform span {
+	color: #777;
+}
+#contactform span[role=alert] {
+	color: #990000;
+}
+#contactform .wpcf7-not-valid-tip {
+	top: 12px;
+}
+#contactform .interested-in .wpcf7-list-item {
+	margin-right: 40px
+}
+#contactform .interested-in .wpcf7-list-item .wpcf7-list-item-label {
+	position: relative;
+	top: -2px;
+	margin-left: 4px;
+}
+#contactform textarea {
+	height: 140px;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+input[type=submit].blue-grey,
+input[type=reset].blue-grey,
+button.blue-grey {
+	display: inline-block;
+	background: url(/wp-content/themes/pspwp/images/btn-grey-80x26px.png) no-repeat 0 0;
+	height: 26px;
+	width: 80px;
+	margin: 10px 10px 0 0;
+	border: none;
+	color: #001f49;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: .9em;
+}
+input[type=submit].blue-grey:hover,
+input[type=reset].blue-grey:hover,
+button.blue-grey:hover {
+	background: url(/wp-content/themes/pspwp/images/btn-blue-80x26px.png) no-repeat 0 0;
+	color: #fff;
+}
+
+#contactform div.wpcf7-response-output {
+	width: 400px;
+	float: right;
+	margin-top: -26px;
+}
+
+/* the rest of stuff */
 
 #contact_left {
 

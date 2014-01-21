@@ -51,7 +51,7 @@ get_header(); ?>
 								
 								<div id="inline<?php echo $count; ?>" style="text-align: center; display:none;"><?php echo(types_render_field( "video-code", array())); ?><h3><i><?php the_title(); ?></i></h3></div>	
 			                    <div class="contact_links">
-			                        <a href="<?php the_permalink(); ?>"><img class="contact_btn" src="<?php bloginfo('template_url'); ?>/images/send_email_bttn.png" width="114" height="22"></a>
+			                        <a href="#" class="open-pop-up" rel="<?php the_title(); ?>"><img class="contact_btn" src="<?php bloginfo('template_url'); ?>/images/send_email_bttn.png" width="114" height="22"></a>
 			                    </div>
 			                </div>
 		                </div>

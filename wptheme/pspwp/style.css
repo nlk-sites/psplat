@@ -486,9 +486,10 @@ body.not-home .ui-autocomplete {
 #megaMenu ul.megaMenu li.menu-item.full-width-sub ul.sub-menu-1 { width: 927px; }
 
 
-body.single-property .dsidx-primary-photo { display: none; }
-body.single-property .dsidx-photos { display: none; }
+/* body.single-property .dsidx-primary-photo { display: none; } */
+/* body.single-property .dsidx-photos { display: none; } */
 body.single-property #tabs-1 table { margin: auto !important; }
+body.single-property #tabs-1 table.dsidx-primary-data { width: 380px; }
 body.single-property #tabs-1 tr.dsidx-secondary-row {
 	background-color: #efefef;
 }
