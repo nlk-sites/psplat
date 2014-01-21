@@ -34,16 +34,24 @@
 
 <?php
 
+$cleanSearch == NULL;
+
 if ( isset( $_GET['idx-q-AddressMasks'] ) ) {
 	$search_term = $_GET['idx-q-AddressMasks'];
 	$cleanSearch = ucwords( preg_replace('/%/', '', $search_term) );
+}
+elseif ( isset( $_GET['idx-q-Cities'] ) ) {
+	$search_term = $_GET['idx-q-Cities'];
+	$cleanSearch = ucwords( $search_term );
 }
 else {
 	$url = $_SERVER['REQUEST_URI'];
 	$parts = parse_url( $url );
 	$path_parts = explode( '/', $parts['path'] );
-	$search_term = $path_parts[ count( $path_parts ) - 2 ];
-	$cleanSearch = ucwords( strtr( urldecode( $search_term ), '-', ' ' ) );
+	if ( $path_parts[ count( $path_parts ) - 3 ] == 'city' || $path_parts[ count( $path_parts ) - 3 ] == 'zip' ) {
+		$search_term = $path_parts[ count( $path_parts ) - 2 ];
+		$cleanSearch = ucwords( strtr( urldecode( $search_term ), '-', ' ' ) );
+	}
 }
 
 ?>
@@ -54,7 +62,7 @@ else {
 
     	<input name="idx-q-Cities" id="idx-q-Cities" class="sbr-srch" type="text" placeholder="Search: City, Zipcode, Address" value="<?=$cleanSearch; ?>" />
 
-    	<input type="hidden" name="idx-q-search-for" id="idx-q-search-for" />
+    	<!--input type="hidden" name="idx-q-search-for" id="idx-q-search-for" /-->
 
         <div class="smallOption" id="smallOption">
 
