@@ -207,6 +207,15 @@ function pspwp_widgets_init() {
 		'before_title'  => '<div class="featured_heading"><div class="featured_contact">',
 		'after_title'   => '</div></div>',
 	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Siderbar | Left', 'pspwp' ),
+		'id'            => 'sidebar_left',
+		'before_widget' => '<div class="eachWidget">',
+		'after_widget'  => '<hr class="lightbar_hr"><br><br><div class="clearfix"></div></div>',
+		'before_title'  => '<div class="featured_heading"><div class="featured_contact">',
+		'after_title'   => '</div></div>',
+	) );
 	
 	
 }

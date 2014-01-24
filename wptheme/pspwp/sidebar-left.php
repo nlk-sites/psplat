@@ -1,4 +1,5 @@
 <div class="left_bar">
+    <?php dynamic_sidebar('sidebar_left'); ?>
     <div class="featured_heading">
         <span class="featured_title">P.S.Platinum</span>
         <span class="featured_subtitle">Del Mar, CA</span>
