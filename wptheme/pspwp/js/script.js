@@ -15,8 +15,8 @@ jQuery(document).ready(function(){
     
     var activate_tab;
     var slide_margin = 10 * 3;
-    var slide_height = 240;
-    var slide_container_height = slide_height * 3; /* be sure to account for margins! */
+    var slide_height = 125;
+    var slide_container_height = slide_height * 4; /* be sure to account for margins! */
     var slide_duration = 0;
     var jQuerybutton = jQuery('a.btn-more');
     
@@ -26,21 +26,21 @@ jQuery(document).ready(function(){
     // tab click function
     jQuery('ul.tab-control li a').click(function(e){
         e.preventDefault();
-    jQuery('ul.tab-control li a').removeClass('active');
-    jQuery(this).addClass('active');
-    
-    jQuery('.tab').hide();
-    activate_tab = jQuery(this).attr('href');
-    jQuery(activate_tab).show();
-    // resets the tab/state of expand/collapse button
-    resetTabs(activate_tab);
-        
+        jQuery('ul.tab-control li a').removeClass('active');
+        jQuery(this).addClass('active');
+        jQuery('.tab').hide();
+        activate_tab = jQuery(this).attr('href');
+        jQuery(activate_tab).show();
+        // resets the tab/state of expand/collapse button
+        //resetTabs(activate_tab);
+        tabCollapse();
     });
     
     // clicks the first child/tab
     jQuery('ul.tab-control li:first-child a').click();
     
     // expand/collapse tab
+    /*
     jQuerybutton.toggle(function(){
         tabExpand();
         
@@ -48,92 +48,47 @@ jQuery(document).ready(function(){
         tabCollapse();
         
     });
-    
+    */
+    jQuerybutton.click(function(e){
+        e.preventDefault();
+        if ( jQuery(this).hasClass('xpand') ) {
+            tabCollapse();
+        }
+        else {
+            tabExpand();
+        }
+    });
     // expand the tab
     // changes the label of the button to 'collapse'
     // stops the slideshow
     function tabExpand(){
-        jQuerybutton.html('<i class="icon active"></i> Collapse');
-        
-		/*
-        jQuery('.slide').css({
-        'display': 'block',
-            
-            'left': 'auto',
-            
-            'position': 'relative',
-            
-            'top': 'auto'
-    });
-        */
-        //jQuery('#tab-mini-bar .pager').hide();
-    jQuery('.slide-container').animate({
+        jQuerybutton.addClass('xpand').html('<i class="icon active"></i> Collapse');
+        jQuery('.slide-container').animate({
             'height': slide_container_height + 'px'
         }, 500);
-        
     }
     
     // collapse the tab
     // changes the label of the button to 'expand'
     // resumes the slideshow
     function tabCollapse(){
-        jQuerybutton.html('<i class="icon"></i> Expand');
-    //jQuery('#tab-mini-bar .pager').show();
-        
+        jQuerybutton.removeClass('xpand').html('<i class="icon"></i> Expand');
 		jQuery('.slide-container').animate({
             'height': slide_height + 'px'
         }, 500);
-		
-		/*
-        jQuery('.slide-container').animate({
-            'height': slide_height + 'px'
-        }, 500).cycle({
-        'after': onAfter,
-            
-            'fx': 'nonde',
-            
-            'next': '.slide-next',
-            
-            'prev': '.slide-prev',
-            
-            'timeout': slide_duration
-    });*/
-        
     }
     
     // per each tab click, resets the state
     // changes the label of the button to 'expand'
     function resetTabs(obj){
-        jQuerybutton.unbind('click').html('<i class="icon"></i> Expand').toggle(function(){
-        tabExpand();
-            
-        }, function(){
         tabCollapse();
-            
-        });
-    //jQuery('#tab-mini-bar .pager').show();
-    // cycle plugin
-    //jQuery('.slide-container').cycle('stop').animate({
-        //    'height': slide_height + 'px'
-        //});
-    /*jQuery(obj).find('.slide-container').cycle({
-        'after': onAfter,
-            
-            'fx': 'none',
-            
-            'next': '.slide-next',
-            
-            'prev': '.slide-prev',
-            
-            'timeout': slide_duration
-    });
-        */
     }
+
+
     
     function onAfter(curr, next, opts){
         var msg = (opts.currSlide + 1) + ' of ' + (opts.slideCount);
-    jQuery('span.current-page').html(msg);
-        
+        jQuery('span.current-page').html(msg);
     }
     
     var x = 0;

@@ -74,7 +74,7 @@
     <div class="slide-container">
     	<ul class="bxslider">
     	<?php
-	    $args = array('post_type'=>'property', 'posts_per_page'=>2, 'orderby'=>'menu_order', 'order'=>'asc');
+	    $args = array('post_type'=>'property', 'posts_per_page'=>50, 'orderby'=>'menu_order', 'order'=>'asc');
 	    $the_query = new WP_Query($args);
 	    $count = 0;
 
@@ -168,7 +168,7 @@
 
     <div class="pager">
 
-        <a class="slide-prev"></a> <span class="current-page"></span> <a class="slide-next"></a>
+        <a class="slide-prev"></a> <span class="current-page">1 of 1</span> <a class="slide-next"></a>
 
     </div>
 
