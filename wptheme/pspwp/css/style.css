@@ -1364,7 +1364,11 @@ nav {
 }
 
 .dsidx-search-widget .dsidx-price {
-	width: 38%;
+	width: 75px !important;
+}
+.dsidx-search-widget .dsidx-search-button .submit {
+	display: block;
+	clear: both;
 }
 
 

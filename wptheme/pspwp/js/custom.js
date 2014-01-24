@@ -63,3 +63,28 @@ jQuery(function($) {
         $('#pop-overlay').remove();
     })
 });
+
+
+jQuery(function($) {
+    $.urlParam = function(name){
+        var results = new RegExp('[\\?&amp;]' + name + '=([^&amp;#]*)').exec(window.location.href);
+        return results[1] || 0;
+    }
+    var proptype = $.urlParam('idx-q-PropertyTypes');
+    var city = $('input#idx-q-Cities.sbr-srch').val();
+    var zip = $.urlParam('idx-q-ZipCodes');
+    var pricemin = $.urlParam('idx-q-PriceMin');
+    var pricemax = $.urlParam('idx-q-PriceMax');
+    var sqft = $.urlParam('idx-q-ImprovedSqFtMin');
+    var bedsmin = $.urlParam('idx-q-BedsMin');
+    var bathsmin = $.urlParam('idx-q-BathsMin');
+
+    $('.dsidx-search-widget-propertyTypes option[value="' + proptype + '"]').attr('selected', 'selected');
+    $('#idx-q-Cities option[value="' + city + '"]').attr('selected', 'selected');
+    $('#idx-q-ZipCodes option[value="' + zip + '"]').attr('selected', 'selected');
+    $('#idx-q-PriceMin.dsidx-price').val(pricemin);
+    $('#idx-q-PriceMax.dsidx-price').val(pricemax);
+    $('#idx-q-ImprovedSqFtMin.dsidx-improvedsqft').val(sqft);
+    $('#idx-q-BedsMin.dsidx-beds').val(bedsmin);
+    $('#idx-q-BathsMin.dsidx-baths').val(bathsmin);
+});
