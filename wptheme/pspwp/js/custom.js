@@ -1,10 +1,6 @@
-//idx search widget multi search box
 jQuery(function($) {
-    
-    //if ( $('#idx-q-search-for').length < 1 ) {
-    //   $('#idx-q-search-form').append('<input type="hidden" name="idx-q-search-for" id="idx-q-search-for" />');
-    //}
-    
+
+    //idx search widget multi search box
     $('#idx-q-Cities').bind("blur keyup", function(){
         var theVal = $(this).val(),
             filterZip = new RegExp("^[0-9]{5}([-][0-9]{4})?$"),
@@ -42,16 +38,17 @@ jQuery(function($) {
         $('input[name="idx-q-AddressMasks"]').val( '%' + addyVal + '%' );
         return true;
     }); 
-});
 
-// Set right side-bar no smaller than left content
-jQuery(function($) {
+
+
+    // Set right side-bar no smaller than left content
     var h = $('.left_main_accnt').height();
     $('.right_bar').css('min-height', h);
-});
 
-// contact form pop-up
-jQuery(function($) {
+
+
+
+    // contact form pop-up
     $('a.open-pop-up').each( function() {
         $(this).click( function() {
             $('body').append('<div id="pop-overlay" style="position:fixed;width:100%;height:100%;top:0;left:0;background-color:rgba(0,0,0,.5);z-index:99;"></div>');
@@ -65,19 +62,31 @@ jQuery(function($) {
 });
 
 
-jQuery(function($) {
-    $.urlParam = function(name){
-        var results = new RegExp('[\\?&amp;]' + name + '=([^&amp;#]*)').exec(window.location.href);
-        return results[1] || 0;
-    }
-    var proptype = $.urlParam('idx-q-PropertyTypes');
+
+    // form auto-filler
+(function($){
+    $.urlParam = (function (a) {
+        var i,
+            p,
+            b = {};
+        if (a === "") { return {}; }
+        for (i = 0; i < a.length; i += 1) {
+            p = a[i].split('=');
+            if (p.length === 2) {
+                b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+            }
+        }
+        return b;
+    }(window.location.search.substr(1).split('&')));
+
+    var proptype = $.urlParam['idx-q-PropertyTypes'];
     var city = $('input#idx-q-Cities.sbr-srch').val();
-    var zip = $.urlParam('idx-q-ZipCodes');
-    var pricemin = $.urlParam('idx-q-PriceMin');
-    var pricemax = $.urlParam('idx-q-PriceMax');
-    var sqft = $.urlParam('idx-q-ImprovedSqFtMin');
-    var bedsmin = $.urlParam('idx-q-BedsMin');
-    var bathsmin = $.urlParam('idx-q-BathsMin');
+    var zip = $.urlParam['idx-q-ZipCodes'];
+    var pricemin = $.urlParam['idx-q-PriceMin'];
+    var pricemax = $.urlParam['idx-q-PriceMax'];
+    var sqft = $.urlParam['idx-q-ImprovedSqFtMin'];
+    var bedsmin = $.urlParam['idx-q-BedsMin'];
+    var bathsmin = $.urlParam['idx-q-BathsMin'];
 
     $('.dsidx-search-widget-propertyTypes option[value="' + proptype + '"]').attr('selected', 'selected');
     $('#idx-q-Cities option[value="' + city + '"]').attr('selected', 'selected');
@@ -87,4 +96,4 @@ jQuery(function($) {
     $('#idx-q-ImprovedSqFtMin.dsidx-improvedsqft').val(sqft);
     $('#idx-q-BedsMin.dsidx-beds').val(bedsmin);
     $('#idx-q-BathsMin.dsidx-baths').val(bathsmin);
-});
+}(jQuery));
