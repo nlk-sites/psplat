@@ -1,4 +1,22 @@
-jQuery(function($) {
+(function($) {
+
+    // get URL params
+    $.urlParam = (function (a) {
+        var i,
+            p,
+            b = {};
+        if (a === "") { return {}; }
+        for (i = 0; i < a.length; i += 1) {
+            p = a[i].split('=');
+            if (p.length === 2) {
+                b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
+            }
+        }
+        return b;
+    }(window.location.search.substr(1).split('&')));
+
+
+
 
     //idx search widget multi search box
     $('#idx-q-Cities').bind("blur keyup", function(){
@@ -59,26 +77,10 @@ jQuery(function($) {
         $(this).closest('#contact .pop-up').hide();
         $('#pop-overlay').remove();
     })
-});
 
 
 
     // form auto-filler
-(function($){
-    $.urlParam = (function (a) {
-        var i,
-            p,
-            b = {};
-        if (a === "") { return {}; }
-        for (i = 0; i < a.length; i += 1) {
-            p = a[i].split('=');
-            if (p.length === 2) {
-                b[p[0]] = decodeURIComponent(p[1].replace(/\+/g, " "));
-            }
-        }
-        return b;
-    }(window.location.search.substr(1).split('&')));
-
     var proptype = $.urlParam['idx-q-PropertyTypes'];
     var city = $('input#idx-q-Cities.sbr-srch').val();
     var zip = $.urlParam['idx-q-ZipCodes'];
@@ -96,4 +98,17 @@ jQuery(function($) {
     $('#idx-q-ImprovedSqFtMin.dsidx-improvedsqft').val(sqft);
     $('#idx-q-BedsMin.dsidx-beds').val(bedsmin);
     $('#idx-q-BathsMin.dsidx-baths').val(bathsmin);
+
+
+
+    // advanced search format fix
+    var url = window.location.pathname;
+    url = url.split("/");
+    var part = url[3];
+    if ( part == 'advanced' ) {
+        $('div.left_main_accnt').css("width", "918px");
+    }
+
+
+
 }(jQuery));
