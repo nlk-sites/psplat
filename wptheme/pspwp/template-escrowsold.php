@@ -16,7 +16,7 @@ get_header(); ?>
 			<div class="right_main">
 	         	<div id="listings">
 	            	<div id="featured_left_header">
-	                	<h1>SOLD / IN ESCROW</h1><img src="<?php bloginfo('template_url'); ?>/images/search_mls_bttn.png" width="104" height="22">
+	                	<h1>SOLD / IN ESCROW</h1>
 	                </div>
 					<div class="clearfix"></div>
 					<hr class="greybar_hr">
