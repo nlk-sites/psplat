@@ -128,13 +128,22 @@ get_header(); ?>
                     			?>
 									<div class="clearfix"></div>
 						                <div class="featured_listing">
-						                	<img class="featured_thumb" src="<?php bloginfo('template_url'); ?>/images/featured_sample_image.jpg" width="170" height="110">
+						                	<a href="<?php the_permalink(); ?>">
+						                	<?php 
+												if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+												  the_post_thumbnail( array(178,119), array('class'	=> "featured_thumb") );
+												}
+												else { ?>
+													<img class="featured_thumb" src="<?php bloginfo('template_url'); ?>/images/featured_sample_image.jpg" width="178" height="119" />
+												<?php }
+											?>
+											</a>
 						      				<div class="featured_title"><?php the_title(); ?></div>
 						     	 			<div class="featured_price"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_up_arrow.png" width="15" height="23">&nbsp;<span class="featured_price_txt">$<?php echo number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-current-price', true))); ?></span></div>
 						      				<span class="featured_price_subtxt">Original Price: $<?php echo number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-orginal-price', true))); ?></span>
 						                    <span class="featured_label">bed/bath</span>&nbsp;<span class="featured_txt"><?php echo types_render_field("bed", array()); ?> bedroom | <?php echo types_render_field("bath", array()); ?> bathroom</span><br>
 						      				<span class="featured_label">sq/ft</span>&nbsp;<span class="featured_txt"><?php echo types_render_field("square-feet", array()); ?></span><br>
-						                    <span class="featured_label">days on market</span>&nbsp;<span class="featured_txt"><?php echo types_render_field("days-on-market", array()); ?></span><br>
+						                    <!--span class="featured_label">days on market</span>&nbsp;<span class="featured_txt"><?php echo types_render_field("days-on-market", array()); ?></span><br-->
 						    				
 						           		</div>
 						                <div class="featured_links">
