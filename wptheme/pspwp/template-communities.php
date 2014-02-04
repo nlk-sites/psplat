@@ -25,7 +25,7 @@ get_header(); ?>
 			?>
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<div class="listing_pod">
-                	<?php the_post_thumbnail('agent-thumb', array('class' => 'prty_border' )); ?>
+                	<?php the_post_thumbnail(array(119, 119), array('class' => 'prty_border' )); ?>
                   <div class="listing_pod_content">
                     	<span class="featured_title"><?php the_title(); ?></span>
                 		<span class="featured_subtitle"><?php echo(types_render_field( "address", array())); ?></span>
