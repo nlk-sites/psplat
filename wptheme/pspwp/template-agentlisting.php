@@ -27,10 +27,10 @@ get_header(); ?>
 			?>
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<div class="listing_pod">
-	                <?php the_post_thumbnail('agent-thumb', array('class' => 'prty_border' )); ?>
+	                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('agent-thumb', array('class' => 'prty_border' )); ?></a>
 					<?php //echo(types_render_field( "product_image", array( "alt" => get_the_title(), "width" => "300", "height" => "200", "proportional" => "true" ) )); ?>
 	                <div class="listing_pod_content">
-	                    <span class="featured_title"><?php the_title(); ?></span>
+	                    <span class="featured_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
 	                    <span class="featured_subtitle"><?php echo(types_render_field( "designation", array())); ?></span>
 	                    <span class="listing_info_label">office</span>&nbsp;<?php echo(types_render_field( "phone-office", array())); ?>&nbsp;&nbsp;<span class="listing_info_label  ">fax</span>&nbsp;<?php echo(types_render_field( "phone-office", array())); ?>
 	                    <br>

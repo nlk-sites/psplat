@@ -25,9 +25,9 @@ get_header(); ?>
 			?>
 			<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<div class="listing_pod">
-                	<?php the_post_thumbnail(array(119, 119), array('class' => 'prty_border' )); ?>
+                	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(array(178, 119), array('class' => 'prty_border' )); ?></a>
                   <div class="listing_pod_content">
-                    	<span class="featured_title"><?php the_title(); ?></span>
+                    	<span class="featured_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span>
                 		<span class="featured_subtitle"><?php echo(types_render_field( "address", array())); ?></span>
                     	<?php echo(types_render_field( "teaser-text", array())); ?>
                     <a href="<?php the_permalink(); ?>#clistings"><img class="listing_btn" src="<?php bloginfo('template_url'); ?>/images/search_mls_bttn.png" width="104" height="22"></a><a href="<?php the_permalink(); ?>"><img class="listing_btn" src="<?php bloginfo('template_url'); ?>/images/community_details_btn.png" width="139" height="22"></a></div>
