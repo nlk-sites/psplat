@@ -784,7 +784,8 @@ ul.tab-control li a.active {
 
 
 
-	margin-bottom: 3px;
+	white-space: nowrap;
+	margin-bottom: 0px !important;
 
 
 
@@ -1404,6 +1405,10 @@ ul.tab-control li a.active {
 
 
 /* ---------------------------- home page listings slider -------------------------------- */
+
+ul.bxslider li {
+	/* box-sizing: border-box; */
+}
 
 .slide-container div.dsidx-results-widget .dsidx-slideshow {
 	/*height: 125px !important;*/
