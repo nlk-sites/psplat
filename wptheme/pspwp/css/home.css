@@ -1330,6 +1330,11 @@ ul.tab-control li a.active {
 }
 
 #tab-slides p span {
+	display: inline-block;
+}
+#tab-slides p span.beds,
+#tab-slides p span.baths,
+#tab-slides p span.price {
 	display: block;
 }
 
