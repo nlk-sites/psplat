@@ -1397,6 +1397,14 @@ ul.tab-control li a.active {
 
 /* ---------------------------- home page listings slider -------------------------------- */
 
+div.dsidx-results-widget .dsidx-slideshow {
+	/*height: 125px !important;*/
+	padding: 0;
+}
+div.dsidx-results-widget .dsidx-controls {
+	display: none;
+}
+
 /* left / right arrows */
 .slide-container .dsidx-slideshow.dsidx-panel .dsidx-slideshow-control.dsidx-move-up,
 .slide-container .dsidx-slideshow.dsidx-panel .dsidx-slideshow-control.dsidx-move-down {
@@ -1407,14 +1415,15 @@ ul.tab-control li a.active {
 	width: 32px;
 	height: 32px;
 	text-indent: -9999px;
-	background: url(images/controls.png) no-repeat 0 -32px;
+	background: url(../images/controls.png) no-repeat 0 -32px;
 }
 .slide-container .dsidx-slideshow.dsidx-panel .dsidx-slideshow-control.dsidx-move-down {
-	background: url(images/controls.png) no-repeat -43px -32px;
+	background: url(../images/controls.png) no-repeat -43px -32px;
+	right: 0;
 }
 
 .slide-container .dsidx-slideshow.dsidx-panel ul {
 	margin: auto !important;
-	height: 125px;
+	/*height: 125px;*/
 	width: 700px;
 }
