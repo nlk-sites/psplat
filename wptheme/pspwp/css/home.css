@@ -1421,6 +1421,9 @@ ul.tab-control li a.active {
 	height: 140px !important;
 	width: 840px;
 }
+.slide-container div.dsidx-results-widget .dsidx-slideshow.dsidx-panel ul li.featured-listing {
+	padding-left: 20px !important;
+}
 
 /* left / right arrows */
 .slide-container .dsidx-slideshow.dsidx-panel .dsidx-slideshow-control.dsidx-move-up,
