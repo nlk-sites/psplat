@@ -140,18 +140,18 @@ jQuery(function() {
 	<header>
 		<a class="logo ir" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 		<nav>
-		<?php 
+		<?php
 			wp_nav_menu( array(
 				'menu'       => 'mainmenu',
 				'theme_location'  => 'primary',
 				'depth'      => 2,
 				'container'  => false,
 				'menu_class' => 'main-nav',
-				'fallback_cb' => 'wp_page_menu',
+				//'fallback_cb' => 'wp_page_menu',
 				//Process nav menu using our custom nav walker
 				//'walker' => new wp_custom_navwalker()
 				)
-			); 
+			);
 		?>
 		</nav>
 	</header>
