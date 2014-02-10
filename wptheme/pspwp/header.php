@@ -142,7 +142,7 @@ jQuery(function() {
 		<nav>
 		<?php 
 			wp_nav_menu( array(
-				//'menu'       => 'mainmenu',
+				'menu'       => 'mainmenu',
 				'theme_location'  => 'primary',
 				'depth'      => 2,
 				'container'  => false,
