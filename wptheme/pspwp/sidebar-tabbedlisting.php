@@ -102,7 +102,7 @@
 					?>
 	        		</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="t_label">sq/ft</span>&nbsp;<span class="t_txt"><?php echo types_render_field("square-feet", array()); ?></span>
 		        	<br>
-		        	<span class="t_label">bed/bath</span>&nbsp;<span class="t_txt"><?php echo types_render_field("bed", array()); ?> bedroom | <?php echo types_render_field("bath", array()); ?> bathroom</span>
+		        	<span class="t_label">bed/bath</span>&nbsp;<span class="t_txt"><?php echo types_render_field("bed", array()); ?> bed | <?php echo types_render_field("bath", array()); ?> bath</span>
 		        	<br>
 		        </div>
 		        <div id="inline<?php echo $count; ?>" style="text-align: center; display:none;"><?php echo(types_render_field( "video-code", array())); ?><h3><i><?php the_title(); ?></i></h3></div>
