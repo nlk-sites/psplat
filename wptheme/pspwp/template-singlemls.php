@@ -39,6 +39,7 @@ get_header(); ?>
 		padding: 0;
 		line-height: 36px;
 		letter-spacing: .65px;
+		white-space: nowrap;
 	}
 </style>	
 <?php get_footer(); ?>

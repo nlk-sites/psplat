@@ -1,234 +1,470 @@
-/* compare.css */
-
-
-
-#main_inner_compare {
-
-	background-color: #fff;	
-
-	border: 1px solid #b3b3b3;
-
-	margin: 10px 0;
-
-	padding: 20px 19px;
-
-	width: 922px;
-
-}
-
-
-
-#compareBrdCumBar {
-
-	background-color: #e1e2e3;
-
-	height: 36px;
-
-	margin: 0 auto 20px;
-
-	width: 100%;
-
-}
-
-
-
-#compareBrdCumBar img {
-
-	margin:0;
-
-	padding:0;
-
-}
-
-
-
-.compare_column {
-
-	background-color: #eee;
-
-	border: 1px solid #b3b3b3;
-
-	float: left;
-
-	margin:0 9px 0 0;
-
-	padding:0;
-
-	width:299px;
-
-}
-
-
-
-.compare_column_last {
-
-	margin-right: 0;
-
-}
-
-
-
-.compare_column_top {
-
-	background-color: #fff;
-
-	color: #001f49;
-
-	font: 12px/1 Arial, Helvetica, sans-serif;
-
-	padding: 7px;
-
-}
-
-
-
-.compare_txt {
-
-	display: inline-block;
-
-	margin: 12px 15px 0;
-
-}
-
-
-
-.compare_column_ckbx {
-
-	float: left;
-
-	margin: 22px 10px auto 0;
-
-}
-
-
-
-.compare_column_top img {
-
-	margin: 0;
-
-	padding: 0;
-
-}
-
-
-
-.compare_column_details {
-
-	background-color: #fff;
-
-	border-top: 1px solid #d2d1d1;
-
-	color: #001f49;
-
-	display: inline-block;
-
-	font-family: Arial, Helvetica, sans-serif;
-
-	padding: 12px;
-
-	width: 275px;
-
-}
-
-
-
-.compare_column_details img {
-
-	float: left;
-
-	display: inline;
-
-}
-
-
-
-.compare_column_details_price {
-
-	display: block;
-
-	margin-bottom: 2px;
-
-}
-
-
-
-.compare_column_details_price_txt {
-
-	display: inline-block;
-
-	font-size: 16px;
-
-	font-weight: bold;
-
-	padding-top: 3px;
-
-}
-
-
-
-.compare_column_details_price_subtxt {
-
-	color: #555;
-
-	display: block;
-
-	font-size: 12px;
-
-	margin-bottom: 5px;
-
-}
-
-
-
-.compare_column_details_label {
-
-	font-size: 12px;
-
-	font-weight: bold;
-
-	text-transform: uppercase;
-
-}
-
-
-
-.compare_column_details_txt {
-
-	color: #555;
-
-	font-size: 12px;
-
-}
-
-
-
-.compare_column_info {
-
-	border-top: 1px solid #d2d1d1;
-
-	color: #001f49;
-
-	font: bold 12px/1 Arial, Helvetica, sans-serif;
-
-	padding: 12px;
-
-	width: 275px;
-
-}
-
-
-
-.compare_column_info ul {
-
-	color: #555;
-
-	font: 11px/1 Arial, Helvetica, sans-serif;
-
-	list-style-type: square;
-
-	margin-bottom: 0;
-
-	margin-left: -10px;
-
-}
-
+/* compare.css */
+
+
+
+
+
+
+
+#main_inner_compare {
+
+
+
+	background-color: #fff;	
+
+
+
+	border: 1px solid #b3b3b3;
+
+
+
+	margin: 10px 0;
+
+
+
+	padding: 20px 19px;
+
+
+
+	width: 922px;
+
+
+
+}
+
+
+
+
+
+
+
+#compareBrdCumBar {
+
+
+
+	background-color: #e1e2e3;
+
+
+
+	height: 36px;
+
+
+
+	margin: 0 auto 20px;
+
+
+
+	width: 100%;
+
+	overflow: hidden;
+
+
+
+}
+
+
+
+
+
+
+
+#compareBrdCumBar img {
+
+
+
+	margin:0;
+
+
+
+	padding:0;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column {
+
+
+
+	background-color: #eee;
+
+
+
+	border: 1px solid #b3b3b3;
+
+
+
+	float: left;
+
+
+
+	margin:0 9px 0 0;
+
+
+
+	padding:0;
+
+
+
+	width:299px;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column_last {
+
+
+
+	margin-right: 0;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column_top {
+
+
+
+	background-color: #fff;
+
+
+
+	color: #001f49;
+
+
+
+	font: 12px/1 Arial, Helvetica, sans-serif;
+
+
+
+	padding: 7px;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_txt {
+
+
+
+	display: inline-block;
+
+
+
+	margin: 12px 15px 0;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column_ckbx {
+
+
+
+	float: left;
+
+
+
+	margin: 22px 10px auto 0;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column_top img {
+
+
+
+	margin: 0;
+
+
+
+	padding: 0;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column_details {
+
+
+
+	background-color: #fff;
+
+
+
+	border-top: 1px solid #d2d1d1;
+
+
+
+	color: #001f49;
+
+
+
+	display: inline-block;
+
+
+
+	font-family: Arial, Helvetica, sans-serif;
+
+
+
+	padding: 12px;
+
+
+
+	width: 275px;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column_details img {
+
+
+
+	float: left;
+
+
+
+	display: inline;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column_details_price {
+
+
+
+	display: block;
+
+
+
+	margin-bottom: 2px;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column_details_price_txt {
+
+
+
+	display: inline-block;
+
+
+
+	font-size: 16px;
+
+
+
+	font-weight: bold;
+
+
+
+	padding-top: 3px;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column_details_price_subtxt {
+
+
+
+	color: #555;
+
+
+
+	display: block;
+
+
+
+	font-size: 12px;
+
+
+
+	margin-bottom: 5px;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column_details_label {
+
+
+
+	font-size: 12px;
+
+
+
+	font-weight: bold;
+
+
+
+	text-transform: uppercase;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column_details_txt {
+
+
+
+	color: #555;
+
+
+
+	font-size: 12px;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column_info {
+
+
+
+	border-top: 1px solid #d2d1d1;
+
+
+
+	color: #001f49;
+
+
+
+	font: bold 12px/1 Arial, Helvetica, sans-serif;
+
+
+
+	padding: 12px;
+
+
+
+	width: 275px;
+
+
+
+}
+
+
+
+
+
+
+
+.compare_column_info ul {
+
+
+
+	color: #555;
+
+
+
+	font: 11px/1 Arial, Helvetica, sans-serif;
+
+
+
+	list-style-type: square;
+
+
+
+	margin-bottom: 0;
+
+
+
+	margin-left: -10px;
+
+
+
+}
+
+
+
