@@ -38,6 +38,7 @@ get_header(); ?>
 		margin: 0;
 		padding: 0;
 		line-height: 36px;
+		letter-spacing: .65px;
 	}
 </style>	
 <?php get_footer(); ?>
