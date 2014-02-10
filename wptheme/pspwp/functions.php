@@ -11,6 +11,8 @@
 if ( ! isset( $content_width ) )
 	$content_width = 640; /* pixels */
 
+error_reporting(0);
+
 if ( ! function_exists( 'pspwp_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
