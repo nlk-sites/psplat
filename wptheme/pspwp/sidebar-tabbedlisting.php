@@ -66,8 +66,6 @@
 
     <li><a href="#tabs-slides-3">recently sold</a></li>
 
-    
-
   </ul>
 
   <div id="tabs-slides-1" class="tab featuredListings">
@@ -83,16 +81,29 @@
 		?>
 		<li>
 			<div class="t_property">
-		        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array(123,80), array('class' => 't_thumb') ); ?></a>
+		        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array(170,115), array('class' => 't_thumb') ); ?></a>
 		        <div class="t_title" style="margin-bottom: 10px;">
 		           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		        </div>
 		        <div>
-		        	<span class="t_label">price</span>&nbsp;<span class="t_txt">$<?php echo number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-current-price', true))); ?></span>
+		        	<span class="t_label">price</span>&nbsp;<span class="t_txt">
+					<?php 
+						if ( get_post_meta(get_the_ID(), 'wpcf-current-price-range', true) != '' ) {
+							$price = explode('-', get_post_meta(get_the_ID(), 'wpcf-current-price-range', true));
+							$newprice = array();
+							foreach ($price as $k => $v) {
+								$newprice[] = '$' . number_format(floatval(preg_replace("/[^0-9]/", "", $v)));
+							}
+							$pricestr = implode(' - ', $newprice);
+							echo $pricestr;
+						} else {
+							echo '$' . number_format(floatval(preg_replace("/[^0-9]/", "", get_post_meta(get_the_ID(), 'wpcf-current-price', true))));
+						}
+					?>
+	        		</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="t_label">sq/ft</span>&nbsp;<span class="t_txt"><?php echo types_render_field("square-feet", array()); ?></span>
 		        	<br>
 		        	<span class="t_label">bed/bath</span>&nbsp;<span class="t_txt"><?php echo types_render_field("bed", array()); ?> bedroom | <?php echo types_render_field("bath", array()); ?> bathroom</span>
 		        	<br>
-		        	<span class="t_label">sq/ft</span>&nbsp;<span class="t_txt"><?php echo types_render_field("square-feet", array()); ?></span>
 		        </div>
 		        <div id="inline<?php echo $count; ?>" style="text-align: center; display:none;"><?php echo(types_render_field( "video-code", array())); ?><h3><i><?php the_title(); ?></i></h3></div>
 				<a class="showvideopopup t_link" href="#inline<?php echo $count; ?>"><img src="<?php bloginfo('template_url'); ?>/images/t_video_link.png" width="92" height="20"></a>
@@ -179,4 +190,3 @@
 
 
 </div> <!-- #tabs -->
-
