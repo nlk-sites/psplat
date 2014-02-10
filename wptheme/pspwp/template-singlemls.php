@@ -15,7 +15,7 @@ get_header(); ?>
             <?php while ( have_posts() ) : the_post(); ?>
 				<div id="compareBrdCumBar">
         			<div style="float:left; width: 172px; overflow: hidden; height: 36px;">
-					<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/compare_home_icon.png" width="40" height="36"></a><a href="<?php bloginfo('url'); ?>/idx"><img src="<?php bloginfo('template_url'); ?>/images/compare_search_results.png" width="117" height="36"></a><img src="<?php bloginfo('template_url'); ?>/images/arrow_rightt.jpg" width="11" height="36"></div>
+					<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_url'); ?>/images/compare_home_icon.png" width="40" height="36"></a><a href="javascript:history.back()"><img src="<?php bloginfo('template_url'); ?>/images/compare_search_results.png" width="117" height="36"></a><img src="<?php bloginfo('template_url'); ?>/images/arrow_rightt.jpg" width="11" height="36"></div>
 					<div style="float: left; width: 470px;"><h1><?php the_title(); ?></h1></div>
 					<div class="clearfix"></div>
         		</div>
