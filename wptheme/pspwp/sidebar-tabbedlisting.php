@@ -44,8 +44,8 @@
 		jQuery('.bxslider').bxSlider({
 		  minSlides: 2,
 		  maxSlides: 2,
-		  slideWidth: 410,
-		  slideMargin: 40,
+		  slideWidth: 420,
+		  slideMargin: 30,
 		  pager: false
 		});
 		
