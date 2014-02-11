@@ -97,8 +97,39 @@ get_header(); ?>
 							</div>
 							<div style="float: left; width: 55%; margin-bottom: 10px;">
 		      				<div class="featured_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-		     	 			<div class="featured_price"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_up_arrow.png" width="15" height="23">&nbsp;<span class="featured_price_txt">$<?php echo number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-current-price', true))); ?></span></div>
-		      				<span class="featured_price_subtxt">Original Price: $<?php echo number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-orginal-price', true))); ?></span>
+		     	 			<div class="featured_price"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_up_arrow.png" width="15" height="23">&nbsp;
+		     	 				<span class="featured_price_txt">
+	     	 					<?php 
+								if ( get_post_meta(get_the_ID(), 'wpcf-current-price-range', true) != '' ) {
+									$price = explode('-', get_post_meta(get_the_ID(), 'wpcf-current-price-range', true));
+									$newprice = array();
+									foreach ($price as $k => $v) {
+										$newprice[] = '$' . number_format(floatval(preg_replace("/[^0-9.]/", "", $v)));
+									}
+									$pricestr = implode(' - ', $newprice);
+									echo $pricestr;
+								}
+								elseif ( get_post_meta(get_the_ID(), 'wpcf-current-price', true) != '' ) {
+									echo '$' . number_format(floatval(preg_replace("/[^0-9]/", "", get_post_meta(get_the_ID(), 'wpcf-current-price', true))));
+								}
+								else {
+									echo 'Not available';
+								}
+								?>
+		     	 				</span>
+		     	 			</div>
+		      				<span class="featured_price_subtxt">Original Price:  <?php
+		      					if ( get_post_meta(get_the_ID(), 'wpcf-original-price', true) != '' ) {
+		      						echo '$' . number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-original-price', true)));
+								}
+								elseif ( get_post_meta(get_the_ID(), 'wpcf-current-price', true) != '' ) {
+									echo '$' . number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-current-price', true)));
+								}
+								else {
+									echo 'Not available';
+								}
+	      						?>
+	      					</span>
 		                    <span class="featured_label">bed/bath</span>&nbsp;<span class="featured_txt"><?php echo types_render_field("bed", array()); ?> bedroom | <?php echo types_render_field("bath", array()); ?> bathroom</span><br>
 		      				<span class="featured_label">sq/ft</span>&nbsp;<span class="featured_txt"><?php echo types_render_field("square-feet", array()); ?></span><br>
 		                    <!--span class="featured_label">days on market</span>&nbsp;<span class="featured_txt"><?php echo types_render_field("days-on-market", array()); ?></span><br-->
