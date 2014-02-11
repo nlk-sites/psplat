@@ -1,5 +1,9 @@
 (function($) {
 
+    // show front slider once dom loaded
+    $('#tab-slides').css('visibility', 'visible');
+
+
     // get URL params
     $.urlParam = (function (a) {
         var i,

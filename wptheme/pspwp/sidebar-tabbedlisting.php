@@ -4,40 +4,25 @@
 
 
 <style>
-	.slide-container .t_spacer:last-child
-	{
-		display: none;
-	}
-	
-	.bx-wrapper .bx-viewport 
-	{
+	#tab-slides { visibility: hidden; }
+	.slide-container .t_spacer:last-child { display: none; }
+	.bx-wrapper .bx-viewport {
 	    background: none !important;
 	    border: 0 none;
 	    box-shadow: none;
 	    left: -5px;
 	}
-	
-	.t_property {
-		margin: 0px;
-	}
-	
-	.bx-wrapper .bx-controls-direction a {
-		right: -40px;
-	}
-	
+	.t_property { margin: 0px; }
+	.bx-wrapper .bx-controls-direction a { right: -40px; }
 	.bx-wrapper .bx-next {
 		right: -40px;
 		display: block !important; 
 	}
-	
 	.bx-wrapper .bx-prev {
 		left: -40px;
 		display: block !important;
 	}
-	
-	.tab {
-    	min-height: 148px;
-	}		
+	.tab { min-height: 148px; }		
 </style>
 <script type="text/javascript">
 	jQuery(document).ready(function(){
