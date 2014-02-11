@@ -2,9 +2,17 @@
 <!-- bxSlider CSS file -->
 <link href="<?php bloginfo('template_url'); ?>/bxslider/jquery.bxslider.css" rel="stylesheet" />
 
-
+<!--[if lte IE 8]><!-->
+<style>
+	#tab-slides { display: none; }
+</style>
+<!--<![endif]-->
+<!--[if gt IE 8]><!-->
 <style>
 	#tab-slides { visibility: hidden; }
+</style>
+<!--<![endif]-->
+<style>
 	.slide-container .t_spacer:last-child { display: none; }
 	.bx-wrapper .bx-viewport {
 	    background: none !important;
