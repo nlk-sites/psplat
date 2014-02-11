@@ -90,8 +90,12 @@
 							}
 							$pricestr = implode(' - ', $newprice);
 							echo $pricestr;
-						} else {
+						}
+						elseif ( get_post_meta(get_the_ID(), 'wpcf-current-price', true) != '' ) {
 							echo '$' . number_format(floatval(preg_replace("/[^0-9]/", "", get_post_meta(get_the_ID(), 'wpcf-current-price', true))));
+						}
+						else {
+							echo 'N/A';
 						}
 					?>
 	        		</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="t_label">sq/ft</span>&nbsp;<span class="t_txt"><?php echo types_render_field("square-feet", array()); ?></span>

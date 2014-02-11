@@ -53,12 +53,33 @@ get_header(); ?>
 							</a>
 		                	<!--img class="featured_thumb" src="<?php bloginfo('template_url'); ?>/images/featured_sample_image.jpg" width="170" height="110"-->
 		      				<div class="featured_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-		     	 			<div class="featured_price"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_up_arrow.png" width="15" height="23">&nbsp;<span class="featured_price_txt">$<?php echo number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-current-price', true))); ?></span></div>
+		     	 			<div class="featured_price">
+		     	 				<img src="<?php bloginfo('template_url'); ?>/images/featured_listings_up_arrow.png" width="15" height="23">&nbsp;
+		     	 				<span class="featured_price_txt">
+		     	 				<?php 
+								if ( get_post_meta(get_the_ID(), 'wpcf-current-price-range', true) != '' ) {
+									$price = explode('-', get_post_meta(get_the_ID(), 'wpcf-current-price-range', true));
+									$newprice = array();
+									foreach ($price as $k => $v) {
+										$newprice[] = '$' . number_format(floatval(preg_replace("/[^0-9.]/", "", $v)));
+									}
+									$pricestr = implode(' - ', $newprice);
+									echo $pricestr;
+								}
+								elseif ( get_post_meta(get_the_ID(), 'wpcf-current-price', true) != '' ) {
+									echo '$' . number_format(floatval(preg_replace("/[^0-9]/", "", get_post_meta(get_the_ID(), 'wpcf-current-price', true))));
+								}
+								else {
+									echo 'Not available';
+								}
+								?>
+								</span>
+							</div>
 		      				<span class="featured_price_subtxt">Original Price: <?php
 		      					if ( get_post_meta(get_the_ID(), 'wpcf-original-price', true) != '' ) {
 		      						echo '$' . number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-original-price', true)));
 								}
-								else if ( get_post_meta(get_the_ID(), 'wpcf-current-price', true) != '' ) {
+								elseif ( get_post_meta(get_the_ID(), 'wpcf-current-price', true) != '' ) {
 									echo '$' . number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-current-price', true)));
 								}
 								else {
