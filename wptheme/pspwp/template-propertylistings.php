@@ -55,8 +55,8 @@ get_header(); ?>
 		      				<div class="featured_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
 		     	 			<div class="featured_price"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_up_arrow.png" width="15" height="23">&nbsp;<span class="featured_price_txt">$<?php echo number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-current-price', true))); ?></span></div>
 		      				<span class="featured_price_subtxt">Original Price: <?php
-		      					if ( get_post_meta(get_the_ID(), 'wpcf-orginal-price', true) != '' ) {
-		      						echo '$' . number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-orginal-price', true)));
+		      					if ( get_post_meta(get_the_ID(), 'wpcf-original-price', true) != '' ) {
+		      						echo '$' . number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-original-price', true)));
 								}
 								else if ( get_post_meta(get_the_ID(), 'wpcf-current-price', true) != '' ) {
 									echo '$' . number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-current-price', true)));
