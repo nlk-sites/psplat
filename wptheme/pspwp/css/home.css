@@ -1334,7 +1334,12 @@ ul.tab-control li a.active {
 	display: inline-block;
 }
 #tab-slides p span.beds,
-#tab-slides p span.baths,
+#tab-slides p span.baths {
+	display: inline-block;
+}
+#tab-slides p span.beds:after {
+	content: "  |  ";
+}
 #tab-slides p span.price {
 	display: block;
 }
@@ -1454,5 +1459,8 @@ ul.bxslider li {
 	background-position: -43px 0;
 }
 
+.slide-container div.dsidx-results-widget .dsidx-slideshow .dsidx-photo img {
+	height: 115px;
+}
 
 .wpf_ref { display: none; }
