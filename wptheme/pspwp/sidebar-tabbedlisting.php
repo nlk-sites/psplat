@@ -93,7 +93,7 @@
 							$price = explode('-', get_post_meta(get_the_ID(), 'wpcf-current-price-range', true));
 							$newprice = array();
 							foreach ($price as $k => $v) {
-								$newprice[] = '$' . number_format(floatval(preg_replace("/[^0-9]/", "", $v)));
+								$newprice[] = '$' . number_format(floatval(preg_replace("/[^0-9.]/", "", $v)));
 							}
 							$pricestr = implode(' - ', $newprice);
 							echo $pricestr;

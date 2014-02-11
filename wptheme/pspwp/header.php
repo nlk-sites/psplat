@@ -51,7 +51,8 @@
 		display: none;
 	}
 	
-	nav{
+	nav,
+	#megaMenu{
 	width: 100%;
 	left: 0;
 	top: 22px;
@@ -139,7 +140,7 @@ jQuery(function() {
 <body <?php body_class(); ?>>
 	<header>
 		<a class="logo ir" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
-		<nav>
+		<!--nav-->
 		<?php 
 			wp_nav_menu( array(
 				//'menu'       => 'mainmenu',
@@ -153,6 +154,6 @@ jQuery(function() {
 				)
 			); 
 		?>
-		</nav>
+		<!--/nav-->
 	</header>
 <div id="container">

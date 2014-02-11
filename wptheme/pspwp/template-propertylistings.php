@@ -18,44 +18,6 @@ get_header(); ?>
 					<div class="clearfix"></div>
 					<hr class="greybar_hr">
 					<div class="clearfix"></div>
-	                <!--
-					<div id="qsort">
-	                    <div class="qsort_field">
-	                        <label for="listing_type">Listing Type</label>
-	                        <div class="select_medium">
-	                            <select>
-	                                <option>Any </option>
-	                                <option>1</option>
-	                                <option>2</option>
-	                            </select>
-	                        </div>
-	                    </div>
-	                    
-	                    <div class="qsort_field">
-	                        <label for="listing_type">Area of Interest</label>
-	                        <div class="select_medium">
-	                            <select>
-	                                <option>Any </option>
-	                                <option>1</option>
-	                                <option>2</option>
-	                            </select>
-	                        </div>
-	                    </div>
-	                    
-	                    <div class="qsort_field">
-	                        <label for="listing_type">Sort By</label>
-	                        <div class="select_medium">
-	                            <select>
-	                                <option>Any </option>
-	                                <option>1</option>
-	                                <option>2</option>
-	                            </select>
-	                        </div>
-	                    </div>
-	            	</div>
-	                <div class="clearfix"></div>
-	                <hr class="greybar_hr">
-	                -->
 					<?php
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 						$args = array(
@@ -92,7 +54,18 @@ get_header(); ?>
 		                	<!--img class="featured_thumb" src="<?php bloginfo('template_url'); ?>/images/featured_sample_image.jpg" width="170" height="110"-->
 		      				<div class="featured_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
 		     	 			<div class="featured_price"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_up_arrow.png" width="15" height="23">&nbsp;<span class="featured_price_txt">$<?php echo number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-current-price', true))); ?></span></div>
-		      				<span class="featured_price_subtxt">Original Price: $<?php echo number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-orginal-price', true))); ?></span>
+		      				<span class="featured_price_subtxt">Original Price: <?php
+		      					if ( get_post_meta(get_the_ID(), 'wpcf-orginal-price', true) != '' ) {
+		      						echo '$' . number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-orginal-price', true)));
+								}
+								else if ( get_post_meta(get_the_ID(), 'wpcf-current-price', true) != '' ) {
+									echo '$' . number_format(floatval(get_post_meta(get_the_ID(), 'wpcf-current-price', true)));
+								}
+								else {
+									echo 'Not available';
+								}
+	      						?>
+	      					</span>
 		                    <span class="featured_label">bed/bath</span>&nbsp;<span class="featured_txt"><?php echo types_render_field("bed", array()); ?> bedroom | <?php echo types_render_field("bath", array()); ?> bathroom</span><br>
 		      				<span class="featured_label">sq/ft</span>&nbsp;<span class="featured_txt"><?php echo types_render_field("square-feet", array()); ?></span><br>
 		           		</div>
