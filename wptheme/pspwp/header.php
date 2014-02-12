@@ -106,7 +106,7 @@
 	border-bottom: 1px solid #4d5761;
 }
 #megaMenu .wpmega-widgetarea img { border: 3px solid #fff; box-shadow: 2px 2px 2px rgba(0,0,0,0.6) }
-#megaMenu ul li.menu-item.ss-nav-menu-mega ul li.menu-item.ss-nav-menu-item-depth-1 { padding: 11px 22px }
+#megaMenu ul li.menu-item.ss-nav-menu-mega ul li.menu-item.ss-nav-menu-item-depth-1 { padding: 11px 12px 11px 22px; }
 #megaMenu ul.megaMenu li.menu-item.ss-nav-menu-mega ul.sub-menu li.menu-item.ss-nav-menu-item-depth-1.ss-sidebar { width: auto }
 #megaMenu ul.megaMenu > li.menu-item.ss-nav-menu-mega > ul.sub-menu-1, #megaMenu ul.megaMenu li.menu-item.ss-nav-menu-reg ul.sub-menu {
 	background: url(<?php bloginfo('template_url'); ?>/images/navt.png) repeat 0 0;
