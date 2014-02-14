@@ -147,31 +147,10 @@ get_header(); ?>
 						    				
 						           		</div>
 						                <div class="featured_links">
-						                  <a target="_blank" href="http://maps.google.com/?q=<?php echo urlencode(get_post_meta(get_the_ID(), 'wpcf-address', true)); ?>"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_view_map.png" width="115" height="23"></a>
-						                  <a class="showvideopopup" href="#inline<?php echo $count; ?>"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_watch_video.png" width="115" height="30"></a>
-										  <div id="inline<?php echo $count; ?>" style="text-align: center; display:none;"><?php echo(types_render_field( "video-code", array())); ?><h3><i><?php the_title(); ?></i></h3></div>
-						                  <div class="galleryContainer" style="display: none;">
-										  	<?php
-												$galleryimages = get_post_meta(get_the_ID(), 'wpcf-gallery-image');
-												$firstimg = '#';
-												if($galleryimages):
-													foreach($galleryimages as $galleryimage)
-													{
-														if($count = 1)
-														{
-															$firstimg = $galleryimage;
-														}
-														$count += 1;
-														echo '<a class="fancybox" rel="gallery-'.get_the_ID().'" href="'.$galleryimage.'"><img src="'.$galleryimage.'" /></a>';	
-													}
-												endif;	
-												
-											?>
-										  </div>
-										  <?php if($firstimg != '#'): ?>
-										  <a href="<?php echo $firstimg; ?>" class="fancybox" rel="gallery-<?php echo get_the_ID(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_photo_gallery.png" width="115" height="30"></a>
-										  <?php endif;?>
-						                  <a href="<?php the_permalink(); ?>"><img class="property_details_btn" src="<?php bloginfo('template_url'); ?>/images/featured_listings_prop_details_bttn.png" width="114" height="22"></a>
+											<a target="_blank" href="http://maps.google.com/?q=<?php echo urlencode(get_post_meta(get_the_ID(), 'wpcf-address', true)); ?>"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_view_map.png" width="115" height="23"></a>
+											<a class="showvideopopup" href="<?php the_permalink(); ?>#tabs-1"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_watch_video.png" width="115" height="30"></a>
+											<a href="<?php the_permalink(); ?>#tabs-1" class="" rel="gallery-<?php echo get_the_ID(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_photo_gallery.png" width="115" height="30"></a>
+											<a href="<?php the_permalink(); ?>"><img class="property_details_btn" src="<?php bloginfo('template_url'); ?>/images/featured_listings_prop_details_bttn.png" width="114" height="22"></a>
 						                </div>
 						        		<div class="clearfix"></div>
 						            	<hr class="greybar_hr">
