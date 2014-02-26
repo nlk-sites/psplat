@@ -39,6 +39,7 @@
 					<h3><a class="contact-office" href="<?php echo home_url(); ?>/contact-us/">Prospect, La Jolla</a></h3>
 					<div class="textwidget">
 						<p class="contact-office">1298 Prospect St<br>
+						Suite 1W<br>
 						La Jolla, CA 92037<br>
 						Phone (858)481-7939<br>
 						Fax (858)481-5134</p>
