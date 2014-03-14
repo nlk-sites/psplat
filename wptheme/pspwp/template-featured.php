@@ -11,7 +11,7 @@
 get_header(); ?>
 
 <div id="main" role="main">
-  <?php get_sidebar("searchbar"); ?>
+  <?php //get_sidebar("searchbar"); ?>
 	<div id="main_inner">
         <div class="left_main_accnt" style="width: 918px;">
        	  <div id="listings">
