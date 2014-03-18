@@ -498,3 +498,14 @@ body.single-property #tabs-1 tr th {
 }
 
 body.single-property #tabs-1 iframe.dsidx-shortcode-map { margin: auto !important; }
+
+
+/* IDX quicksearch fixes */
+#div_divLocal53475_{ display: none; }
+#div_divLocal53475_.showme{ display: block; margin-top: 2px; }
+
+.sbr { max-height: 32px; }
+.sbr .QuickSearch_div .quicksearch_div { height: inherit; width: inherit;}
+.sbr .quicksearch_label { padding-left: 10px; margin-top: 3px; width: auto; }
+.sbr #search-locations { width: 260px; }
+.sbr .quicksearch_button_cell { border: none; }

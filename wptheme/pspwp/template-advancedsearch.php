@@ -11,7 +11,7 @@
 get_header(); ?>
 
 <div id="main" role="main">
-  <?php get_sidebar("searchbar"); ?>
+  <?php //get_sidebar("searchbar"); ?>
 	<div id="main_inner">
         <div class="left_main_accnt" style="width: 918px;">
        	  <div id="listings">
@@ -20,7 +20,7 @@ get_header(); ?>
 				<hr class="greybar_hr" />
 				<?php the_content(); ?>
 			<?php endwhile; // end of the loop. ?>
-			<script src="http://idx.diversesolutions.com/scripts/controls/Remote-Frame.aspx?MasterAccountID=85189&amp;SearchSetupID=11&amp;LinkID=346712&amp;Height=2000"></script>
+			<script src="http://idx.diversesolutions.com/scripts/controls/Remote-Frame.aspx?MasterAccountID=85189&amp;SearchSetupID=11&amp;LinkID=0&amp;Height=2000"></script>
           </div>
         </div>
 	  	<div class="clearfix"></div>

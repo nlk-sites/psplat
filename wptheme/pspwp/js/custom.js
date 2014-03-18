@@ -20,9 +20,12 @@
     }(window.location.search.substr(1).split('&')));
 
 
+    // new IDX omnibox fix
+    $('select#quicksearch_minprice_list').find('option:first-child').text('No Min');
+    $('select#quicksearch_maxprice_list').find('option:first-child').text('No Max');
 
-
-    //idx search widget multi search box
+    //OLD idx search widget multi search box
+    /*
     $('#idx-q-Cities').bind("blur keyup", function(){
         var theVal = $(this).val(),
             filterZip = new RegExp("^[0-9]{5}([-][0-9]{4})?$"),
@@ -60,7 +63,7 @@
         $('input[name="idx-q-AddressMasks"]').val( '%' + addyVal + '%' );
         return true;
     }); 
-
+    */
 
 
     // Set right side-bar no smaller than left content
