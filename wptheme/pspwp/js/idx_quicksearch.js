@@ -2,7 +2,7 @@ var quickSearchScript, _ds_midx;
 CreateObjectd140c = function () {
 	_ds_midx = {
 		isFramed: '',
-		currentURL: 'http://local.nlk/psp/search/',
+		currentURL: 'http://www.psplatinum.com/search/',
 		targetDomain: 'ead8tKOmNFVti8YtUKx7Ip9JBZtQ4nX1YcYX9ZpN9yM=',
 		accountId: '85189',
 		searchSetupId: '11',
