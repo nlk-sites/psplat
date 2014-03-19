@@ -32,7 +32,11 @@ get_header();
 
                         <?php //dynamic_sidebar('search-widget'); ?>
 
-						<form method="get" action="<?php bloginfo('url'); ?>/idx/" id="idx-search-form">
+                        <script id="divLocal3777e_" type="text/javascript" src="http://widgets.diversesolutions.com/Scripts/Dynamic/widgetTLM.js?curDivID=divLocal3777e_&curWidth=470&curHeight=200&type=quicksearch&targetDomain=ead8tKOmNFVti8YtUKx7IvAuBhuhcfwvTR9x0lZYrqo=&aid=85189&ssid=11&productType=1&location=1&fields=013&widgetType=1&muteStyles=false&currentURL=http://www.psplatinum.com/search/"></script>
+
+						<?php /*
+
+                        <form method="get" action="<?php bloginfo('url'); ?>/idx/" id="idx-search-form">
 
                             <div class="qsrch_row">
 
@@ -255,6 +259,8 @@ get_header();
                             </div>
 
                         </form>
+
+                        */ ?>
 
                     </div>
 
