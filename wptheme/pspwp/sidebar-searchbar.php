@@ -11,7 +11,7 @@
 
 //Overwrite IDX method
 ?>
-<div class="sbr s-coll clearfix">
+<div class="sbr idx s-coll clearfix">
 	<div id="div_divLocal53475_" class="showme">
 		<div id="QuickSearch_divLocal53475_" class="QuickSearch_div">
 			<div id="QuickSearch_divLocal53475__QuickSearch" class="quicksearch_div">
