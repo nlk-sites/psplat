@@ -18,7 +18,7 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/style.css">
+
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/jquery_custom_light/jquery-ui-1.8.19.custom.css">
 <link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/jquery_custom_light/jquery.ui.tabs.css">
 <script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr-2.0.6.min.js"></script>
