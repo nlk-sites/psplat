@@ -227,14 +227,36 @@ add_action( 'widgets_init', 'pspwp_widgets_init' );
  * Enqueue scripts and styles
  */
 function pspwp_scripts() {
+	$theme = wp_get_theme();
 	wp_enqueue_style( 'pspwp-style', get_bloginfo( 'stylesheet_url' ), array(), $theme->Version );
 
-	wp_enqueue_style( 'pspwp-style-sub', get_template_directory_uri() . '/css/style.css', array(), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-search', get_template_directory_uri() . '/css/search.css', array(), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-sub', get_template_directory_uri() . '/css/style.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-search', get_template_directory_uri() . '/css/search.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-home', get_template_directory_uri() . '/css/home.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-nav', get_template_directory_uri() . '/css/nav.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-slider', get_template_directory_uri() . '/css/slider.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-login', get_template_directory_uri() . '/css/login.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-structure', get_template_directory_uri() . '/css/structure.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-featured', get_template_directory_uri() . '/css/featured.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-listings', get_template_directory_uri() . '/css/listings.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-account', get_template_directory_uri() . '/css/account.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-blog', get_template_directory_uri() . '/css/blog.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-contact', get_template_directory_uri() . '/css/contact.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-compare', get_template_directory_uri() . '/css/compare.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-mls_details', get_template_directory_uri() . '/css/mls_details.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-mls_results', get_template_directory_uri() . '/css/mls_results.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-pagination', get_template_directory_uri() . '/css/pagination.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-side-panel', get_template_directory_uri() . '/css/side-panel.css', array('pspwp-style'), $theme->Version );
+	
+	wp_enqueue_style( 'video-js.min', get_template_directory_uri() . '/video-js/video-js.min.css', array('pspwp-style') );
+
+	wp_enqueue_style( 'jquery-ui-1.8.19.custom', get_template_directory_uri() . '/css/jquery_custom_light/jquery-ui-1.8.19.custom.css', array('pspwp-style') );
+	wp_enqueue_style( 'jquery.ui.tabs', get_template_directory_uri() . '/css/jquery_custom_light/jquery.ui.tabs.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'jquery-ui-1.8.19.custom', get_template_directory_uri() . '/css/jquery_custom_light/jquery-ui-1.8.19.custom.css', array('pspwp-style') );
+	wp_enqueue_style( 'jquery.ui.tabs', get_template_directory_uri() . '/css/jquery_custom_light/jquery.ui.tabs.css', array('pspwp-style') );
 
 
-
-
+	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/libs/modernizr-2.0.6.min.js', array(), '2.0.6', false );
 
 	wp_enqueue_script( 'pspwp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

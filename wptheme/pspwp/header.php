@@ -19,28 +19,6 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/jquery_custom_light/jquery-ui-1.8.19.custom.css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/jquery_custom_light/jquery.ui.tabs.css">
-<script src="<?php bloginfo( 'template_url' ); ?>/js/libs/modernizr-2.0.6.min.js"></script>
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/jquery_custom_light/jquery-ui-1.8.19.custom.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/jquery_custom_light/jquery.ui.tabs.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/home.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/nav.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/slider.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/login.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/structure.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/featured.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/listings.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/account.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/blog.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/contact.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/compare.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/mls_details.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/mls_results.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/pagination.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/css/side-panel.css" type="text/css">
-<link rel="stylesheet" href="<?php bloginfo( 'template_url' ); ?>/video-js/video-js.min.css" type="text/css">
-
 <!--meta name="viewport" content="initial-scale=1.0, user-scalable=no" /-->
 
 <?php wp_enqueue_script('jquery'); ?>
