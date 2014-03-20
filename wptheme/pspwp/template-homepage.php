@@ -30,9 +30,179 @@ get_header();
 
                         <img id="qsrch_title" src="<?php bloginfo('template_url'); ?>/images/start_here.png" width="145" height="28">
 
-                        <?php //dynamic_sidebar('search-widget'); ?>
+                        <?php /*
+
+                        <div id="div_divLocal3777e_" class="showme" >
+
+                            <div id="QuickSearch_divLocal3777e_" style="padding: 0px;">
+
+                                <div id="QuickSearch_divLocal3777e__QuickSearch" style="width: 240px; background-color: white; margin: 0px auto;">
+
+                                    <table style="width: 100%; height: 100%;">
+
+                                        <tbody>
+
+                                            <tr>
+
+                                                <th style="font-family: arial, sans-serif; font-size: 16px; font-weight: bold; border-bottom-style: solid; border-bottom-color: black; border-bottom-width: 1px; text-align: left; width: 150px;">Location</th>
+
+                                            </tr>
+
+                                            <tr>
+
+                                                <td style="position: relative;">
+
+                                                    <input id="search-locations" placeholder="Enter Location, Address, MLS #" class="search-locations" aria-haspopup="true" style="width: 100%; font-family: arial, sans-serif; font-size: 12px; padding: 4px 0px; border: 1px solid gray;">
+
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+
+                                                <td>
+                                                    
+                                                    <table style="">
+
+                                                        <tbody>
+
+                                                            <tr>
+
+                                                                <th colspan="3" style="font-family: arial, sans-serif; font-size: 16px; font-weight: bold; border-bottom-style: solid; border-bottom-color: black; border-bottom-width: 1px; text-align: left;">Property</th>
+
+                                                            </tr>
+
+                                                            <tr>
+
+                                                                <td style="font-family: arial, sans-serif; font-size: 11px; width: 70px; text-align: left;">BEDS</td>
+
+                                                                <td style="font-family: arial, sans-serif; font-size: 11px; width: 70px; text-align: left;">BATHS</td>
+
+                                                            </tr>
+
+                                                        </tbody>
+
+                                                    </table>
+                                                
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+
+                                                <td>
+
+                                                    <table style="padding: 0px; border-spacing: 0px;">
+
+                                                        <tbody>
+
+                                                            <tr>
+
+                                                                <td style="font-family: arial, sans-serif; font-size: 16px; width: 70px; vertical-align: top;">
+
+                                                                    <select id="quicksearch_beds_list" type="list" style="font-family: arial, sans-serif; font-size: 12px; padding: 4px;">
+                                                                        
+                                                                        <option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option>
+
+                                                                    </select>
+
+                                                                </td>
+
+                                                                <td style="font-family: arial, sans-serif; font-size: 16px; width: 70px; vertical-align: top;">
+
+                                                                    <select id="quicksearch_baths_list" type="list" style="font-family: arial, sans-serif; font-size: 12px; padding: 4px;">
+                                                                        
+                                                                        <option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option>
+
+                                                                    </select>
+
+                                                                </td>
+
+                                                                <td style="font-family: arial, sans-serif; font-size: 16px; width: 90px; vertical-align: top;"></td>
+
+                                                            </tr>
+
+                                                        </tbody>
+
+                                                    </table>
+
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+
+                                                <td>
+
+                                                    <table style="padding: 0px; border-spacing: 0px;">
+
+                                                        <tbody>
+
+                                                            <tr>
+
+                                                                <td style="font-family: arial, sans-serif; font-size: 11px;">PRICE</td>
+
+                                                            </tr>
+
+                                                            <tr>
+
+                                                                <td style="font-family: arial, sans-serif; font-size: 16px; vertical-align: top;">
+
+                                                                    <select id="quicksearch_minprice_list" type="list" style="font-family: arial, sans-serif; font-size: 12px; padding: 4px;">
+                                                
+                                                                        <option value="0">$0</option><option value="100000">$100,000</option><option value="200000">$200,000</option><option value="300000">$300,000</option><option value="400000">$400,000</option><option value="500000">$500,000</option><option value="600000">$600,000</option><option value="700000">$700,000</option><option value="800000">$800,000</option><option value="900000">$900,000</option><option value="1000000">$1,000,000</option><option value="2000000">$2,000,000</option><option value="3000000">$3,000,000</option><option value="4000000">$4,000,000</option><option value="5000000">$5,000,000</option><option value="10000000">$10,000,000</option><option value="20000000">$20,000,000</option><option value="50000000">$50,000,000</option>
+                    
+                                                                    </select>
+
+                                                                </td>
+
+                                                                <td style="font-family: arial, sans-serif; font-size: 11px;"> - </td>
+
+                                                                <td style="font-family: arial, sans-serif; font-size: 16px; vertical-align: top;">
+
+                                                                    <select id="quicksearch_maxprice_list" type="list" style="font-family: arial, sans-serif; font-size: 12px; padding: 4px;">
+                                            
+                                                                        <option value="0">$0</option><option value="100000">$100,000</option><option value="200000">$200,000</option><option value="300000">$300,000</option><option value="400000">$400,000</option><option value="500000">$500,000</option><option value="600000">$600,000</option><option value="700000">$700,000</option><option value="800000">$800,000</option><option value="900000">$900,000</option><option value="1000000">$1,000,000</option><option value="2000000">$2,000,000</option><option value="3000000">$3,000,000</option><option value="4000000">$4,000,000</option><option value="5000000">$5,000,000</option><option value="10000000">$10,000,000</option><option value="20000000">$20,000,000</option><option value="50000000">$50,000,000</option>
+                                
+                                                                    </select>
+
+                                                                </td>
+
+                                                            </tr>
+
+                                                        </tbody>
+
+                                                    </table>
+
+                                                </td>
+
+                                            </tr>
+
+                                            <tr>
+
+                                                <td colspan="4" style="text-align: right; padding: 5px;">
+
+                                                    <input type="button" id="quicksearch_button" value="Search for Properties" style="font-family: arial, sans-serif; font-size: 12px; font-weight: bold; color: white; background-color: rgb(39, 128, 230); width: 170px; height: 32px; border: 1px solid black;">
+
+                                                </td>
+
+                                            </tr>
+
+                                        </tbody>
+
+                                    </table>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        */ ?>
 
                         <script id="divLocal3777e_" type="text/javascript" src="http://widgets.diversesolutions.com/Scripts/Dynamic/widgetTLM.js?curDivID=divLocal3777e_&curWidth=470&curHeight=200&type=quicksearch&targetDomain=ead8tKOmNFVti8YtUKx7IvAuBhuhcfwvTR9x0lZYrqo=&aid=85189&ssid=11&productType=1&location=1&fields=013&widgetType=1&muteStyles=false&currentURL=http://www.psplatinum.com/search/"></script>
+
+                        <?php //dynamic_sidebar('search-widget'); ?>
 
 						<?php /*
 

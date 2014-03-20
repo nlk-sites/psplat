@@ -21,8 +21,8 @@
 
 
     // new IDX omnibox fix
-    $('select#quicksearch_minprice_list').find('option:first-child').text('No Min');
-    $('select#quicksearch_maxprice_list').find('option:first-child').text('No Max');
+    $('#quicksearch_minprice_list').find('option:first-child').text('No Min');
+    $('#quicksearch_maxprice_list').find('option:first-child').text('No Max');
 
     //OLD idx search widget multi search box
     /*
