@@ -227,7 +227,7 @@ add_action( 'widgets_init', 'pspwp_widgets_init' );
  * Enqueue scripts and styles
  */
 function pspwp_scripts() {
-	wp_enqueue_style( 'pspwp-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'pspwp-style', get_bloginfo( 'stylesheet_url' ), array(), $theme->Version );
 
 	wp_enqueue_script( 'pspwp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
