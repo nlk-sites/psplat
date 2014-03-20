@@ -2028,3 +2028,18 @@
 		border-radius: 5px;
 		color: #757a7f;
 	}
+
+
+
+/* sidebar search idx */
+#div_divLocal8cb9a_ {display: none;}
+#div_divLocal8cb9a_.showme {display: block; padding-left: 10px;}
+#div_divLocal8cb9a_.showme #QuickSearch_divLocal8cb9a__QuickSearch {height: auto !important;}
+#div_divLocal8cb9a_.showme .full { float: left; margin-bottom: 16px; width: 100%;}
+#div_divLocal8cb9a_.showme .full.center {text-align: center;}
+#div_divLocal8cb9a_.showme .half { float: left; margin-bottom: 16px; width: 50%;}
+#div_divLocal8cb9a_.showme label { display: block; font-weight: bold;}
+#div_divLocal8cb9a_.showme select { width: 104px; }
+#div_divLocal8cb9a_.showme td { padding-right: 4px; }
+#div_divLocal8cb9a_.showme #quicksearch_beds_list { margin-right: 8px; }
+#div_divLocal8cb9a_.showme #quicksearch_button { margin-left: -10px; }
