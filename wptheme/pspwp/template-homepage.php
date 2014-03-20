@@ -30,8 +30,6 @@ get_header();
 
                         <img id="qsrch_title" src="<?php bloginfo('template_url'); ?>/images/start_here.png" width="145" height="28">
 
-                        <?php /*
-
                         <div id="div_divLocal3777e_" class="showme" >
 
                             <div id="QuickSearch_divLocal3777e_" style="padding: 0px;">
@@ -197,8 +195,6 @@ get_header();
                             </div>
 
                         </div>
-
-                        */ ?>
 
                         <script id="divLocal3777e_" type="text/javascript" src="http://widgets.diversesolutions.com/Scripts/Dynamic/widgetTLM.js?curDivID=divLocal3777e_&curWidth=470&curHeight=200&type=quicksearch&targetDomain=ead8tKOmNFVti8YtUKx7IvAuBhuhcfwvTR9x0lZYrqo=&aid=85189&ssid=11&productType=1&location=1&fields=013&widgetType=1&muteStyles=false&currentURL=http://www.psplatinum.com/search/"></script>
 

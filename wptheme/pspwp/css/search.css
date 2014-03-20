@@ -1895,7 +1895,7 @@
 
 
 
-/* IDX quicksearch fixes */
+/* IDX quicksearch fixes top bar */
 #div_divLocal53475_{ display: none; }
 #div_divLocal53475_.showme{ display: block; margin-top: 2px; }
 
@@ -1908,7 +1908,7 @@
 
 /* IDX search fix */
 
-	/*#div_divLocal3777e_ + #div_divLocal3777e_ { display: none; }*/
+	#div_divLocal3777e_ { display: none; }
 	#div_divLocal3777e_.showme { display: block; }
 	/*#qsrch #div_divLocal3777e_ { display: none; }*/
 	#qsrch #QuickSearch_divLocal3777e__QuickSearch {
