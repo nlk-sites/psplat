@@ -263,7 +263,8 @@ function pspwp_scripts() {
 	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/libs/modernizr-2.0.6.min.js', array('jquery'), '2.0.6', false );
 	wp_enqueue_script( 'pspwp-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20120206', true );
 	wp_enqueue_script( 'pspwp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array('jquery'), '20130115', true );
-	wp_enqueue_script( 'jquery-ui-1.8.17.custom.min', get_template_directory_uri() . '/js/libs/jquery-ui-1.8.17.custom.min.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'jquery-ui', '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js', array('jquery'), '1.10.4');
+	//wp_enqueue_script( 'jquery-ui-1.8.17.custom.min', get_template_directory_uri() . '/js/libs/jquery-ui-1.8.17.custom.min.js', array('jquery'), $theme->Version, true );
 	wp_enqueue_script( 'jquery.ui.tabs', get_template_directory_uri() . '/js/libs/ui/jquery.ui.tabs.js', array('jquery'), $theme->Version, true );
 	wp_enqueue_script( 'jquery.tools.min', get_template_directory_uri() . '/js/libs/jquery.tools.min.js', array('jquery'), $theme->Version, true );
 	wp_enqueue_script( 'slides.jquery', get_template_directory_uri() . '/js/slides.jquery.js', array('jquery'), $theme->Version, true );
