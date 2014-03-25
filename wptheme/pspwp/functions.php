@@ -228,49 +228,67 @@ add_action( 'widgets_init', 'pspwp_widgets_init' );
  */
 function pspwp_scripts() {
 	$theme = wp_get_theme();
+
+	// Styles
 	wp_enqueue_style( 'pspwp-style', get_bloginfo( 'stylesheet_url' ), array(), $theme->Version );
-
-	wp_enqueue_style( 'pspwp-style-sub', get_template_directory_uri() . '/css/style.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-search', get_template_directory_uri() . '/css/search.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-home', get_template_directory_uri() . '/css/home.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-nav', get_template_directory_uri() . '/css/nav.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-sub', get_template_directory_uri() . '/css/style.min.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-search', get_template_directory_uri() . '/css/search.min.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-home', get_template_directory_uri() . '/css/home.min.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-nav', get_template_directory_uri() . '/css/nav.min.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-forms', get_template_directory_uri() . '/css/forms.min.css', array('pspwp-style'), $theme->Version );
 	wp_enqueue_style( 'pspwp-style-slider', get_template_directory_uri() . '/css/slider.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-login', get_template_directory_uri() . '/css/login.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-login', get_template_directory_uri() . '/css/login.min.css', array('pspwp-style'), $theme->Version );
 	wp_enqueue_style( 'pspwp-style-structure', get_template_directory_uri() . '/css/structure.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-featured', get_template_directory_uri() . '/css/featured.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-listings', get_template_directory_uri() . '/css/listings.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-account', get_template_directory_uri() . '/css/account.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-blog', get_template_directory_uri() . '/css/blog.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-contact', get_template_directory_uri() . '/css/contact.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-compare', get_template_directory_uri() . '/css/compare.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-mls_details', get_template_directory_uri() . '/css/mls_details.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-mls_results', get_template_directory_uri() . '/css/mls_results.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-featured', get_template_directory_uri() . '/css/featured.min.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-listings', get_template_directory_uri() . '/css/listings.min.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-featured-listings', get_template_directory_uri() . '/css/featured_listings.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-account', get_template_directory_uri() . '/css/account.min.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-blog', get_template_directory_uri() . '/css/blog.min.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-contact', get_template_directory_uri() . '/css/contact.min.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-compare', get_template_directory_uri() . '/css/compare.min.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-mls_details', get_template_directory_uri() . '/css/mls_details.min.css', array('pspwp-style'), $theme->Version );
+	wp_enqueue_style( 'pspwp-style-mls_results', get_template_directory_uri() . '/css/mls_results.min.css', array('pspwp-style'), $theme->Version );
 	wp_enqueue_style( 'pspwp-style-pagination', get_template_directory_uri() . '/css/pagination.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'pspwp-style-side-panel', get_template_directory_uri() . '/css/side-panel.css', array('pspwp-style'), $theme->Version );
-	
+	wp_enqueue_style( 'pspwp-style-side-panel', get_template_directory_uri() . '/css/side-panel.min.css', array('pspwp-style'), $theme->Version );
 	wp_enqueue_style( 'video-js.min', get_template_directory_uri() . '/video-js/video-js.min.css', array('pspwp-style') );
-
 	wp_enqueue_style( 'jquery-ui-1.8.19.custom', get_template_directory_uri() . '/css/jquery_custom_light/jquery-ui-1.8.19.custom.css', array('pspwp-style') );
 	wp_enqueue_style( 'jquery.ui.tabs', get_template_directory_uri() . '/css/jquery_custom_light/jquery.ui.tabs.css', array('pspwp-style'), $theme->Version );
 	wp_enqueue_style( 'jquery-ui-1.8.19.custom', get_template_directory_uri() . '/css/jquery_custom_light/jquery-ui-1.8.19.custom.css', array('pspwp-style') );
 	wp_enqueue_style( 'jquery.ui.tabs', get_template_directory_uri() . '/css/jquery_custom_light/jquery.ui.tabs.css', array('pspwp-style') );
+	wp_enqueue_style( 'jquery.fancybox.css', get_template_directory_uri() . '/fancy/jquery.fancybox.css', array('pspwp-style'), $theme->Version, 'screen' );
+	wp_enqueue_style( 'jquery.fancybox-buttons.css', get_template_directory_uri() . '/fancy/helpers/jquery.fancybox-buttons.css', array('pspwp-style'), $theme->Version, 'screen' );
+	wp_enqueue_style( 'jquery.fancybox-thumbs.css', get_template_directory_uri() . '/fancy/helpers/jquery.fancybox-thumbs.css', array('pspwp-style'), $theme->Version, 'screen' );
 
+	// Scripts
+	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/libs/modernizr-2.0.6.min.js', array('jquery'), '2.0.6', false );
+	wp_enqueue_script( 'pspwp-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20120206', true );
+	wp_enqueue_script( 'pspwp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array('jquery'), '20130115', true );
+	wp_enqueue_script( 'jquery-ui-1.8.17.custom.min', get_template_directory_uri() . '/js/libs/jquery-ui-1.8.17.custom.min.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'jquery.ui.tabs', get_template_directory_uri() . '/js/libs/ui/jquery.ui.tabs.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'jquery.tools.min', get_template_directory_uri() . '/js/libs/jquery.tools.min.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'slides.jquery', get_template_directory_uri() . '/js/slides.jquery.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'mustache', get_template_directory_uri() . '/js/mustache.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'video.min', get_template_directory_uri() . '/video-js/video.min.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'plugins', get_template_directory_uri() . '/js/plugins.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'cycle.min', get_template_directory_uri() . '/js/cycle.min.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'side-panel', get_template_directory_uri() . '/js/side-panel.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/slider.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'galleria-1.2.8.min', get_template_directory_uri() . '/js/galleria-1.2.8.min.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'jquery.fancybox.pack', get_template_directory_uri() . '/fancy/jquery.fancybox.pack.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'jquery.fancybox-buttons', get_template_directory_uri() . '/fancy/helpers/jquery.fancybox-buttons.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'jquery.fancybox-media', get_template_directory_uri() . '/fancy/helpers/jquery.fancybox-media.js', array('jquery'), $theme->Version, true );
+	wp_enqueue_script( 'jquery.fancybox-thumbs', get_template_directory_uri() . '/fancy/helpers/jquery.fancybox-thumbs.js', array('jquery'), $theme->Version, true );
 
-	wp_enqueue_script( 'modernizr', get_template_directory_uri() . '/js/libs/modernizr-2.0.6.min.js', array(), '2.0.6', false );
-
-	wp_enqueue_script( 'pspwp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-
-	wp_enqueue_script( 'pspwp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'pspwp-customs', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '1', true );
+	wp_enqueue_script( 'pspwp-customs-head', get_template_directory_uri() . '/js/custom-head.js', array( 'jquery' ), '1', false );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
-
 	if ( is_singular() && wp_attachment_is_image() ) {
 		wp_enqueue_script( 'pspwp-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20120202' );
 	}
-
-	wp_enqueue_script( 'pspwp-customs', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), '1', true );
 
 }
 add_action( 'wp_enqueue_scripts', 'pspwp_scripts' );
@@ -395,6 +413,6 @@ function curl_schools( $zip, $state ) {
 
 //[idx-sidebar-form]
 function idx_sidebar_render( $atts ){
-	return '<script id="divLocal8cb9a_" type="text/javascript" src="'.get_template_directory_uri().'/js/idx_quicksearch_sidebar.js"></script><div id="div_divLocal8cb9a_" class="showme"><div id="QuickSearch_divLocal8cb9a_" class="QuickSearch_div"><div id="QuickSearch_divLocal8cb9a__QuickSearch" class="quicksearch_vert_div"><div class="full"><input id="search-locations" placeholder="Enter Location, Address, MLS #" class="search-locations" aria-haspopup="true" style="width: 222px; font-family: arial, sans-serif; font-size: 12px; padding: 4px 0px; border: 1px solid gray;"></div><div class="half"><label for="quicksearch_beds_list" class="quicksearch_label">BEDS</label><select id="quicksearch_beds_list" type="list" class="quicksearch_list"><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option></select></div><div class="half"><label for="quicksearch_baths_list" class="quicksearch_label">BATHS</label><select id="quicksearch_baths_list" type="list" class="quicksearch_list"><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option></select></div><div class="full"><label for="quicksearch_minprice_list" class="quicksearch_label" colspan="3">PRICE</label><select id="quicksearch_minprice_list" type="list" class="quicksearch_list"><option value="0">No Min</option><option value="100000">$100,000</option><option value="200000">$200,000</option><option value="300000">$300,000</option><option value="400000">$400,000</option><option value="500000">$500,000</option><option value="600000">$600,000</option><option value="700000">$700,000</option><option value="800000">$800,000</option><option value="900000">$900,000</option><option value="1000000">$1,000,000</option><option value="2000000">$2,000,000</option><option value="3000000">$3,000,000</option><option value="4000000">$4,000,000</option><option value="5000000">$5,000,000</option><option value="10000000">$10,000,000</option><option value="20000000">$20,000,000</option><option value="50000000">$50,000,000</option></select>&nbsp;-&nbsp;<select id="quicksearch_maxprice_list" type="list" class="quicksearch_list"><option value="0">No Max</option><option value="100000">$100,000</option><option value="200000">$200,000</option><option value="300000">$300,000</option><option value="400000">$400,000</option><option value="500000">$500,000</option><option value="600000">$600,000</option><option value="700000">$700,000</option><option value="800000">$800,000</option><option value="900000">$900,000</option><option value="1000000">$1,000,000</option><option value="2000000">$2,000,000</option><option value="3000000">$3,000,000</option><option value="4000000">$4,000,000</option><option value="5000000">$5,000,000</option><option value="10000000">$10,000,000</option><option value="20000000">$20,000,000</option><option value="50000000">$50,000,000</option></select></div><div class="full center"><input type="button" id="quicksearch_button_sidebar" value="Search for Properties" class="quicksearch_button_sidebar sbr-sbmt"></div></div></div></div>';
+	return '<script id="divLocal8cb9a_" type="text/javascript" src="http://widgets.diversesolutions.com/Scripts/Dynamic/widgetTLM.js?curDivID=divLocal8cb9a_&curWidth=240&curHeight=200&type=quicksearch&targetDomain=ead8tKOmNFVti8YtUKx7Ip9JBZtQ4nX1YcYX9ZpN9yM=&aid=85189&ssid=11&productType=1&location=1&fields=013&widgetType=1&muteStyles=false&currentURL=http://www.psplatinum.com/search/"></script><div id="div_divLocal8cb9a_" class="showme"><div id="QuickSearch_divLocal8cb9a_" class="QuickSearch_div"><div id="QuickSearch_divLocal8cb9a__QuickSearch" class="quicksearch_vert_div"><div class="full"><input id="search-locations" placeholder="Enter Location, Address, MLS #" class="search-locations" aria-haspopup="true" style="width: 222px; font-family: arial, sans-serif; font-size: 12px; padding: 4px 0px; border: 1px solid gray;"></div><div class="half"><label for="quicksearch_beds_list" class="quicksearch_label">BEDS</label><select id="quicksearch_beds_list" type="list" class="quicksearch_list"><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option></select></div><div class="half"><label for="quicksearch_baths_list" class="quicksearch_label">BATHS</label><select id="quicksearch_baths_list" type="list" class="quicksearch_list"><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option><option value="6">6+</option></select></div><div class="full"><label for="quicksearch_minprice_list" class="quicksearch_label" colspan="3">PRICE</label><select id="quicksearch_minprice_list" type="list" class="quicksearch_list"><option value="0">No Min</option><option value="100000">$100,000</option><option value="200000">$200,000</option><option value="300000">$300,000</option><option value="400000">$400,000</option><option value="500000">$500,000</option><option value="600000">$600,000</option><option value="700000">$700,000</option><option value="800000">$800,000</option><option value="900000">$900,000</option><option value="1000000">$1,000,000</option><option value="2000000">$2,000,000</option><option value="3000000">$3,000,000</option><option value="4000000">$4,000,000</option><option value="5000000">$5,000,000</option><option value="10000000">$10,000,000</option><option value="20000000">$20,000,000</option><option value="50000000">$50,000,000</option></select>&nbsp; -&nbsp; <select id="quicksearch_maxprice_list" type="list" class="quicksearch_list"><option value="0">No Max</option><option value="100000">$100,000</option><option value="200000">$200,000</option><option value="300000">$300,000</option><option value="400000">$400,000</option><option value="500000">$500,000</option><option value="600000">$600,000</option><option value="700000">$700,000</option><option value="800000">$800,000</option><option value="900000">$900,000</option><option value="1000000">$1,000,000</option><option value="2000000">$2,000,000</option><option value="3000000">$3,000,000</option><option value="4000000">$4,000,000</option><option value="5000000">$5,000,000</option><option value="10000000">$10,000,000</option><option value="20000000">$20,000,000</option><option value="50000000">$50,000,000</option></select></div><div class="full center"><input type="button" id="quicksearch_button" value="Search for Properties" class="quicksearch_button sbr-sbmt"></div></div></div></div>';
 }
 add_shortcode( 'idx-sidebar-form', 'idx_sidebar_render' );

@@ -19,52 +19,9 @@
         return b;
     }(window.location.search.substr(1).split('&')));
 
-
     // new IDX omnibox fix
     $('#quicksearch_minprice_list').find('option:first-child').text('No Min');
     $('#quicksearch_maxprice_list').find('option:first-child').text('No Max');
-
-    //OLD idx search widget multi search box
-    /*
-    $('#idx-q-Cities').bind("blur keyup", function(){
-        var theVal = $(this).val(),
-            filterZip = new RegExp("^[0-9]{5}([-][0-9]{4})?$"),
-            filterCity = new RegExp("^[a-zA-Z]+"),
-            filterAddress = new RegExp("[0-9]{1,7}[\\s+]([a-zA-Z]+)"),
-            filterMls = new RegExp("^[0-9]{6,}");
-
-        if ( filterZip.test(theVal) ) {
-            $(this).attr('name', 'idx-q-ZipCodes').removeClass('ui-autocomplete-input');
-        }
-        else if ( filterCity.test(theVal) ) {
-            $(this).attr('name', 'idx-q-Cities').addClass('ui-autocomplete-input');
-        }
-        else if ( filterAddress.test(theVal) ) {
-            $(this).attr('name', 'idx-q-AddressMasks').removeClass('ui-autocomplete-input');
-        }
-        else if ( filterMls.test(theVal) ) {
-            $(this).attr('name', 'idx-q-MlsNumbers').removeClass('ui-autocomplete-input');
-            $('#idx-q-PropertyTypes').val('');
-            $('#idx-q-PriceMin').val('');
-            $('#idx-q-PriceMax').val('');
-            $('#idx-q-BedsMin').val('');
-            $('#idx-q-BedsMax').val('');
-            $('#idx-q-BathsMin').val('');
-            $('#idx-q-BathsMax').val('');
-        }
-        else {
-            $(this).attr('name', 'idx-q-Cities').addClass('ui-autocomplete-input');
-        }
-        
-        //$('input[name="idx-q-search-for"]').attr( 'value', theVal );
-    });
-    $('#idx-search-form').submit( function() {
-        var addyVal = $('input[name="idx-q-AddressMasks"]').val();
-        $('input[name="idx-q-AddressMasks"]').val( '%' + addyVal + '%' );
-        return true;
-    }); 
-    */
-
 
     // Set right side-bar no smaller than left content
     var h = $('.left_main_accnt').height();
@@ -106,8 +63,6 @@
     $('#idx-q-BedsMin.dsidx-beds').val(bedsmin);
     $('#idx-q-BathsMin.dsidx-baths').val(bathsmin);
 
-
-
     // advanced search format fix
     var url = window.location.pathname;
     url = url.split("/");
@@ -117,5 +72,58 @@
     }
 
 
-
 }(jQuery));
+
+
+jQuery(document).ready(function() {
+    jQuery(".showvideopopup").fancybox({
+        fitToView   : true,
+        autoSize    : true,
+        closeClick  : false,
+        openEffect  : 'none',
+        closeEffect : 'none'
+    });
+    
+    jQuery("a.fancybox").fancybox(
+        {
+             nextEffect : 'fade',
+             prevEffect : 'fade',
+             type: 'image',
+             arrows : true,
+             loop : true,
+        }
+    );
+
+});
+
+
+jQuery(function() {     
+    jQuery('#agentmenuimg, #comenuimg').each(function() {
+        var agentog = jQuery(this).attr('src');
+        jQuery(this).data('agentog', agentog).bind('reset', function() {
+            jQuery(this).attr('src',jQuery(this).data('agentog'));
+        });
+    });
+    jQuery('#menu-item-162 a img').each(function() {
+        //console.log('js for '+ jQuery(this).attr('src'));
+        jQuery(this).parent().bind({
+            'mouseover': function() {
+                jQuery('#agentmenuimg').attr('src',jQuery(this).children('img').attr('src'));
+            },
+            'mouseout': function() {
+                jQuery('#agentmenuimg').trigger('reset');
+            }
+        });
+    });
+    jQuery('#menu-item-161 a img').each(function() {
+        //console.log('js for '+ jQuery(this).attr('src'));
+        jQuery(this).parent().bind({
+            'mouseover': function() {
+                jQuery('#comenuimg').attr('src',jQuery(this).children('img').attr('src'));
+            },
+            'mouseout': function() {
+                jQuery('#comenuimg').trigger('reset');
+            }
+        });
+    });
+});

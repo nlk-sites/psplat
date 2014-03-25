@@ -54,7 +54,7 @@
 			</div>
 		</div>
 	</div>
-	<?php print '<script id="divLocal53475_" type="text/javascript" src="' . get_template_directory_uri() . '/js/idx_quicksearch.js"></script>'; ?>
+	<script id="divLocal53475_" type="text/javascript" src="http://widgets.diversesolutions.com/Scripts/Dynamic/widgetTLM.js?curDivID=divLocal53475_&curWidth=960&curHeight=200&type=quicksearch&targetDomain=ead8tKOmNFVti8YtUKx7Ip9JBZtQ4nX1YcYX9ZpN9yM=&aid=85189&ssid=11&productType=1&location=1&fields=0123&widgetType=0&muteStyles=true&currentURL=<?php echo get_bloginfo('url'); ?>/search/"></script>
 </div>
 
 <?php

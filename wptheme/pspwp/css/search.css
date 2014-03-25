@@ -1908,8 +1908,8 @@
 
 /* IDX search fix */
 
-	#div_divLocal3777e_ { display: none; }
-	#div_divLocal3777e_.showme { display: block; }
+	/*#div_divLocal3777e_ { display: none; }
+	#div_divLocal3777e_.showme { display: block; }*/
 	/*#qsrch #div_divLocal3777e_ { display: none; }*/
 	#qsrch #QuickSearch_divLocal3777e__QuickSearch {
 		background-color: transparent !important;
