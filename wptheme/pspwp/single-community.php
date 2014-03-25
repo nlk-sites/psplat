@@ -40,37 +40,6 @@ get_header(); ?>
           </div>
            <?php the_post_thumbnail('agent-detail', array('class' => 'agentdetail')); ?>
            <?php dynamic_sidebar('sidebar_community'); ?>
-		   <?php 
-			   
-					  		/* ?>
-		   <div class="featured_heading">
-		        <div class="featured_contact">
-		            Need More Info?
-		        </div>
-		    </div>
-		    <img src="<?php bloginfo( 'template_url' ); ?>/images/btn_right_req_info.png" width="242" height="33">
-			<hr class="lightbar_hr">
-			<img src="<?php bloginfo( 'template_url' ); ?>/images/btn_right_showing.png" width="242" height="33">
-			<hr class="lightbar_hr">
-			<img src="<?php bloginfo( 'template_url' ); ?>/images/btn_right_live_agent.png" width="242" height="29">
-			<hr class="lightbar_hr">
-			<img src="<?php bloginfo( 'template_url' ); ?>/images/btn_right_print.png" width="242" height="33">
-			<hr class="lightbar_hr">
-			<img src="<?php bloginfo( 'template_url' ); ?>/images/btn_right_pdf.png" width="242" height="37">
-			<hr class="lightbar_hr">
-		    <br>
-		    <br>
-		    <div class="clearfix"></div>
-		    <?php dynamic_sidebar('sidebar_community'); ?>
-			<div class="featured_heading">
-		        <div class="featured_contact">
-		            Map Location
-		        </div>
-		    </div>
-		    <img class="contact_map" src="<?php bloginfo( 'template_url' ); ?>/images/psp_contact_map.jpg" width="235" height="245">
-		    <br>
-          	<hr class="lightbar_hr"><br><br>
-			<div class="clearfix"></div><?php */ ?>
         </div>
         <div class="right_main_min">
 				<!--div class="videocode">
@@ -383,8 +352,9 @@ get_header(); ?>
 					  		</div>
 				  		</div>
 				  </div>
-		</div>
+				</div>
 	<?php endwhile; // end of the loop. ?>	
 	<div class="clearfix"></div>
+	</div>
 </div>
 <?php get_footer(); ?>
