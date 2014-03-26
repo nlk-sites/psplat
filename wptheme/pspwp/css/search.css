@@ -2029,7 +2029,10 @@
 		color: #757a7f;
 	}
 
-
+#qsrch #QuickSearch_divLocala9456__QuickSearch #search-locations ~ .ac-renderer * {
+	color: gray;
+	font-weight: normal;
+}
 
 /* sidebar search idx */
 #div_divLocal8cb9a_ {display: none;}
