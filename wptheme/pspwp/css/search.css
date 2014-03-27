@@ -1892,7 +1892,7 @@
 
 /* END - FILTER MODULE */
 
-
+.sbr .s-coll .ac-renderer * { display: block; }
 
 
 /* IDX quicksearch fixes top bar */
