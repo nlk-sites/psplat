@@ -11,18 +11,7 @@
  */
 
 get_header(); ?>
-<style>
-	body[class*="13855"] .left_main_accnt
-	{
-		width: 918px !important;
-	}
-	
-	body[class*="13855"] .right_bar
-	{
-		display: none !important;
-	}
-	
-</style>
+
 <div id="main" role="main">
   <?php get_sidebar("searchbar"); ?>
 	<div id="main_inner">

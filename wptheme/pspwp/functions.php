@@ -230,7 +230,10 @@ function pspwp_scripts() {
 	$theme = wp_get_theme();
 
 	// Styles
+
 	wp_enqueue_style( 'pspwp-style', get_bloginfo( 'stylesheet_url' ), array(), $theme->Version );
+	wp_enqueue_style( 'all_css.min', get_template_directory_uri() . '/css/all_css.css', array() );
+	/*
 	wp_enqueue_style( 'pspwp-style-sub', get_template_directory_uri() . '/css/style.min.css', array('pspwp-style'), $theme->Version );
 	wp_enqueue_style( 'pspwp-style-search', get_template_directory_uri() . '/css/search.min.css', array('pspwp-style'), $theme->Version );
 	wp_enqueue_style( 'pspwp-style-home', get_template_directory_uri() . '/css/home.min.css', array('pspwp-style'), $theme->Version );
@@ -250,11 +253,12 @@ function pspwp_scripts() {
 	wp_enqueue_style( 'pspwp-style-mls_results', get_template_directory_uri() . '/css/mls_results.min.css', array('pspwp-style'), $theme->Version );
 	wp_enqueue_style( 'pspwp-style-pagination', get_template_directory_uri() . '/css/pagination.css', array('pspwp-style'), $theme->Version );
 	wp_enqueue_style( 'pspwp-style-side-panel', get_template_directory_uri() . '/css/side-panel.min.css', array('pspwp-style'), $theme->Version );
-	wp_enqueue_style( 'video-js.min', get_template_directory_uri() . '/video-js/video-js.min.css', array('pspwp-style') );
 	wp_enqueue_style( 'jquery-ui-1.8.19.custom', get_template_directory_uri() . '/css/jquery_custom_light/jquery-ui-1.8.19.custom.css', array('pspwp-style') );
 	wp_enqueue_style( 'jquery.ui.tabs', get_template_directory_uri() . '/css/jquery_custom_light/jquery.ui.tabs.css', array('pspwp-style'), $theme->Version );
 	wp_enqueue_style( 'jquery-ui-1.8.19.custom', get_template_directory_uri() . '/css/jquery_custom_light/jquery-ui-1.8.19.custom.css', array('pspwp-style') );
 	wp_enqueue_style( 'jquery.ui.tabs', get_template_directory_uri() . '/css/jquery_custom_light/jquery.ui.tabs.css', array('pspwp-style') );
+	*/
+	wp_enqueue_style( 'video-js.min', get_template_directory_uri() . '/video-js/video-js.min.css', array('pspwp-style') );
 	wp_enqueue_style( 'jquery.fancybox.css', get_template_directory_uri() . '/fancy/jquery.fancybox.css', array('pspwp-style'), $theme->Version, 'screen' );
 	wp_enqueue_style( 'jquery.fancybox-buttons.css', get_template_directory_uri() . '/fancy/helpers/jquery.fancybox-buttons.css', array('pspwp-style'), $theme->Version, 'screen' );
 	wp_enqueue_style( 'jquery.fancybox-thumbs.css', get_template_directory_uri() . '/fancy/helpers/jquery.fancybox-thumbs.css', array('pspwp-style'), $theme->Version, 'screen' );
