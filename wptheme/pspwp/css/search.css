@@ -1900,7 +1900,7 @@
 .sbr.top-search td { width: auto !important; }
 .sbr.top-search .quicksearch_flat_div > table > tbody > tr > td:first-child { margin-right: 20px; }
 .sbr.top-search .quicksearch_flat_div > table > tbody > tr > td:nth-child(3) { margin-right: 20px; }
-.sbr.top-search .quicksearch_flat_div > table > tbody > tr:first-child > td:last-child { margin-right: 20px; }
+.sbr.top-search .quicksearch_flat_div > table > tbody > tr:first-child > td:last-child { margin-right: 10px; }
 .sbr.top-search .quicksearch_flat_div select { min-width: 30px; }
 .sbr.top-search #search-locations { width: 345px !important; }
 .sbr.top-search .quicksearch_flat_div #quicksearch_button {
