@@ -68,7 +68,7 @@
 		?>
 		<li>
 			<div class="t_property">
-		        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( array(170,115), array('class' => 't_thumb') ); ?></a>
+		        <a href="<?php the_permalink(); ?>" ><?php the_post_thumbnail( array(170,115), array('class' => 't_thumb') ); ?></a>
 		        <div class="t_title" style="margin-bottom: 10px;">
 		           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 		        </div>
