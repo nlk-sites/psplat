@@ -114,69 +114,47 @@ get_header();
 
                     </div>
 
+                    <?php dynamic_sidebar('homepageleft'); ?>
+
+                    <?php dynamic_sidebar('homepagemiddle'); ?>
+
+                    <?php dynamic_sidebar('homepageright'); ?>
+
+                    <div id="welcome_box_right" style="position: relative;">
+
+                    	<?php if ( $psp_agent_options['social']['twitter_widget'] ) { 
+                            echo $psp_agent_options['social']['twitter_widget'];
+                        } else { ?>
+                        <h1 class="twitterOverlay"><a href="<?php echo ( $psp_agent_options['social']['twitter'] ) ? $psp_agent_options['social']['twitter'] : 'https://twitter.com/psplatinum'; ?>" target="_blank">Follow</a></h1>
+                        <a class="twitter-timeline" href="<?php echo ( $psp_agent_options['social']['twitter'] ) ? $psp_agent_options['social']['twitter'] : 'https://twitter.com/psplatinum'; ?>" data-widget-id="387290994468585473">Tweets by @psplatinum</a>
+                        <script>
+                            !function(d,s,id){
+                                var js,
+                                    fjs=d.getElementsByTagName(s)[0],
+                                    p=/^http:/.test(d.location)?'http':'https';
+                                if(!d.getElementById(id)){
+                                    js=d.createElement(s);
+                                    js.id=id;
+                                    js.src=p+"://platform.twitter.com/widgets.js";
+                                    fjs.parentNode.insertBefore(js,fjs);
+                                }
+                            }(document,"script","twitter-wjs");
+                        </script>
+                        <?php } ?>
+
+                    </div>
+
+                    <div class="clearfix">
+
+                    </div>
+
                     <?php if (have_posts()): while (have_posts()): the_post(); ?>
 
-                    	<?php the_content(); ?>
+                        <?php the_content(); ?>
 
-                	<?php endwhile; ?>
+                    <?php endwhile; ?>
 
-                <?php else : ?>
-
-                <article id="post-not-found" class="hentry clearfix">
-
-                    <header class="article-header">
-
-                        <h1><?php _e("Oops, Post Not Found!", "bonestheme"); ?></h1>
-
-                    </header>
-
-                    <section class="entry-content">
-
-                        <p>
-
-<?php _e("Uh Oh. Something is missing. Try double checking things.", "bonestheme"); ?>
-
-                        </p>
-
-                    </section>
-
-                    <footer class="article-footer">
-
-                        <p>
-
-<?php _e("This is the error message in the index.php template.", "bonestheme"); ?>
-
-                        </p>
-
-                    </footer>
-
-                </article>
-
-                <?php endif; ?>
-
-                <div id="welcome_box_right" style="position: relative;">
-
-                	<?php if ( $psp_agent_options['social']['twitter_widget'] ) { 
-                        echo $psp_agent_options['social']['twitter_widget'];
-                    } else { ?>
-                    <h1 class="twitterOverlay"><a href="<?php echo ( $psp_agent_options['social']['twitter'] ) ? $psp_agent_options['social']['twitter'] : 'https://twitter.com/psplatinum'; ?>" target="_blank">Follow</a></h1>
-                    <a class="twitter-timeline" href="<?php echo ( $psp_agent_options['social']['twitter'] ) ? $psp_agent_options['social']['twitter'] : 'https://twitter.com/psplatinum'; ?>" data-widget-id="387290994468585473">Tweets by @psplatinum</a>
-                    <script>
-                        !function(d,s,id){
-                            var js,
-                                fjs=d.getElementsByTagName(s)[0],
-                                p=/^http:/.test(d.location)?'http':'https';
-                            if(!d.getElementById(id)){
-                                js=d.createElement(s);
-                                js.id=id;
-                                js.src=p+"://platform.twitter.com/widgets.js";
-                                fjs.parentNode.insertBefore(js,fjs);
-                            }
-                        }(document,"script","twitter-wjs");
-                    </script>
-                    <?php } ?>
-
-                </div>
+                    <?php endif; ?>
 
             </div><!-- end of home_top_container -->
 

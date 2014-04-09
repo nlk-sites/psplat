@@ -58,7 +58,7 @@ $psp_agent_options = get_option('psp_agent_options');
 				</div>
 			<img class="f_divider" src="<?php bloginfo( 'template_url' ); ?>/images/footer_divider.png" width="9" height="139" style="margin-left:-4px;">
 				<div class="f_pod">
-					<h3>Follow Us </h3>
+					<h3>Follow Me </h3>
 					<div class="textwidget">
 						<p>
 							<a target="_blank" href="<?php echo ( $psp_agent_options['social']['facebook'] ) ? $psp_agent_options['social']['facebook'] : 'http://www.facebook.com/pages/PS-Platinum-Properties/202142967222'; ?>" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.facebook.com']);">

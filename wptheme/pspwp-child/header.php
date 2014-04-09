@@ -6,7 +6,11 @@
  *
  * @package PSPWP Child
  */
-?><!DOCTYPE html>
+
+$psp_agent_options = get_option('psp_agent_options');
+
+?>
+<!DOCTYPE html>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
 <!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
@@ -48,7 +52,11 @@ jQuery(function() {
 
 <body <?php body_class(); ?>>
 	<header>
-		<a class="logo ir" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
+		<a class="logo ir" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
+			<span>
+				<?php echo ( $psp_agent_options['details']['name_display'] ? $psp_agent_options['details']['name_display'] : ' ' ); ?>
+			</span>
+		</a>
 		<!--nav-->
 		<?php 
 			wp_nav_menu( array(

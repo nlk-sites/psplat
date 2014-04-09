@@ -1,7 +1,7 @@
 /*
  Theme Name:   PSPWP Child
  Template:     pspwp
- Version:      1.0.01
+ Version:      1.0.02
 
  PSPWP Child is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
 
@@ -12,3 +12,25 @@
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
+header .logo {
+	position: absolute;
+	top: 8px;
+	width: 200px;
+	height: 50px;
+	background: url(images/agent-logo.png) no-repeat top left;
+}
+
+header .ir {
+	color: #fff !important;
+	color: rgba(255,255,255,.6) !important;
+	font: 200 13px/86px "OpenSans", arial, sans-serif;
+	text-decoration: none;
+	text-indent: inherit;
+	text-transform: uppercase;
+}
+
+header .ir span {
+	display: block;
+	text-align: right;
+	width: 140px;
+}

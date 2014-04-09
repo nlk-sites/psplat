@@ -72,12 +72,12 @@ margin: 0px 5px;
 				<div id="tabs-1">
 					<h1><?php echo strtoupper($psp_agent_options['details']['name_display']); ?></h1>
 					<hr class="greybar_hr" />
-					<?php echo apply_filters( 'the_content', $psp_agent_options['details']['bio'] ); ?>
+					<?php echo apply_filters( 'the_content', stripslashes($psp_agent_options['details']['bio']) ); ?>
 				</div>
 				<div id="tabs-2">
 					<h1>Testimonials</h1>
 					<hr class="greybar_hr" />
-					<?php echo apply_filters( 'the_content', $psp_agent_options['details']['testimonials'] ); ?>
+					<?php echo apply_filters( 'the_content', stripslashes($psp_agent_options['details']['testimonials']) ); ?>
 				</div>
 				<div id="listings">
 					<?php echo do_shortcode('[idx-listings linkid="'.$psp_agent_options['idx']['listings'].'" count="50" showlargerphotos="true"]'); ?>
