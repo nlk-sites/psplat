@@ -20,6 +20,7 @@ $psp_agent_options = get_option('psp_agent_options');
             <img class="f_divider" src="<?php bloginfo( 'template_url' ); ?>/images/footer_divider.png" width="9" height="139" style="margin-left:-4px;">
             	<div class="f_pod">
             		<h3 class="agent-name"><?php echo ( $psp_agent_options['details']['name_display'] ? $psp_agent_options['details']['name_display'] : ' ' ); ?></h3>
+            		<h4 class="agent-bre"><?php echo ( $psp_agent_options['details']['bre'] ? $psp_agent_options['details']['bre'] : ' ' ); ?></h4>
 					<div class="textwidget">
 						<div class="footer_logo">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/footer_logo.png" height="42px" width="186px">	
@@ -143,86 +144,7 @@ $psp_agent_options = get_option('psp_agent_options');
 
 	});
 </script> 
-<script>
-	/*
-			var cbpAnimatedHeader = (function() {
 
-			    var docElem = document.documentElement,
-			        rightsidebar = document.querySelector( '.right_bar' ),
-					leftsidebar = document.querySelector( '.left_bar' ),
-			        didScroll = false,
-			        changeHeaderOn = 125;
-				
-				var right_offset = 0; 
-				
-				if(jQuery( '.right_bar' ))
-				{
-					right_offset = jQuery( '.right_bar' ).offset();
-				}
-				var left_offset = 0;
-				
-				if(jQuery( '.left_bar' ))
-				{
-					left_offset = jQuery( '.left_bar' ).offset();
-				}
-					
-			 
-			    function init() {
-			        window.addEventListener( 'scroll', function( event ) {
-			            if( !didScroll ) {
-			                didScroll = true;
-			                setTimeout( scrollPage, 250 );
-			            }
-			        }, false );
-			    }
-			 
-			    function scrollPage() {
-					var docheight = jQuery( window ).height();
-			        var sy = scrollY();
-			        if ( sy >= changeHeaderOn) {
-			            jQuery('body').addClass('fixed-right-bar' );
-						jQuery('body').addClass('fixed-left-bar' );
-						if(right_offset)
-						{
-							jQuery('.right_bar').css('left', right_offset.left );	
-							jQuery('.right_bar').css('max-height', docheight );	
-						}
-						
-						if(left_offset)
-						{
-							jQuery('.left_bar').css('left', left_offset.left );
-							jQuery('.left_bar').css('max-height', docheight );	
-						}
-						
-			        }
-			        else {
-			            jQuery('body').removeClass('fixed-right-bar' );
-						jQuery('body').removeClass('fixed-left-bar' );
-			        }
-			        didScroll = false;
-			    }
-			 
-			    function scrollY() {
-			        return window.pageYOffset || docElem.scrollTop;
-			    }
-			 
-			    init();
-			 
-			})();
-			
-			function isScrolledIntoView(elem)
-			{
-			    var docViewTop = jQuery(window).scrollTop();
-			    var docViewBottom = docViewTop + jQuery(window).height();
-			
-			    var elemTop = jQuery(elem).offset().top;
-			    var elemBottom = elemTop + jQuery(elem).height();
-			
-			    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
-			}
-			*/
-		</script>
-<!-- end scripts--> 
 
 <?php wp_footer(); ?>
 <script type="text/javascript">
