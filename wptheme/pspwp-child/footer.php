@@ -20,7 +20,7 @@ $psp_agent_options = get_option('psp_agent_options');
             <img class="f_divider" src="<?php bloginfo( 'template_url' ); ?>/images/footer_divider.png" width="9" height="139" style="margin-left:-4px;">
             	<div class="f_pod">
             		<h3 class="agent-name"><?php echo ( $psp_agent_options['details']['name_display'] ? $psp_agent_options['details']['name_display'] : ' ' ); ?></h3>
-            		<h4 class="agent-bre"><?php echo ( $psp_agent_options['details']['bre'] ? $psp_agent_options['details']['bre'] : ' ' ); ?></h4>
+            		<h4 class="agent-bre"><?php echo ( $psp_agent_options['details']['bre'] ? 'CA BRE # ' . $psp_agent_options['details']['bre'] : ' ' ); ?></h4>
 					<div class="textwidget">
 						<div class="footer_logo">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/footer_logo.png" height="42px" width="186px">	

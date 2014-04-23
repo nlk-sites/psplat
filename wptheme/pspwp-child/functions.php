@@ -33,3 +33,10 @@ function pspwp_agent_widgets_init() {
 
 }
 add_action( 'widgets_init', 'pspwp_agent_widgets_init' );
+
+function pspwp_child_scripts() {
+
+	wp_enqueue_style( 'pspwp-child-css', get_stylesheet_directory_uri() . '/style.css', array() );
+
+}
+add_action( 'wp_enqueue_scripts', 'pspwp_child_scripts' );

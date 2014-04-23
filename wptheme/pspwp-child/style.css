@@ -9,6 +9,8 @@
 
 @import url("../pspwp/style.css");
 
+@import url("css/style.css");
+
 /* =Theme customization starts here
 -------------------------------------------------------------- */
 
@@ -34,3 +36,180 @@ header .ir span {
 	text-align: right;
 	width: 140px;
 }
+
+h3.agent-name {
+	margin-bottom: 0;
+}
+h4.agent-bre {
+	color: #fff;
+	font-style: .9em;
+	margin: 0;
+}
+
+
+
+/* IDX quicksearch fixes top bar */
+div.idx.top-search > script + div > div > div { width: 100%; height: auto !important; }
+.sbr.top-search td { width: auto !important; }
+div.idx.top-search > script + div > div > div > table > tbody > tr > td:first-child { margin-right: 6px; }
+div.idx.top-search > script + div > div > div > table > tbody > tr > td:nth-child(3) { margin-right: 6px; }
+div.idx.top-search > script + div > div > div > table > tbody > tr:first-child > td:last-child { margin-right: 6px; }
+div.idx.top-search > script + div > div > div select { min-width: 30px; }
+.sbr.top-search #search-locations { width: 335px !important; }
+div.idx.top-search > script + div > div > div #quicksearch_button {
+	padding: 5px 10px!important;
+	border: none;
+	background: #223659;
+	background: -moz-linear-gradient(top,#375994 0,#223659);
+	background: -webkit-gradient(linear,left top,left bottom,from(#375994),to(#223659));
+	color: #fff;
+	text-transform: uppercase!important;
+	text-shadow: 0 -1px 0 rgba(000,000,000,.4),0 1px 0 rgba(255,255,255,.3);
+	font-size: 11px!important;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	div.idx.top-search > script + div > div > div > table > tbody > tr > td:first-child { margin-right: 20px; }
+	div.idx.top-search > script + div > div > div > table > tbody > tr > td:nth-child(3) { margin-right: 20px; }
+	div.idx.top-search > script + div > div > div > table > tbody > tr:first-child > td:last-child { margin-right: 20px; }
+}
+
+/* IDX search fix */
+
+	/*#div_divLocal5ffae_ { display: none; }
+	#div_divLocal5ffae_.showme { display: block; }*/
+	/*#qsrch #div_divLocal5ffae_ { display: none; }*/
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch {
+		background-color: transparent !important;
+		width: auto !important;
+	}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table tr {}
+/* First row: Location label */
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(1),
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:first-child { display: none; }
+/* second row: omnibox input */
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(2) {}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(2) > td {
+		margin-left: 10px;
+		margin-top: 14px;
+		padding: 0;
+		text-align: center;
+		width: 206px;
+	}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch input#search-locations {
+		background: url('../images/hour_glass.png') no-repeat right center #fff;
+		border: none !important;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-khtml-border-radius: 5px;
+		border-radius: 5px;
+		color: #757a7f;
+		height: 20px;
+		margin: auto;
+		text-indent: 8px;
+	}
+/* third row: beds/baths labels */
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) {}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) > td {
+		width: 100%;
+	}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) table {
+		margin-top: 14px;
+		width: inherit;
+	}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) table tr:first-child { display: none; }
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) table tr:last-child,
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) table tr:nth-child(2) {
+		width: 100%;
+	}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) table tr:last-child td,
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) table tr:nth-child(2) td {
+		margin-left: 10px;
+		width: 96px !important;
+	}
+/* fourth row: beds/baths inputs */
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(4) {}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(4) > td {
+		height: 30px;
+	}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(4) table tr td {
+		margin-left: 10px;
+		width: 96px !important;
+	}
+/* fifth row: price */
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) {}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table {
+		margin-top: 14px;
+	}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:first-child {}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:first-child td {
+		margin-left: 10px;
+	}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:last-child td:first-child,
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:nth-child(2) td:nth-child(1) {
+		margin-left: 10px;
+		width: 96px;
+	}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:nth-child(2) td:nth-child(2) {
+		text-align: center;
+		width: 10px;
+	}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:last-child td:last-child,
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:nth-child(2) td:nth-child(3) {
+		width: 96px;
+	}
+/* search button */
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(6) {
+		text-align: center;
+	}
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(6) input[type="button"] {
+		background-color: transparent !important;
+		background: url(../images/search_btn.png) no-repeat 0 0 transparent;
+		border: none !important;
+		color: #000 !important;
+		cursor: pointer;
+		font: bold 11px/1 Arial, Helvetica, sans-serif !important;
+		margin: 10px auto 0;
+		xpadding: 3px 18px 12px 20px !important;
+		text-decoration: none;
+		height: 32px;
+		width: 205px !important;
+		text-indent: -9999px;
+	}
+
+
+
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table tbody td {
+		display: inline-block;
+	font-size: 13px !important;
+	line-height: 20px;
+	font-weight: bold;
+	color: #fff;
+	}
+
+/* all inputs */
+	#qsrch #QuickSearch_divLocal5ffae__QuickSearch select {
+		height: 30px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		-khtml-border-radius: 5px;
+		border-radius: 5px;
+		color: #757a7f;
+	}
+
+#qsrch #QuickSearch_divLocal5ffae__QuickSearch #search-locations ~ .ac-renderer * {
+	color: gray;
+	font-weight: normal;
+}
+
+/* sidebar search idx */
+#div_divLocal8cb9a_ {display: none;}
+#div_divLocal8cb9a_.showme {display: block; padding-left: 10px;}
+#div_divLocal8cb9a_.showme #QuickSearch_divLocal8cb9a__QuickSearch {height: auto !important;}
+#div_divLocal8cb9a_.showme .full { float: left; margin-bottom: 16px; width: 100%;}
+#div_divLocal8cb9a_.showme .full.center {text-align: center;}
+#div_divLocal8cb9a_.showme .half { float: left; margin-bottom: 16px; width: 50%;}
+#div_divLocal8cb9a_.showme label { display: block; font-weight: bold;}
+#div_divLocal8cb9a_.showme select { width: 104px; }
+#div_divLocal8cb9a_.showme td { padding-right: 4px; }
+#div_divLocal8cb9a_.showme #quicksearch_beds_list { margin-right: 8px; }
+#div_divLocal8cb9a_.showme #quicksearch_button_sidebar { margin-left: -10px; }

@@ -32,7 +32,7 @@ get_header();
 
                         <img id="qsrch_title" src="<?php bloginfo('template_url'); ?>/images/start_here.png" width="145" height="28">
 
-                        <?php print $psp_agent_options['idx']['front_search_js']; ?>
+                        <?php print stripcslashes($psp_agent_options['idx']['front_search_js']); ?>
 
                     </div>
 
