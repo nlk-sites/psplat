@@ -20,7 +20,7 @@ get_header(); ?>
 				<hr class="greybar_hr" />
 				<?php the_content(); ?>
 			<?php endwhile; // end of the loop. ?>
-			<script src="http://idx.diversesolutions.com/scripts/controls/Remote-Frame.aspx?MasterAccountID=114862&amp;SearchSetupID=11&amp;LinkID=0&amp;Height=2000"></script>
+			<?php print stripcslashes($psp_agent_options['idx']['idx_base']); ?>
           </div>
         </div>
 	  	<div class="clearfix"></div>
