@@ -8,6 +8,8 @@
  * 
  */
 
+$psp_agent_options = get_option('psp_agent_options');
+
 get_header(); ?>
 
 <div id="main" role="main">
@@ -20,7 +22,7 @@ get_header(); ?>
 				<hr class="greybar_hr" />
 				<?php the_content(); ?>
 			<?php endwhile; // end of the loop. ?>
-			<?php print stripcslashes($psp_agent_options['idx']['idx_base']); ?>
+			<?php echo stripslashes($psp_agent_options['idx']['idx_base']); ?>
           </div>
         </div>
 	  	<div class="clearfix"></div>
