@@ -10,6 +10,8 @@
 
 $psp_agent_options = get_option('psp_agent_options');
 
+$aid = $psp_agent_options['idx']['idx_base'];
+
 get_header(); ?>
 
 <div id="main" role="main">

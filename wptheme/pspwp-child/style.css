@@ -1,7 +1,7 @@
 /*
  Theme Name:   PSPWP Child
  Template:     pspwp
- Version:      1.0.02
+ Version:      1.0.3b
 
  PSPWP Child is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
 
@@ -49,13 +49,13 @@ h4.agent-bre {
 
 
 /* IDX quicksearch fixes top bar */
-div.idx.top-search > script + div > div > div { width: 100%; height: auto !important; }
+div.idx.top-search > script + div > div > div { width: 100% !important; height: auto !important; }
 .sbr.top-search td { width: auto !important; }
 div.idx.top-search > script + div > div > div > table > tbody > tr > td:first-child { margin-right: 6px; }
 div.idx.top-search > script + div > div > div > table > tbody > tr > td:nth-child(3) { margin-right: 6px; }
 div.idx.top-search > script + div > div > div > table > tbody > tr:first-child > td:last-child { margin-right: 6px; }
 div.idx.top-search > script + div > div > div select { min-width: 30px; }
-.sbr.top-search #search-locations { width: 335px !important; }
+div.idx.top-search > script + div#div_top-search-bar-idx-id #search-locations { width: 315px !important; }
 div.idx.top-search > script + div > div > div #quicksearch_button {
 	padding: 5px 10px!important;
 	border: none;
@@ -75,28 +75,23 @@ div.idx.top-search > script + div > div > div #quicksearch_button {
 
 /* IDX search fix */
 
-	/*#div_divLocal5ffae_ { display: none; }
-	#div_divLocal5ffae_.showme { display: block; }*/
-	/*#qsrch #div_divLocal5ffae_ { display: none; }*/
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch {
+
+	#qsrch > div#div_front-page-idx-search-id > div > div {
 		background-color: transparent !important;
 		width: auto !important;
 	}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table tr {}
-/* First row: Location label */
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(1),
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:first-child { display: none; }
-/* second row: omnibox input */
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(2) {}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(2) > td {
+
+	/* omnibox input */
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:first-child { display: inline-block !important; }
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:first-child > td {
 		margin-left: 10px;
 		margin-top: 14px;
 		padding: 0;
 		text-align: center;
 		width: 206px;
 	}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch input#search-locations {
-		background: url('../images/hour_glass.png') no-repeat right center #fff;
+	#qsrch > div#div_front-page-idx-search-id > div > div input#search-locations {
+		background: url('../pspwp/images/hour_glass.png') no-repeat right center #fff;
 		border: none !important;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
@@ -107,68 +102,89 @@ div.idx.top-search > script + div > div > div #quicksearch_button {
 		margin: auto;
 		text-indent: 8px;
 	}
+
 /* third row: beds/baths labels */
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) {}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) > td {
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(2) { height: 20px; }
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(2) > td {
 		width: 100%;
 	}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) table {
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(2) table {
 		margin-top: 14px;
 		width: inherit;
 	}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) table tr:first-child { display: none; }
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) table tr:last-child,
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) table tr:nth-child(2) {
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(2) table tr:first-child { display: inline-block; }
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(2) table tr:first-child td:last-child { display: none; }
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(2) table tr:last-child,
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(2) table tr:nth-child(2) {
 		width: 100%;
 	}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) table tr:last-child td,
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(3) table tr:nth-child(2) td {
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(2) table tr:last-child td,
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(2) table tr:nth-child(2) td {
 		margin-left: 10px;
 		width: 96px !important;
 	}
-/* fourth row: beds/baths inputs */
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(4) {}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(4) > td {
+/* 3rd row: inputs */
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(3) > td {
 		height: 30px;
 	}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(4) table tr td {
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(3) > td > table > tbody > tr > td:nth-child(1),
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(3) > td > table > tbody > tr > td:nth-child(2),
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(3) > td > table > tbody > tr > td:nth-child(3),
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(3) > td > table > tbody > tr > td:nth-child(5) {
 		margin-left: 10px;
 		width: 96px !important;
 	}
-/* fifth row: price */
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) {}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table {
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(3) > td > table > tbody > tr > td:nth-child(3):before {
+		content: 'PRICE';
+	}
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(3) > td > table > tbody > tr > td:nth-child(4) {
+		width: 0 !important;
+		padding: 0 !important;
+		margin: 20px -2px 0 2px !important;
+	}
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(3) > td > table > tbody > tr > td:nth-child(5) {
+		margin-top: 20px;
+	}
+
+/* 4th row: price */
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(4) { display: none; }
+	/*
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(4) table {
 		margin-top: 14px;
 	}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:first-child {}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:first-child td {
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(4) table tr:first-child {}
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(4) table tr:first-child td {
 		margin-left: 10px;
 	}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:last-child td:first-child,
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:nth-child(2) td:nth-child(1) {
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(4) table tr:last-child td:first-child,
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(4) table tr:nth-child(2) td:nth-child(1) {
 		margin-left: 10px;
 		width: 96px;
 	}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:nth-child(2) td:nth-child(2) {
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(4) table tr:nth-child(2) td:nth-child(2) {
 		text-align: center;
 		width: 10px;
 	}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:last-child td:last-child,
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(5) table tr:nth-child(2) td:nth-child(3) {
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(4) table tr:last-child td:last-child,
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(4) table tr:nth-child(2) td:nth-child(3) {
 		width: 96px;
 	}
+	*/
 /* search button */
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(6) {
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr:nth-child(5) {
 		text-align: center;
+		margin-top: 80px;
+		position: relative;
+		display: block;
 	}
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table > tbody > tr:nth-child(6) input[type="button"] {
+	#qsrch > div#div_front-page-idx-search-id > div > div > table > tbody > tr input#quicksearch_button {
 		background-color: transparent !important;
-		background: url(../images/search_btn.png) no-repeat 0 0 transparent;
+		background: url(../pspwp/images/search_btn.png) no-repeat 0 0 transparent;
 		border: none !important;
 		color: #000 !important;
 		cursor: pointer;
 		font: bold 11px/1 Arial, Helvetica, sans-serif !important;
-		margin: 10px auto 0;
+		margin: 0px auto 0;
 		xpadding: 3px 18px 12px 20px !important;
 		text-decoration: none;
 		height: 32px;
@@ -178,16 +194,16 @@ div.idx.top-search > script + div > div > div #quicksearch_button {
 
 
 
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch > table tbody td {
+	#qsrch > div#div_front-page-idx-search-id td {
 		display: inline-block;
-	font-size: 13px !important;
-	line-height: 20px;
-	font-weight: bold;
-	color: #fff;
+		font-size: 13px !important;
+		line-height: 20px;
+		font-weight: bold;
+		color: #fff;
 	}
 
 /* all inputs */
-	#qsrch #QuickSearch_divLocal5ffae__QuickSearch select {
+	#qsrch > div#div_front-page-idx-search-id > div > div select {
 		height: 30px;
 		-moz-border-radius: 5px;
 		-webkit-border-radius: 5px;
@@ -196,7 +212,7 @@ div.idx.top-search > script + div > div > div #quicksearch_button {
 		color: #757a7f;
 	}
 
-#qsrch #QuickSearch_divLocal5ffae__QuickSearch #search-locations ~ .ac-renderer * {
+#qsrch > div#div_front-page-idx-search-id > div > div #search-locations ~ .ac-renderer * {
 	color: gray;
 	font-weight: normal;
 }
