@@ -3,7 +3,8 @@
 $psp_agent_options = get_option('psp_agent_options');
 
 $theId = 'top-search-bar-idx-id';
-$targetDomain = 'd508erT5GPgHRBFyw4AhZWMlxX+Yf58kj+LG0soethg='; //get_bloginfo('url') . '/search/';
+
+$targetDomain = $psp_agent_options['idx']['encoded_link'];
 
 $aid = $psp_agent_options['idx']['agent_id'];
 

@@ -13,6 +13,7 @@
 $psp_agent_options = get_option('psp_agent_options');
 
 $aid = $psp_agent_options['idx']['agent_id'];
+$targetDomain = $psp_agent_options['idx']['encoded_link'];
 get_header();
 
 ?>
@@ -31,8 +32,7 @@ get_header();
 
                         <img id="qsrch_title" src="<?php bloginfo('template_url'); ?>/images/start_here.png" width="145" height="28">
 
-                        <script id="front-page-idx-search-id" type="text/javascript" src="http://widgets.diversesolutions.com/Scripts/Dynamic/widgetTLM.js?curDivID=front-page-idx-search-id&amp;curWidth=470&amp;curHeight=200&amp;type=quicksearch&amp;targetDomain=<?php echo get_bloginfo('url') . '/search/' ; ?>&amp;aid=<?php echo $aid; ?>&amp;ssid=11&amp;productType=1&amp;location=1&amp;fields=013&amp;widgetType=0&amp;muteStyles=false&amp;currentURL=<?php echo get_bloginfo('url'); ?>/search/"></script>
-
+                        <script id="front-page-idx-search-id" type="text/javascript" src="http://widgets.diversesolutions.com/Scripts/Dynamic/widgetTLM.js?curDivID=front-page-idx-search-id&amp;curWidth=470&amp;curHeight=200&amp;type=quicksearch&amp;targetDomain=<?php echo $targetDomain; ?>&amp;aid=<?php echo $aid; ?>&amp;ssid=11&amp;productType=1&amp;location=1&amp;fields=013&amp;widgetType=0&amp;muteStyles=false&amp;currentURL=<?php echo get_bloginfo('url'); ?>/search/"></script>
 
                     </div>
 
