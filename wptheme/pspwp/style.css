@@ -5,7 +5,7 @@ Theme URI: http://underscores.me/
 Author: Ninthlink
 Author URI: http://www.ninthlink.com
 Description: PSP Wordpress Template
-Version: 1.05
+Version: 1.1
 License: GNU General Public License
 License URI: license.txt
 Tags:
@@ -522,3 +522,7 @@ body.single-property #tabs-1 iframe.dsidx-shortcode-map { margin: auto !importan
 	{
 		display: none !important;
 	}
+
+
+
+	.bx-loading { display: none !important; }
