@@ -74,7 +74,7 @@
 
 }(jQuery));
 
-
+/*
 jQuery(document).ready(function() {
     jQuery(".showvideopopup").fancybox({
         fitToView   : true,
@@ -95,7 +95,7 @@ jQuery(document).ready(function() {
     );
 
 });
-
+*/
 
 jQuery(function() {     
     jQuery('#agentmenuimg, #comenuimg').each(function() {
