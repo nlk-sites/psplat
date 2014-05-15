@@ -96,12 +96,12 @@ jQuery(function($){
             these = $(this).siblings('.textwidget').find('li:visible').filter(':lt(2)'),
             those = these.last().nextAll(':lt(2)');
         if ( these.last().next('li').length ) {
-            these.hide('slow', function(){
+            these.hide('fast', function(){
                 those.show('slow');
             });
         }
         else {
-            these.hide('slow', function(){
+            these.hide('fast', function(){
                 $this.siblings('.textwidget').find('li').slice(2).show('slow')
             });
         }
@@ -111,12 +111,12 @@ jQuery(function($){
             these = $(this).siblings('.textwidget').find('li:visible').filter(':lt(2)'),
             those = these.first().prevAll(':lt(2)');
         if ( these.first().prev('li').length ) {
-            these.hide('slow', function(){
+            these.hide('fast', function(){
                 those.show('slow');
             });
         }
         else {
-            these.hide('slow', function(){
+            these.hide('fast', function(){
                 $this.siblings('.textwidget').find('li').slice(-2).show('slow')
             });
         }
