@@ -89,7 +89,9 @@ jQuery(function($) {
 
 
 jQuery(function($){
-    $('ol.dsidx-results li.dsidx-prop-summary').hide().filter(':lt(2)').show();
+    $('ol.dsidx-results').each(function() {
+         $(this).find('li.dsidx-prop-summary').hide().filter(':lt(2)').show();
+    });
 
     $('.dsidx-move-down').click(function(){
         var $this = $(this),
