@@ -3,7 +3,6 @@
 <!--[if lte IE 8]><style>#tab-slides { display: none; }</style><![endif]-->
 
 
-<?php /*
 <style>
 	#tab-slides { visibility: hidden; }
 	.slide-container .t_spacer:last-child { display: none; }
@@ -40,7 +39,6 @@
 </script>
 
 
-*/ ?>
 
 <div id="tab-slides" style="z-index:50000">
 
@@ -63,7 +61,7 @@
     	
 
 
-    	<?php /*
+
     	<ul class="bxslider">
     	<?php
 	    $args = array('post_type'=>'property', 'posts_per_page'=>50, 'orderby'=>'menu_order', 'order'=>'asc');
@@ -117,7 +115,6 @@
 		</ul>
 
 
-		*/ ?>
 
 
     </div> <!-- .slide-container -->
