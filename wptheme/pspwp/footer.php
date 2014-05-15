@@ -46,7 +46,26 @@
 					</div>
 				</div>
 			<img class="f_divider" src="<?php bloginfo( 'template_url' ); ?>/images/footer_divider.png" width="9" height="139" style="margin-left:-4px;">
-				<?php dynamic_sidebar('footersection3'); ?>
+				<div class="f_pod">
+					<h3>Follow Me </h3>
+					<div class="textwidget">
+						<p>
+							<a target="_blank" href="<?php echo 'http://www.facebook.com/pages/PS-Platinum-Properties/202142967222'; ?>" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.facebook.com']);">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/facebook.png"> Facebook</a>
+						</p>
+                		<p>
+                			<a target="_blank" href="<?php echo 'https://twitter.com/psplatinum'; ?>" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://twitter.com']);">
+                				<img src="<?php echo get_template_directory_uri(); ?>/images/twitter.png"> Twitter</a>
+            			</p>
+            		</div>
+				</div>
+				<div class="f_pod"><h3>&nbsp;</h3>
+					<div class="textwidget">
+						<p><a target="_blank" href="<?php echo 'https://www.linkedin.com/in/brettcombs'; ?>" onclick="javascript:_gaq.push(['_trackEvent','outbound-widget','http://www.linkedin.com']);">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/linkedin.png"> LinkedIn</a></p>
+                		<p><a target="_blank" href="<?php echo 'http://vimeo.com/65088484'; ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/vimeo.png"> Vimeo</a></p>
+                	</div>
+				</div>
 			<img class="f_divider" src="<?php bloginfo( 'template_url' ); ?>/images/footer_divider.png" width="9" height="139">
             
         </div>
