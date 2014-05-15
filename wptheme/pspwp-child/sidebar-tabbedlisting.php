@@ -146,7 +146,9 @@
 
 
     <div class="slide-container">
+    	<a href="javascript:void(0)" class="dsidx-slideshow-control dsidx-move-up" data-observed="true" style="color: rgb(153, 153, 153);">previous</a>
 		<?php dynamic_sidebar('recently-sold'); ?>
+		<a href="javascript:void(0)" class="dsidx-slideshow-control dsidx-move-down" data-observed="true" style="color: rgb(0, 0, 0);">next</a>
 
     </div> <!-- .slide-container -->
 
@@ -161,9 +163,9 @@
 
 
     <div class="slide-container">
+    	<a href="javascript:void(0)" class="dsidx-slideshow-control dsidx-move-up" data-observed="true" style="color: rgb(153, 153, 153);">previous</a>
 		<?php dynamic_sidebar('just-listed'); ?>
-		<?php //echo do_shortcode('[idx-listings city="" statuses="1" orderby="DateAdded" orderdir="DESC" count="6" showlargerphotos="false"]'); ?>
-
+		<a href="javascript:void(0)" class="dsidx-slideshow-control dsidx-move-down" data-observed="true" style="color: rgb(0, 0, 0);">next</a>
     </div> <!-- .slide-container -->
 
 
