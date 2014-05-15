@@ -210,7 +210,7 @@ add_action( 'widgets_init', 'pspwp_widgets_init' );
  */
 function pspwp_scripts() {
 	$theme = wp_get_theme();
-	$vers = filemtime( get_stylesheet_directory() . '/style.css'); //$theme->Version;
+	$vers = '1.' . filemtime( get_stylesheet_directory() . '/style.css'); //$theme->Version;
 
 
 	// Styles
