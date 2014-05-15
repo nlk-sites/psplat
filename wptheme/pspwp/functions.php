@@ -211,7 +211,7 @@ add_action( 'widgets_init', 'pspwp_widgets_init' );
 function pspwp_scripts() {
 	$theme = wp_get_theme();
 	$vers = '1.' . filemtime( get_stylesheet_directory() . '/style.css'); //$theme->Version;
-	$versjs = '1.' . filemtime( get_stylesheet_directory() . '/js/custom.css'); //$theme->Version;
+	$versjs = '1.' . filemtime( get_template_directory_uri() . '/js/custom.css'); //$theme->Version;
 
 
 	// Styles
