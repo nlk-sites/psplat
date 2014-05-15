@@ -89,6 +89,36 @@ jQuery(function($) {
 
 
 jQuery(function($){
-    $('ol.dsidx-results li.dsidx-prop-summary').hide();
-    $('ol.dsidx-results li.dsidx-prop-summary:nth-child(1), ol.dsidx-results li.dsidx-prop-summary:nth-child(2)').show();
+    $('ol.dsidx-results li.dsidx-prop-summary').hide().filter(':lt(2)').show();
+
+    $('.dsidx-move-down').click(function(){
+        var $this = $(this),
+            these = $(this).siblings('.textwidget').find('li:visible').filter(':lt(2)'),
+            those = these.last().nextAll(':lt(2)');
+        if ( these.last().next('li').length ) {
+            these.hide('slow', function(){
+                those.show('slow');
+            });
+        }
+        else {
+            these.hide('slow', function(){
+                $this.siblings('.textwidget').find('li').slice(2).show('slow')
+            });
+        }
+    });
+    $('.dsidx-move-up').click(function(){
+        var $this = $(this),
+            these = $(this).siblings('.textwidget').find('li:visible').filter(':lt(2)'),
+            those = these.first().prevAll(':lt(2)');
+        if ( these.first().prev('li').length ) {
+            these.hide('slow', function(){
+                those.show('slow');
+            });
+        }
+        else {
+            these.hide('slow', function(){
+                $this.siblings('.textwidget').find('li').slice(-2).show('slow')
+            });
+        }
+    });
 });
