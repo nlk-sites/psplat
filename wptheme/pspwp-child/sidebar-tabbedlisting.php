@@ -1,9 +1,9 @@
-<script src="<?php bloginfo('template_url'); ?>/bxslider/jquery.bxslider.min.js"></script>
 <!-- bxSlider CSS file -->
-<link href="<?php bloginfo('template_url'); ?>/bxslider/jquery.bxslider.css" rel="stylesheet" />
 
 <!--[if lte IE 8]><style>#tab-slides { display: none; }</style><![endif]-->
 
+
+<?php /*
 <style>
 	#tab-slides { visibility: hidden; }
 	.slide-container .t_spacer:last-child { display: none; }
@@ -37,7 +37,10 @@
 		});
 		
 	});
-</script>	
+</script>
+
+
+*/ ?>
 
 <div id="tab-slides" style="z-index:50000">
 
@@ -57,6 +60,10 @@
 
   <div id="tabs-slides-1" class="tab featuredListings">
     <div class="slide-container">
+    	
+
+
+    	<?php /*
     	<ul class="bxslider">
     	<?php
 	    $args = array('post_type'=>'property', 'posts_per_page'=>50, 'orderby'=>'menu_order', 'order'=>'asc');
@@ -108,6 +115,11 @@
 	    </div> -->
 		<?php endwhile; wp_reset_postdata(); ?>
 		</ul>
+
+
+		*/ ?>
+
+
     </div> <!-- .slide-container -->
 
 
