@@ -1,7 +1,7 @@
 /*
  Theme Name:   PSPWP Child
  Template:     pspwp
- Version:      1.1
+ Version:      1.11
 
  PSPWP Child is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
 
@@ -231,11 +231,7 @@ div.idx.top-search > script + div > div > div #quicksearch_button {
 #div_divLocal8cb9a_.showme #quicksearch_button_sidebar { margin-left: -10px; }
 
 
-
-
-
-
-
+/* tabs and sliders stuff */
 .bx-loading { display: none !important; }
 
 .slide-container { position: relative;}
