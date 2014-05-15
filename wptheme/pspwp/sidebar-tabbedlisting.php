@@ -1,6 +1,6 @@
-<script src="<?php bloginfo('template_url'); ?>/bxslider/jquery.bxslider.min.js"></script>
+
 <!-- bxSlider CSS file -->
-<link href="<?php bloginfo('template_url'); ?>/bxslider/jquery.bxslider.css" rel="stylesheet" />
+
 
 <!--[if lte IE 8]><style>#tab-slides { display: none; }</style><![endif]-->
 

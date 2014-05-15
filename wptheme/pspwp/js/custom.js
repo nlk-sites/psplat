@@ -69,6 +69,20 @@ jQuery(function($) {
             }
         });
     });
+
+
+    if ( $('.bxslider').length ) {
+        jQuery('.bxslider').bxSlider({
+            minSlides: 2,
+            maxSlides: 2,
+            slideWidth: 420,
+            slideHeight: 130,
+            slideMargin: 30,
+            pager: false
+        });
+    }
+
+
 });
 
 
