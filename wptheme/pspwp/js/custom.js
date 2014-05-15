@@ -88,11 +88,11 @@ jQuery(function($) {
 
 
 
+/* tabbed listings/slider functionality */
 jQuery(function($){
     $('ol.dsidx-results').each(function() {
          $(this).find('li.dsidx-prop-summary').hide().filter(':lt(2)').show();
     });
-
     $('.dsidx-move-down').click(function(){
         var $this = $(this),
             these = $(this).siblings('.textwidget').find('li:visible').filter(':lt(2)'),
