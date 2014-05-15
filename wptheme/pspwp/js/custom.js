@@ -70,3 +70,11 @@ jQuery(function($) {
         });
     });
 });
+
+
+
+
+jQuery(function($){
+    $('ol.dsidx-results li.dsidx-prop-summary').hide();
+    $('ol.dsidx-results li.dsidx-prop-summary:nth-child(1), ol.dsidx-results li.dsidx-prop-summary:nth-child(2)').show();
+});
