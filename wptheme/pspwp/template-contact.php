@@ -63,8 +63,6 @@ get_header(); ?>
         </div>
 		<?php get_sidebar('contact'); ?>
 	  	<div class="clearfix"></div>
-	  	<?php get_sidebar("tabbedlisting"); ?>
-	  	<div class="clearfix"></div>
 	  <?php //include_once("tabbed_listings.php"); ?>
 	</div>
 </div>
