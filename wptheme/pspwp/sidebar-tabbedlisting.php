@@ -59,7 +59,7 @@
     <div class="slide-container">
     	<ul class="bxslider">
     	<?php
-	    $args = array('post_type'=>'property', 'posts_per_page'=>50, 'orderby'=>'menu_order', 'order'=>'asc');
+	    $args = array('post_type'=>'property', 'posts_per_page'=>10, 'orderby'=>'menu_order', 'order'=>'asc');
 	    $the_query = new WP_Query($args);
 	    $count = 0;
 
