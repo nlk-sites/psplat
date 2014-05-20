@@ -1,38 +1,4 @@
 <!--[if lte IE 8]><style>#tab-slides { display: none; }</style><![endif]-->
-<style>
-	#tab-slides { visibility: hidden; }
-	.slide-container .t_spacer:last-child { display: none; }
-	.bx-wrapper .bx-viewport {
-	    background: none !important;
-	    border: 0 none;
-	    box-shadow: none;
-	    left: -5px;
-	}
-	.t_property { margin: 0px; }
-	.bx-wrapper .bx-controls-direction a { right: -40px; }
-	.bx-wrapper .bx-next {
-		right: -40px;
-		display: block !important; 
-	}
-	.bx-wrapper .bx-prev {
-		left: -40px;
-		display: block !important;
-	}
-	.tab { min-height: 148px; }		
-</style>
-<script type="text/javascript">
-	jQuery(document).ready(function(){
-		jQuery('.bxslider').bxSlider({
-		  minSlides: 2,
-		  maxSlides: 2,
-		  slideWidth: 420,
-		  slideHeight: 130,
-		  slideMargin: 30,
-		  pager: false
-		});
-		
-	});
-</script>
 
 <div id="tab-slides" style="z-index:50000">
   <ul class="tab-control">
@@ -44,57 +10,69 @@
 
   <div id="tabs-slides-1" class="tab featuredListings">
     <div class="slide-container">
-    	<ul class="bxslider">
-	    	<?php
-		    $args = array('post_type'=>'property', 'posts_per_page'=>50, 'orderby'=>'menu_order', 'order'=>'asc');
-		    $the_query = new WP_Query($args);
-		    $count = 0;
+		<a href="javascript:void(0)" class="dsidx-slideshow-control dsidx-move-up" data-observed="true" style="color: rgb(153, 153, 153);">previous</a>
 
-			while ( $the_query->have_posts() ) : $the_query->the_post(); 
-				$count += 1;
-			?>
-			<li>
-				<div class="t_property">
-			        <a href="<?php the_permalink(); ?>" ><?php the_post_thumbnail( array(170,115), array('class' => 't_thumb') ); ?></a>
-			        <div class="t_title" style="margin-bottom: 10px;">
-			           <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-			        </div>
-			        <div>
-			        	<span class="t_label">price</span>&nbsp;<span class="t_txt">
+		<div class="textwidget">
+
+			<ol class="dsidx-results">
+
+		    	<?php
+			    $args = array('post_type'=>'property', 'posts_per_page'=>6, 'orderby'=>'menu_order', 'order'=>'asc');
+			    $the_query = new WP_Query($args);
+			    $count = 0;
+
+				while ( $the_query->have_posts() ) : $the_query->the_post(); 
+					$count += 1;
+				?>
+				<li class="dsidx-prop-summary" style="list-style-type: none; margin-bottom: 15px; position: relative;">
+					
+					<div class="dsidx-prop-title" style="margin-bottom: 3px;">
 						<?php 
-							if ( get_post_meta(get_the_ID(), 'wpcf-current-price-range', true) != '' ) {
-								$price = explode('-', get_post_meta(get_the_ID(), 'wpcf-current-price-range', true));
-								$newprice = array();
-								foreach ($price as $k => $v) {
-									$newprice[] = '$' . number_format(floatval(preg_replace("/[^0-9.]/", "", $v)));
+								if ( get_post_meta(get_the_ID(), 'wpcf-current-price-range', true) != '' ) {
+									$price = explode('-', get_post_meta(get_the_ID(), 'wpcf-current-price-range', true));
+									$newprice = array();
+									foreach ($price as $k => $v) {
+										$newprice[] = '$' . number_format(floatval(preg_replace("/[^0-9.]/", "", $v)));
+									}
+									$pricestr = implode(' - ', $newprice);
+									echo $pricestr;
 								}
-								$pricestr = implode(' - ', $newprice);
-								echo $pricestr;
-							}
-							elseif ( get_post_meta(get_the_ID(), 'wpcf-current-price', true) != '' ) {
-								echo '$' . number_format(floatval(preg_replace("/[^0-9]/", "", get_post_meta(get_the_ID(), 'wpcf-current-price', true))));
-							}
-							else {
-								echo 'N/A';
-							}
-						?>
-		        		</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="t_label">sq/ft</span>&nbsp;<span class="t_txt"><?php echo types_render_field("square-feet", array()); ?></span>
-			        	<br>
-			        	<span class="t_label">bed/bath</span>&nbsp;<span class="t_txt"><?php echo types_render_field("bed", array()); ?> bed | <?php echo types_render_field("bath", array()); ?> bath</span>
-			        	<br>
-			        </div>
-			        <div id="inline<?php echo $count; ?>" style="text-align: center; display:none;"><?php echo(types_render_field( "video-code", array())); ?><h3><i><?php the_title(); ?></i></h3></div>
-					<a class="showvideopopup t_link" href="#inline<?php echo $count; ?>"><img src="<?php bloginfo('template_url'); ?>/images/t_video_link.png" width="92" height="20"></a>
-					<a target="_blank" class="t_link" href="http://maps.google.com/?q=<?php echo urlencode(get_post_meta(get_the_ID(), 'wpcf-address', true)); ?>"><img src="<?php bloginfo('template_url'); ?>/images/t_map_link.png" width="92" height="20"></a>
-			    </div>
-			</li>
-			
-			<!--
-			<div class="t_spacer">
-		        <img src="<?php bloginfo('template_url'); ?>/images/tabs_large_divider.png" width="15" height="142">
-		    </div> -->
-			<?php endwhile; wp_reset_postdata(); ?>
-		</ul>
+								elseif ( get_post_meta(get_the_ID(), 'wpcf-current-price', true) != '' ) {
+									echo '$' . number_format(floatval(preg_replace("/[^0-9]/", "", get_post_meta(get_the_ID(), 'wpcf-current-price', true))));
+								}
+								else {
+									echo 'N/A';
+								}
+							?>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					</div>
+
+					<div style="float: left; text-align: center; margin-right: 10px; overflow: hidden; min-height: 188px;">
+						<a href="<?php the_permalink(); ?>" ><?php the_post_thumbnail( array(170,115), array('class' => 't_thumb') ); ?></a>
+					</div>
+
+					<div class-"dsidx-prop-features" style="white-space: nowrap;">
+						<div><?php echo types_render_field("bed", array()); ?> beds, <?php echo types_render_field("bath", array()); ?> baths</div>
+
+						<div>Home size: <?php echo types_render_field("square-feet", array()); ?></div>
+				        <div id="inline<?php echo $count; ?>" style="text-align: center; display:none;"><?php echo(types_render_field( "video-code", array())); ?><h3><i><?php the_title(); ?></i></h3></div>
+						<a class="showvideopopup t_link" href="#inline<?php echo $count; ?>"><img src="<?php bloginfo('template_url'); ?>/images/t_video_link.png" width="92" height="20"></a>
+						<a target="_blank" class="t_link" href="http://maps.google.com/?q=<?php echo urlencode(get_post_meta(get_the_ID(), 'wpcf-address', true)); ?>"><img src="<?php bloginfo('template_url'); ?>/images/t_map_link.png" width="92" height="20"></a>
+
+					</div>
+
+				</li>
+				
+				<?php endwhile; wp_reset_postdata(); ?>
+			</ul>
+
+
+
+		</div>
+
+
+
+		<a href="javascript:void(0)" class="dsidx-slideshow-control dsidx-move-down" data-observed="true" style="color: rgb(0, 0, 0);">next</a>
     </div> <!-- .slide-container -->
   </div> <!-- #tabs-1.tab -->
 
