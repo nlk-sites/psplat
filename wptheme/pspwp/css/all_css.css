@@ -3138,6 +3138,12 @@ nav,
  }
 
 /* IDX quicksearch fixes top bar */
+
+div[id^="QuickSearch"] .ac-renderer { z-index: 999; }
+div[id^="QuickSearch"] .ac-renderer .ac-row { text-align: left; }
+
+
+
 .sbr.top-search .quicksearch_flat_div {
 	width: 100%;
 	height: auto !important;
