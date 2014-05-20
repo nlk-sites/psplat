@@ -211,7 +211,6 @@ add_action( 'widgets_init', 'pspwp_widgets_init' );
 function pspwp_scripts() {
 	$theme = wp_get_theme();
 	$vers = $theme->Version;
-	$versjs = '1.0.' . filemtime( get_template_directory_uri() . '/js/custom.css'); //$theme->Version;
 
 
 	// Styles
@@ -230,9 +229,9 @@ function pspwp_scripts() {
 	wp_enqueue_script( 'jquery.ui.tabs', get_template_directory_uri() . '/js/libs/ui/jquery.ui.tabs.js', array('jquery'), $vers, true );
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array('jquery'), $vers, true );
 	wp_enqueue_script( 'slider', get_template_directory_uri() . '/js/slider.js', array('jquery'), $vers, true );
-	wp_enqueue_script( 'pspwp-custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), $versjs, true );
-	wp_enqueue_script( 'pspwp-custom-head', get_template_directory_uri() . '/js/custom-head.js', array( 'jquery' ), $versjs, false );
-	wp_enqueue_script( 'bxslider', get_bloginfo('template_url') . '/bxslider/jquery.bxslider.min.js', array( 'jquery' ), $vers, true);
+	wp_enqueue_script( 'pspwp-custom', get_template_directory_uri() . '/js/custom.js', array( 'jquery' ), filemtime( get_template_directory_uri() . '/js/custom.js' ), true );
+	wp_enqueue_script( 'pspwp-custom-head', get_template_directory_uri() . '/js/custom-head.js', array( 'jquery' ), filemtime( get_template_directory_uri() . '/js/custom-head.js' ), false );
+	//wp_enqueue_script( 'bxslider', get_bloginfo('template_url') . '/bxslider/jquery.bxslider.min.js', array( 'jquery' ), $vers, true);
 	
 
 	/*
