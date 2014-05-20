@@ -16,7 +16,19 @@
 			<ol class="dsidx-results">
 
 		    	<?php
-			    $args = array('post_type'=>'property', 'posts_per_page'=>6, 'orderby'=>'menu_order', 'order'=>'asc');
+			    $args = array(
+			    	'post_type'=>'property',
+			    	'posts_per_page'=>10,
+			    	'orderby'=>'menu_order',
+			    	'order'=>'asc',
+			    	'meta_query' => array(
+						array(
+							'key' => 'wpcf-featured-property',
+							'value' => '1',
+							'compare' => '='
+							)
+						)
+			    	);
 			    $the_query = new WP_Query($args);
 			    $count = 0;
 

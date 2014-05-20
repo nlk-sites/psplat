@@ -25,15 +25,7 @@ get_header(); ?>
 							'posts_per_page' => 10,
 							'paged' => $paged,
 							'orderby' => 'menu_order',
-							'order' => 'asc',
-							'limit' => 4,
-							'meta_query' => array(
-									array(
-										'key' => 'wpcf-property-status',
-										'value' => 'New',
-										'compare' => 'LIKE'
-										)
-								)
+							'order' => 'asc'
 							);
 						$the_query = new WP_Query( $args );
 						$count = 0;

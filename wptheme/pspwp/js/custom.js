@@ -105,7 +105,7 @@ jQuery(function($){
             // hide these
             these.hide(0, function(){
                 // and show the next two
-                those.show('slow');
+                those.show('fast');
             });
         }
         // otherwise...
@@ -115,7 +115,7 @@ jQuery(function($){
             // hide these
             these.hide(0, function(){
                 // and show the first two in the list (wraps around)
-                $this.siblings('.textwidget').find('li').slice(2).show('slow')
+                $this.siblings('.textwidget').find('li').slice(2).show('fast')
             });
             */
         }
@@ -130,7 +130,7 @@ jQuery(function($){
             // hide these
             these.hide(0, function(){
                 // and show previous two
-                those.show('slow');
+                those.show('fast');
             });
         }
         // otherwise...
@@ -140,7 +140,7 @@ jQuery(function($){
             // hide these
             these.hide(0, function(){
                 // and display the bottom two results (wraps around)
-                $this.siblings('.textwidget').find('li').slice(-2).show('slow')
+                $this.siblings('.textwidget').find('li').slice(-2).show('fast')
             });
             */
         }
