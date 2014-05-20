@@ -22,10 +22,11 @@ get_header(); ?>
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 						$args = array(
 							'post_type' => 'property',
-							'posts_per_page' => 6,
+							'posts_per_page' => 10,
 							'paged' => $paged,
 							'orderby' => 'menu_order',
 							'order' => 'asc',
+							'limit' => 4,
 							'meta_query' => array(
 									array(
 										'key' => 'wpcf-property-status',

@@ -5,30 +5,10 @@ Theme URI: http://underscores.me/
 Author: Ninthlink
 Author URI: http://www.ninthlink.com
 Description: PSP Wordpress Template
-Version: 1.4
+Version: 1.5
 License: GNU General Public License
 License URI: license.txt
 Tags:
-
-
-
-This theme, like WordPress, is licensed under the GPL.
-
-Use it to make something cool, have fun, and share what you've learned with others.
-
-
-
- PSPWP is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
-
-
-
-Resetting and rebuilding styles have been helped along thanks to the fine work of
-
-Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
-
-along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-
-and Blueprint http://www.blueprintcss.org/
 
 */
 
@@ -493,23 +473,7 @@ body.single-property #tabs-1 iframe.dsidx-shortcode-map { margin: auto !importan
 
 /* bxslider stuff */
 	#tab-slides { visibility: hidden; }
-	.slide-container .t_spacer:last-child { display: none; }
-	.bx-wrapper .bx-viewport {
-	    background: none !important;
-	    border: 0 none;
-	    box-shadow: none;
-	    left: -5px;
-	}
-	.t_property { margin: 0px; }
-	.bx-wrapper .bx-controls-direction a { right: -40px; }
-	.bx-wrapper .bx-next {
-		right: -40px;
-		display: block !important; 
-	}
-	.bx-wrapper .bx-prev {
-		left: -40px;
-		display: block !important;
-	}
+	
 	.tab { min-height: 148px; }
 
 /* misc */
@@ -525,27 +489,49 @@ body.single-property #tabs-1 iframe.dsidx-shortcode-map { margin: auto !importan
 
 
 
-	.bx-loading { display: none !important; }
 
-	.home p.dsidx-summary,
-	.home p.dsidx-summary + ol + p { display: none; }
 
-	.home ol.dsidx-results {
-		position: relative !important;
-		width: 830px !important;
-	}
-	.home li.dsidx-prop-summary {
-		display: none;
-		padding-left: 0 !important;
-		width: 400px !important;
-	}
-	.home li.dsidx-prop-summary.showme {
-		display: inline-block;
-	}
-	.home li.dsidx-prop-summary img {
-		width: 150px !important;
-	}
 
+
+
+
+
+
+
+.bx-loading { display: none !important; }
+.wpf_ref {display: none;}
+
+
+.slide-container { position: relative;}
+
+
+
+.home p.dsidx-summary, .home p.dsidx-summary + ol + p { display: none; }
+
+ol.dsidx-results {
+	margin: 0px;
+	position: inherit !important;
+	padding: 0 50px;
+	height: 140px !important;
+	overflow: hidden;
+}
+
+ol.dsidx-results li.dsidx-prop-summary {
+	display: inline-block;
+	list-style: none;
+	margin-right: 10px;
+	padding-left: 0 !important;
+	width: 400px !important;
+}
+ol.dsidx-results li.dsidx-prop-summary.showme {
+	display: inline-block;
+}
+ol.dsidx-results li.dsidx-prop-summary img {
+	max-width: 172px !important;
+}
+ol.dsidx-results div.dsidx-prop-title + div {
+	min-height: inherit !important;
+}
 
 /* left / right arrows */
 .slide-container .dsidx-slideshow-control.dsidx-move-up,
@@ -557,11 +543,11 @@ body.single-property #tabs-1 iframe.dsidx-shortcode-map { margin: auto !importan
 	width: 32px;
 	height: 32px;
 	text-indent: -9999px;
-	background: url(../images/controls.png) no-repeat 0 -32px;
+	background: url(images/controls.png) no-repeat 0 -32px;
 	border: none !important;
 }
 .slide-container .dsidx-slideshow-control.dsidx-move-down {
-	background: url(../images/controls.png) no-repeat -43px -32px;
+	background: url(images/controls.png) no-repeat -43px -32px;
 	right: 0;
 }
 .slide-container .dsidx-slideshow-control.dsidx-move-up:hover {
@@ -572,58 +558,40 @@ body.single-property #tabs-1 iframe.dsidx-shortcode-map { margin: auto !importan
 }
 
 
-/* tabs and sliders and stuff */
-.bx-loading { display: none !important; }
 
-.slide-container { position: relative;}
+/* - - - - - tabs and sliders and stuff - - - - - */
 
-	.home p.dsidx-summary,
-	.home p.dsidx-summary + ol + p { display: none; }
-
-	.home ol.dsidx-results,
-	#tab-slides ol.dsidx-results {
-		height: 140px !important;
-		overflow: hidden;
-		margin-left: 80px !important;
-		position: relative !important;
-		width: 830px !important;
-	}
-	.home li.dsidx-prop-summary {
-		padding-left: 0 !important;
-		width: 400px !important;
-	}
-	.home li.dsidx-prop-summary.showme {
-		display: inline-block;
-	}
-	.home li.dsidx-prop-summary img {
-		width: 150px !important;
-	}
-	.home ol.dsidx-results div.dsidx-prop-title + div {
-		min-height: inherit !important;
-	}
-
-
-/* left / right arrows */
-.slide-container .dsidx-slideshow-control.dsidx-move-up,
-.slide-container .dsidx-slideshow-control.dsidx-move-down {
-	position: absolute !important;
-	top: 50%;
-	margin-top: -16px;
-	outline: 0;
-	width: 32px;
-	height: 32px;
-	text-indent: -9999px;
-	background: url(../pspwp/images/controls.png) no-repeat 0 -32px;
-	border: none !important;
+/* from in-line */
+#tab-slides { visibility: hidden; }
+.slide-container .t_spacer:last-child { display: none; }
+.bx-wrapper .bx-viewport {
+    background: none !important;
+    border: 0 none;
+    box-shadow: none;
+    left: -5px;
 }
-.slide-container .dsidx-slideshow-control.dsidx-move-down {
-	background: url(../pspwp/images/controls.png) no-repeat -43px -32px;
-	right: 4px;
+.t_property { margin: 0px; }
+.bx-wrapper .bx-controls-direction a { right: -40px; }
+.bx-wrapper .bx-next {
+	right: -40px;
+	display: block !important; 
 }
-.slide-container .dsidx-slideshow-control.dsidx-move-up:hover {
-	background-position: 0 0;
+.bx-wrapper .bx-prev {
+	left: -40px;
+	display: block !important;
 }
-.slide-container .dsidx-slideshow-control.dsidx-move-down:hover {
-	background-position: -43px 0;
-}
+.tab { min-height: 148px; }		
+
+
+
+
+
+
+
+
+
+
+
+
+
 
