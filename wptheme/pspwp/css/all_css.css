@@ -3072,7 +3072,7 @@ div[id^="QuickSearch"] .ac-renderer .ac-row { text-align: left; }
 
 .sbr.top-search .quicksearch_flat_div select {min-width: 30px;}
 
-.sbr.top-search #search-locations {width: 335px !important;}
+.sbr.top-search #search-locations {width: 305px !important;}
 
 .sbr.top-search .quicksearch_flat_div #quicksearch_button {
 	padding: 5px 10px!important;
