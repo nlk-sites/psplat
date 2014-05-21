@@ -13,7 +13,7 @@ Tags:
 */
 
 
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400,300);
 
 
 /* =Reset
@@ -511,7 +511,7 @@ body.single-property #tabs-1 iframe.dsidx-shortcode-map { margin: auto !importan
 ol.dsidx-results {
 	margin: 0px;
 	position: inherit !important;
-	padding: 0 50px !important;
+	padding: 0 30px !important;
 	height: 140px !important;
 	overflow: hidden;
 }
@@ -519,9 +519,10 @@ ol.dsidx-results {
 ol.dsidx-results li.dsidx-prop-summary {
 	display: none;
 	float: left;
+	min-height: 150px;
 	list-style: none;
-	margin-right: 10px;
-	margin-top: 6px;
+	margin: 10px;
+	overflow: hidden;
 	padding-left: 0 !important;
 	width: 400px !important;
 }
@@ -532,6 +533,9 @@ ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-title {
 ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-title a {
 	display: block;
 	/* address text styling here */
+	color: #00c;
+	font-style: 14px;
+	text-decoration: none;
 }
 ol.dsidx-results li.dsidx-prop-summary img {
 	max-width: 172px !important;
