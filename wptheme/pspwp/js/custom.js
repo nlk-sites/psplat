@@ -71,25 +71,9 @@ jQuery(function($) {
     });
 
 
-    if ( $('.bxslider').length ) {
-        jQuery('.bxslider').bxSlider({
-            minSlides: 2,
-            maxSlides: 2,
-            slideWidth: 420,
-            slideHeight: 130,
-            slideMargin: 30,
-            pager: false
-        });
-    }
 
+    /* tabbed listings/slider functionality */
 
-});
-
-
-
-
-/* tabbed listings/slider functionality */
-jQuery(function($){
     // hide results, then re-show the first two, for each tab
     $('ol.dsidx-results').each(function() {
          $(this).find('li.dsidx-prop-summary').hide().filter(':lt(2)').show();

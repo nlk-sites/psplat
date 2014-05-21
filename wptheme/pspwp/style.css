@@ -511,7 +511,7 @@ body.single-property #tabs-1 iframe.dsidx-shortcode-map { margin: auto !importan
 ol.dsidx-results {
 	margin: 0px;
 	position: inherit !important;
-	padding: 0 50px;
+	padding: 0 50px !important;
 	height: 140px !important;
 	overflow: hidden;
 }
