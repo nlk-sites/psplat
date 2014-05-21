@@ -521,20 +521,22 @@ ol.dsidx-results li.dsidx-prop-summary {
 	float: left;
 	min-height: 150px;
 	list-style: none;
-	margin: 10px;
+	margin: 10px 0px 0 20px;
 	overflow: hidden;
 	padding-left: 0 !important;
-	width: 400px !important;
+	width: 410px !important;
 }
 ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-title {
 	position: relative;
 	left: 180px;
+	display: inline-block;
+	max-width: 230px;
 }
 ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-title a {
 	display: block;
 	/* address text styling here */
 	color: #00c;
-	font-style: 14px;
+	font-size: 14px;
 	text-decoration: none;
 }
 ol.dsidx-results li.dsidx-prop-summary img {
