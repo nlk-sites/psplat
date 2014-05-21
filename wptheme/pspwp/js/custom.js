@@ -71,62 +71,48 @@ jQuery(function($) {
     });
 
 
+});
 
-    /* tabbed listings/slider functionality */
 
+
+
+/* tabbed listings/slider functionality */
+jQuery(function($){
     // hide results, then re-show the first two, for each tab
     $('ol.dsidx-results').each(function() {
-         $(this).find('li.dsidx-prop-summary').hide().filter(':lt(2)').show();
+         $(this).children('li').filter(':lt(2)').fadeIn(250);
     });
 
     $('.dsidx-move-down').click(function(){
-        var $this = $(this),
-            these = $(this).siblings('.textwidget').find('li:visible').filter(':lt(2)'),
+        var these = $(this).siblings('div').find('li:visible'),
             those = these.last().nextAll(':lt(2)');
-        $('.dsidx-move-up').show();
         // if more results follow currently displayed...
-        if ( these.last().next('li').length ) {
+        if ( those.length ) {
             // hide these
-            these.hide(0, function(){
+            these.fadeOut(150, function(){
                 // and show the next two
-                those.show('fast');
+                those.fadeIn(250);
             });
         }
         // otherwise...
         else {
             return false; // do nothing more
-            /*
-            // hide these
-            these.hide(0, function(){
-                // and show the first two in the list (wraps around)
-                $this.siblings('.textwidget').find('li').slice(2).show('fast')
-            });
-            */
         }
     });
     $('.dsidx-move-up').click(function(){
-        var $this = $(this),
-            these = $(this).siblings('.textwidget').find('li:visible').filter(':lt(2)'),
+        var these = $(this).siblings('div').find('li:visible'),
             those = these.first().prevAll(':lt(2)');
-        $('.dsidx-move-down').show();
         // if more results precede currently displayed...
-        if ( these.first().prev('li').length ) {
+        if ( those.length ) {
             // hide these
-            these.hide(0, function(){
+            these.fadeOut(150, function(){
                 // and show previous two
-                those.show('fast');
+                those.fadeIn(250);
             });
         }
         // otherwise...
         else {
             return false; // do nothing more
-            /*
-            // hide these
-            these.hide(0, function(){
-                // and display the bottom two results (wraps around)
-                $this.siblings('.textwidget').find('li').slice(-2).show('fast')
-            });
-            */
         }
     });
 });

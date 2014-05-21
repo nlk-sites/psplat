@@ -20,14 +20,7 @@
 			    	'post_type'=>'property',
 			    	'posts_per_page'=>10,
 			    	'orderby'=>'menu_order',
-			    	'order'=>'asc',
-			    	'meta_query' => array(
-						array(
-							'key' => 'wpcf-featured-property',
-							'value' => '1',
-							'compare' => '='
-							)
-						)
+			    	'order'=>'asc'
 			    	);
 			    $the_query = new WP_Query($args);
 			    $count = 0;

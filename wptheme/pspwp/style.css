@@ -517,15 +517,12 @@ ol.dsidx-results {
 }
 
 ol.dsidx-results li.dsidx-prop-summary {
-	display: inline-block !important;
+	display: none;
 	float: left;
 	list-style: none;
 	margin-right: 10px;
 	padding-left: 0 !important;
 	width: 400px !important;
-}
-ol.dsidx-results li.dsidx-prop-summary.showme {
-	display: inline-block;
 }
 ol.dsidx-results li.dsidx-prop-summary img {
 	max-width: 172px !important;
