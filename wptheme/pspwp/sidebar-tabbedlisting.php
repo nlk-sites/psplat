@@ -62,7 +62,7 @@
 						<a href="<?php the_permalink(); ?>" ><?php the_post_thumbnail( array(170,115), array('class' => 't_thumb') ); ?></a>
 					</div>
 
-					<div class-"dsidx-prop-features" style="white-space: nowrap;">
+					<div class="dsidx-prop-features" style="white-space: nowrap;">
 						<div><?php echo types_render_field("bed", array()); ?> beds, <?php echo types_render_field("bath", array()); ?> baths</div>
 
 						<div>Home size: <?php echo types_render_field("square-feet", array()); ?></div>
