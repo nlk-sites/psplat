@@ -456,6 +456,7 @@ ul.main-nav li {
 
 .testimonial {
 	margin: 0;
+	margin-left: 7px;
 	background: #EEEEEE;
 	padding: 10px 50px;
 	position: relative;

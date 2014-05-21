@@ -15,7 +15,7 @@ jQuery(document).ready(function(){
     
     var activate_tab;
     var slide_margin = 10 * 3;
-    var slide_height = 125;
+    var slide_height = 150;
     var slide_container_height = slide_height * 4; /* be sure to account for margins! */
     var slide_duration = 0;
     var jQuerybutton = jQuery('a.btn-more');
