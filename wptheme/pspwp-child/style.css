@@ -55,7 +55,7 @@ div.idx.top-search > script + div > div > div > table > tbody > tr > td:first-ch
 div.idx.top-search > script + div > div > div > table > tbody > tr > td:nth-child(3) { margin-right: 6px; }
 div.idx.top-search > script + div > div > div > table > tbody > tr:first-child > td:last-child { margin-right: 6px; }
 div.idx.top-search > script + div > div > div select { min-width: 30px; }
-div.idx.top-search > script + div#div_top-search-bar-idx-id #search-locations { width: 315px !important; }
+div.idx.top-search > script + div#div_top-search-bar-idx-id #search-locations { width: 305px !important; }
 div.idx.top-search > script + div > div > div #quicksearch_button {
 	padding: 5px 10px!important;
 	border: none;
