@@ -521,8 +521,17 @@ ol.dsidx-results li.dsidx-prop-summary {
 	float: left;
 	list-style: none;
 	margin-right: 10px;
+	margin-top: 6px;
 	padding-left: 0 !important;
 	width: 400px !important;
+}
+ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-title {
+	position: relative;
+	left: 180px;
+}
+ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-title a {
+	display: block;
+	/* address text styling here */
 }
 ol.dsidx-results li.dsidx-prop-summary img {
 	max-width: 172px !important;
@@ -530,6 +539,20 @@ ol.dsidx-results li.dsidx-prop-summary img {
 }
 ol.dsidx-results div.dsidx-prop-title + div {
 	min-height: inherit !important;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-features {
+	position: relative;
+	left: 180px;
+}
+ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-features div {
+	display: none;
+}
+ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-features div:nth-child(1),
+ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-features div:nth-child(2) {
+	display: block;
 }
 
 /* left / right arrows */
