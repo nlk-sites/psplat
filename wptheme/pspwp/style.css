@@ -526,6 +526,7 @@ ol.dsidx-results li.dsidx-prop-summary {
 }
 ol.dsidx-results li.dsidx-prop-summary img {
 	max-width: 172px !important;
+	border: none !important;
 }
 ol.dsidx-results div.dsidx-prop-title + div {
 	min-height: inherit !important;

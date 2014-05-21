@@ -52,7 +52,7 @@ get_header(); ?>
 				</div>
 				<div class="clearfix"></div>
                 <br />
-				<div id="tabs">
+				<div id="tabs" class="ui-tabs ui-widget ui-widget-content ui-corner-all">
 				  <ul>
 				    <li><a href="#tabs-1">Biography</a></li>
 				    <li><a href="#tabs-2">Testimonials</a></li>

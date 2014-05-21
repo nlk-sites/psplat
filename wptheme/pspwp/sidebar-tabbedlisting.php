@@ -66,9 +66,9 @@
 						<div><?php echo types_render_field("bed", array()); ?> beds, <?php echo types_render_field("bath", array()); ?> baths</div>
 
 						<div>Home size: <?php echo types_render_field("square-feet", array()); ?></div>
-				        <div id="inline<?php echo $count; ?>" style="text-align: center; display:none;"><?php echo(types_render_field( "video-code", array())); ?><h3><i><?php the_title(); ?></i></h3></div>
-						<a class="showvideopopup t_link" href="#inline<?php echo $count; ?>"><img src="<?php bloginfo('template_url'); ?>/images/t_video_link.png" width="92" height="20"></a>
-						<a target="_blank" class="t_link" href="http://maps.google.com/?q=<?php echo urlencode(get_post_meta(get_the_ID(), 'wpcf-address', true)); ?>"><img src="<?php bloginfo('template_url'); ?>/images/t_map_link.png" width="92" height="20"></a>
+				        <?php /* <div id="inline<?php echo $count; ?>" style="text-align: center; display:none;"><?php echo(types_render_field( "video-code", array())); ?><h3><i><?php the_title(); ?></i></h3></div> */ ?>
+						<a class="t_link" href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/t_video_link.png" width="92" height="20"></a>
+						<a class="t_link" href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/t_map_link.png" width="92" height="20"></a>
 
 					</div>
 

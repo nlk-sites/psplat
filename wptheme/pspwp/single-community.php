@@ -116,7 +116,16 @@ get_header(); ?>
 						    				
 						           		</div>
 						                <div class="featured_links">
-											<a target="_blank" href="http://maps.google.com/?q=<?php echo urlencode(get_post_meta(get_the_ID(), 'wpcf-address', true)); ?>"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_view_map.png" width="115" height="23"></a>
+											<a  href=
+												<?php
+												if (get_post_meta(get_the_ID(), 'wpcf-address', true)) {
+													echo '"http://maps.google.com/?q=' . urlencode(get_post_meta(get_the_ID(), 'wpcf-address', true)) . '" target="_blank"';
+												}
+												else {
+													echo '"' . get_the_permalink() . '"';
+												}
+												?>
+												><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_view_map.png" width="115" height="23"></a>
 											<a class="showvideopopup" href="<?php the_permalink(); ?>#tabs-1"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_watch_video.png" width="115" height="30"></a>
 											<a href="<?php the_permalink(); ?>#tabs-1" class="" rel="gallery-<?php echo get_the_ID(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/featured_listings_photo_gallery.png" width="115" height="30"></a>
 											<a href="<?php the_permalink(); ?>"><img class="property_details_btn" src="<?php bloginfo('template_url'); ?>/images/featured_listings_prop_details_bttn.png" width="114" height="22"></a>
