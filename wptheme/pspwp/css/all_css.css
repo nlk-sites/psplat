@@ -471,6 +471,7 @@ ul.main-nav li {
 
 	.testimonial:before, .testimonial:after {
 		content: "\201C";
+		content: "“";
 		position: absolute;
 		font-size: 80px;
 		line-height: 1;
@@ -485,6 +486,7 @@ ul.main-nav li {
 
 	.testimonial:after {
 		content: "\201D";
+		content: "”";
 		right: 10px;
 		bottom: -0.5em;
 	 }
