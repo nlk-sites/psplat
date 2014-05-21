@@ -18,9 +18,16 @@
 		    	<?php
 			    $args = array(
 			    	'post_type'=>'property',
-			    	'posts_per_page'=>10,
+			    	'posts_per_page'=>8,
 			    	'orderby'=>'menu_order',
-			    	'order'=>'asc'
+			    	'order'=>'asc',
+			    	'meta_query' => array(
+			    		array(
+			    			'key' => 'wpcf-featured-property',
+							'value'   => 1,
+							'compare' => '='
+			    			)
+			    		)
 			    	);
 			    $the_query = new WP_Query($args);
 			    $count = 0;
