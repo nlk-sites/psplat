@@ -79,7 +79,7 @@ jQuery(function($) {
 /* tabbed listings/slider functionality */
 jQuery(function($){
     // hide results, then re-show the first two, for each tab
-    $('ol.dsidx-results').each(function() {
+    $('.home ol.dsidx-results').each(function() {
          $(this).children('li').filter(':lt(2)').fadeIn(250);
     });
 

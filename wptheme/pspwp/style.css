@@ -506,9 +506,9 @@ body.single-property #tabs-1 iframe.dsidx-shortcode-map { margin: auto !importan
 
 
 
-.home p.dsidx-summary, .home p.dsidx-summary + ol + p { display: none; }
+.home p.dsidx-summary, p.dsidx-summary + ol + p { display: none; }
 
-ol.dsidx-results {
+.home ol.dsidx-results {
 	margin: 0px;
 	position: inherit !important;
 	padding: 0 30px !important;
