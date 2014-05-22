@@ -506,9 +506,9 @@ body.single-property #tabs-1 iframe.dsidx-shortcode-map { margin: auto !importan
 
 
 
-.home p.dsidx-summary, p.dsidx-summary + ol + p { display: none; }
+#tab-slides p.dsidx-summary, p.dsidx-summary + ol + p { display: none; }
 
-.home ol.dsidx-results {
+#tab-slides ol.dsidx-results {
 	margin: 0px;
 	position: inherit !important;
 	padding: 0 30px !important;
@@ -517,7 +517,6 @@ body.single-property #tabs-1 iframe.dsidx-shortcode-map { margin: auto !importan
 }
 
 ol.dsidx-results li.dsidx-prop-summary {
-	display: none;
 	float: left;
 	min-height: 150px;
 	list-style: none;
@@ -525,6 +524,9 @@ ol.dsidx-results li.dsidx-prop-summary {
 	overflow: hidden;
 	padding-left: 0 !important;
 	width: 410px !important;
+}
+#tab-slides ol.dsidx-results li.dsidx-prop-summary {
+	display: none;
 }
 ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-title {
 	position: relative;
