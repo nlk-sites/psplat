@@ -78,16 +78,14 @@ get_header(); ?>
 					<h1>My Blog</h1>
 					<hr class="greybar_hr">
 					<?php
+						$noblogpostsyet = true;
 						$user = get_user_by( 'email', get_post_meta(get_the_ID(), 'wpcf-emailaddress', true) );
-						if($user)
-						{
+						if($user) {
 							$authors_posts = get_posts( array( 'author' => $user->ID, 'posts_per_page' => 10 ) );
 							
-							if($authors_posts)
-							{
-							    foreach ( $authors_posts as $authors_post ) {
-							       
-									?>
+							if($authors_posts) {
+									$noblogpostsyet = false;
+							    foreach ( $authors_posts as $authors_post ) { ?>
 										<div class="eachPost">
 											<h1><?php echo get_the_title($authors_post->ID); ?></h1>
 								            <p class="date_auth"><?php the_time('M. jS Y'); ?></p>
@@ -110,8 +108,7 @@ get_header(); ?>
 							}
 						    
 						}
-						else
-						{
+						if ( $noblogpostsyet ) {
 							echo '<h3><i>I will write some cool posts soon. Thank you for your patience.</i></h3>';
 						}
 					?>
