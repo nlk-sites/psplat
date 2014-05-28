@@ -65,6 +65,13 @@ get_header(); ?>
                         <a href="#tabs-2">Community Info</a>
                     </li>
                     <?php if ( $nearby_schools ) { ?><li><a href="#nearschools">Nearby Schools</a></li><?php } ?>
+                    
+                    <?php if ( types_render_field("address", array()) ) { ?>
+                    <li>
+                        <a href="#tabs-map">Map</a>
+                    </li>
+                    <?php } ?>
+                    
                 </ul>
 				<div id="tabs-3">
                     <?php echo types_render_field("overview", array()); ?>
@@ -322,6 +329,21 @@ get_header(); ?>
                         </div>
                     </div>
                 </div>
+
+                <?php if ( types_render_field("address", array()) ) { ?>
+                <div id="tabs-map">
+                    <?php $gad = urlencode(types_render_field("address", array())); ?>
+                    <iframe
+                      width="680"
+                      height="500"
+                      frameborder="0" style="border:0"
+                      src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBR9AGYPcpb_MgKB7rYru5qsa9Hw2f8jjo
+                        &amp;q=<?php echo $gad; ?>
+                        &amp;zoom=19
+                        &amp;maptype=satellite">
+                    </iframe>
+                </div>
+                <?php } ?>
 
             </div>
         </div>
