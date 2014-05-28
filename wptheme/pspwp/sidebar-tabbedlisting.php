@@ -68,7 +68,7 @@
 						<div>Home size: <?php echo types_render_field("square-feet", array()); ?></div>
 				        <?php /* <div id="inline<?php echo $count; ?>" style="text-align: center; display:none;"><?php echo(types_render_field( "video-code", array())); ?><h3><i><?php the_title(); ?></i></h3></div> */ ?>
 						<a class="t_link" href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/t_video_link.png" width="92" height="20"></a>
-						<a class="t_link" href="<?php the_permalink(); ?>"><img src="<?php bloginfo('template_url'); ?>/images/t_map_link.png" width="92" height="20"></a>
+						<a class="t_link" href="<?php the_permalink(); ?>#tabs-map"><img src="<?php bloginfo('template_url'); ?>/images/t_map_link.png" width="92" height="20"></a>
 
 					</div>
 
