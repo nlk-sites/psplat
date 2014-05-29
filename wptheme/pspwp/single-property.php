@@ -334,7 +334,7 @@ get_header(); ?>
                 <div id="tabs-map">
                     <?php 
 
-                    $gapi = 'AIzaSyBR9AGYPcpb_MgKB7rYru5qsa9Hw2f8jjo';
+                    $gapi = 'AIzaSyAGstVZou3vvxXNJpND3zBptkhIAd7BVD8';
                     $gad = urlencode(types_render_field("address", array()));
 
                     ?>
