@@ -534,6 +534,9 @@ ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-title {
 	display: inline-block;
 	max-width: 230px;
 }
+ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-title b {
+	font-weight: normal;
+}
 ol.dsidx-results li.dsidx-prop-summary .dsidx-prop-title a {
 	display: block;
 	/* address text styling here */
