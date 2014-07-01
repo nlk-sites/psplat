@@ -1,7 +1,7 @@
 <?php
 $psp_agent_options = get_option('psp_agent_options');
 ?>
-<div class="right_bar">
+<div class="left_bar">
 			<div class="featured_heading">
 				<span class="featured_title"><?php echo strtoupper($psp_agent_options['details']['name_display']); ?></span>
 			</div>
