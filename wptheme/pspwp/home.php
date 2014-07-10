@@ -21,6 +21,7 @@ get_header(); ?>
 				<div class="eachPost">
 					<h1><?php the_title(); ?></h1>
 		            <p class="date_auth"><?php the_time('M. jS Y'); ?> - Agent - <a href="#"><?php the_author(); ?></a></p>
+		            <?php /*
 		            <div class="sharebuttons">
 		            	<ul>
 							<li><?php dd_twitter_generate('Compact','twitter_username',get_permalink(get_the_ID()), get_the_title(), get_the_ID()); ?></li>
@@ -29,6 +30,7 @@ get_header(); ?>
 			                <li><?php dd_linkedin_generate('Compact',get_permalink(get_the_ID()), get_the_title(), get_the_ID()); ?></li>
 			            </ul>
 		            </div>
+		            */ ?>
 					<div class="clearfix"></div>
 					<?php the_post_thumbnail('profile-thumb'); ?>
 		            <?php the_excerpt(); ?>
