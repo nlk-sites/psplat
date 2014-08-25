@@ -32,6 +32,8 @@ get_header();
 
                         <script id="divLocala9456_" type="text/javascript" src="http://widgets.diversesolutions.com/Scripts/Dynamic/widgetTLM.js?curDivID=divLocala9456_&curWidth=470&curHeight=200&type=quicksearch&targetDomain=FaFSw2D+etsEohaGyd9djQ==&aid=85189&ssid=11&productType=1&location=1&fields=013&widgetType=1&muteStyles=false&currentURL=http://www.psplatinum.com/search/"></script>
 
+                        <p id="home-login-reg"><img src="http://cdn3.diverse-cdn.com/idx-v2/images/3-5/lock-small.png/0239a4" class="icon" height="18"><a href="http://www.psplatinum.com/listings/#ShowLogin">Login</a> or <a href="http://www.psplatinum.com/listings/#ShowRegister">Register</a><p>
+
                     </div>
 
                 </div>

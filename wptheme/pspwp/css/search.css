@@ -1926,6 +1926,19 @@
 
 /* IDX search fix */
 
+	#div_divLocala9456_ {
+		position: relative;
+		top: -22px;
+	}
+	#home-login-reg {
+		position: absolute;
+		bottom: 0;
+		padding-left: 13px;
+		color: #fff;
+		font-size: 14px;
+	}
+	#home-login-reg a {color: #fff; font-weight: bold;}
+
 	/*#div_divLocala9456_ { display: none; }
 	#div_divLocala9456_.showme { display: block; }*/
 	/*#qsrch #div_divLocala9456_ { display: none; }*/
@@ -1964,7 +1977,7 @@
 		width: 100%;
 	}
 	#qsrch #QuickSearch_divLocala9456__QuickSearch > table > tbody > tr:nth-child(3) table {
-		margin-top: 14px;
+		margin-top: 4px;
 		width: inherit;
 	}
 	#qsrch #QuickSearch_divLocala9456__QuickSearch > table > tbody > tr:nth-child(3) table tr:first-child { display: none; }
@@ -1989,7 +2002,7 @@
 /* fifth row: price */
 	#qsrch #QuickSearch_divLocala9456__QuickSearch > table > tbody > tr:nth-child(5) {}
 	#qsrch #QuickSearch_divLocala9456__QuickSearch > table > tbody > tr:nth-child(5) table {
-		margin-top: 14px;
+		margin-top: 4px;
 	}
 	#qsrch #QuickSearch_divLocala9456__QuickSearch > table > tbody > tr:nth-child(5) table tr:first-child {}
 	#qsrch #QuickSearch_divLocala9456__QuickSearch > table > tbody > tr:nth-child(5) table tr:first-child td {
